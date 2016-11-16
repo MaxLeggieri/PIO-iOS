@@ -7,50 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500758141D68878E00051603 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500758131D68878E00051603 /* LocationController.swift */; };
+		500EB29D1DA687E60012FAF8 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */; };
+		502085E81D2CEC0600E749EE /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502085E71D2CEC0600E749EE /* NotificationsController.swift */; };
+		5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026D3B91D2A6D1100B3F46D /* CatButton.swift */; };
+		502848AF1D01F7D300C60823 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848AE1D01F7D300C60823 /* WebApi.swift */; };
+		502848B11D01F82600C60823 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B01D01F82600C60823 /* Promo.swift */; };
+		502848B31D0241C700C60823 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B21D0241C700C60823 /* MasterViewController.swift */; };
+		502848B81D02476B00C60823 /* ScrollingContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B71D02476B00C60823 /* ScrollingContentController.swift */; };
+		502848BA1D02492400C60823 /* MapContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B91D02492400C60823 /* MapContentController.swift */; };
+		502848BC1D02499A00C60823 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502848BB1D02499A00C60823 /* MapKit.framework */; };
+		50365FA41D354A430064DFFE /* PromoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA31D354A430064DFFE /* PromoDetailController.swift */; };
+		50365FA61D356A940064DFFE /* PromoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA51D356A940064DFFE /* PromoAnnotation.swift */; };
+		50365FAA1D35A4130064DFFE /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA91D35A4130064DFFE /* CouponController.swift */; };
+		504F218D1D7CD8A500F34C7B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F218C1D7CD8A500F34C7B /* Product.swift */; };
+		504F218F1D7CDD1A00F34C7B /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */; };
+		505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */; };
+		506421AC1DC9F9FD002C5FD1 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506421AB1DC9F9FD002C5FD1 /* FormCell.swift */; };
+		506421AE1DC9FB41002C5FD1 /* ExtraInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */; };
+		50688E631D6FA62E000BEB1B /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 50688E621D6FA62E000BEB1B /* blip.caf */; };
+		506A0E101DAD5F7D00F56CAA /* CartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */; };
+		506A0E121DAD620600F56CAA /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E111DAD620600F56CAA /* Cart.swift */; };
+		506A0E141DAD84F700F56CAA /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E131DAD84F700F56CAA /* CartController.swift */; };
+		506CF3EF1D1F15110052377C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 506CF3EE1D1F15110052377C /* GoogleService-Info.plist */; };
+		506CF3F11D202BC40052377C /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CF3F01D202BC40052377C /* CategoriesController.swift */; };
+		506CF3F31D202F200052377C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CF3F21D202F200052377C /* Category.swift */; };
+		506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E97751D861C5B008C949E /* BackgroundTask.swift */; };
+		506FC5EA1DBDFE4900D564DF /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506FC5E91DBDFE4900D564DF /* ShippingController.swift */; };
+		507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507AFA321DAE839E0066780B /* CartItemViewCell.swift */; };
+		508222011DD540B200C4A242 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222001DD540B200C4A242 /* SearchController.swift */; };
+		508222031DD54AB700C4A242 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222021DD54AB700C4A242 /* Result.swift */; };
+		508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222061DD9DE0C00C4A242 /* ResultCell.swift */; };
+		5086A9761D3D1ACB00EF22C5 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */; };
+		5086A9781D3D249900EF22C5 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5086A9771D3D249900EF22C5 /* OptionsController.swift */; };
 		509963D01D0183A500F6012A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963CF1D0183A500F6012A /* AppDelegate.swift */; };
-		509963D21D0183A500F6012A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963D11D0183A500F6012A /* RootViewController.swift */; };
-		509963D41D0183A500F6012A /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963D31D0183A500F6012A /* DataViewController.swift */; };
-		509963D61D0183A500F6012A /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963D51D0183A500F6012A /* ModelController.swift */; };
 		509963D91D0183A500F6012A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509963D71D0183A500F6012A /* Main.storyboard */; };
 		509963DB1D0183A500F6012A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509963DA1D0183A500F6012A /* Assets.xcassets */; };
 		509963DE1D0183A500F6012A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509963DC1D0183A500F6012A /* LaunchScreen.storyboard */; };
-		509963E91D0183A500F6012A /* PioAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963E81D0183A500F6012A /* PioAlertTests.swift */; };
-		509963F41D0183A500F6012A /* PioAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963F31D0183A500F6012A /* PioAlertUITests.swift */; };
+		50CDB9C01DCE62BF0002F2D5 /* PioHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */; };
+		50CDB9C21DCE63500002F2D5 /* PioHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CDB9C11DCE63500002F2D5 /* PioHeader.swift */; };
+		50DA257C1D7C762F00F423BF /* CompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DA257B1D7C762F00F423BF /* CompanyController.swift */; };
+		50DA257E1D7C960A00F423BF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DA257D1D7C960A00F423BF /* Company.swift */; };
+		50E431E81DA6675D00E55947 /* PioNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E431E71DA6675D00E55947 /* PioNavigationController.swift */; };
+		50EBEC1D1D3E4FBA0008EB1A /* UsedCouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */; };
+		50EBEC1F1D3E5C830008EB1A /* CouponDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */; };
+		50EBEC211D3E69DF0008EB1A /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC201D3E69DF0008EB1A /* InfoController.swift */; };
+		6F8E4A79711A3EA2CF2A2FF7 /* Pods_PioAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535360E772C86400789FB863 /* Pods_PioAlert.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		509963E51D0183A500F6012A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 509963C41D0183A500F6012A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 509963CB1D0183A500F6012A;
-			remoteInfo = PioAlert;
-		};
-		509963F01D0183A500F6012A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 509963C41D0183A500F6012A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 509963CB1D0183A500F6012A;
-			remoteInfo = PioAlert;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		500758131D68878E00051603 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
+		502085E71D2CEC0600E749EE /* NotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		5026D3B91D2A6D1100B3F46D /* CatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatButton.swift; sourceTree = "<group>"; };
+		502848AE1D01F7D300C60823 /* WebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
+		502848B01D01F82600C60823 /* Promo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		502848B21D0241C700C60823 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		502848B71D02476B00C60823 /* ScrollingContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingContentController.swift; sourceTree = "<group>"; };
+		502848B91D02492400C60823 /* MapContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContentController.swift; sourceTree = "<group>"; };
+		502848BB1D02499A00C60823 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		50365FA31D354A430064DFFE /* PromoDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoDetailController.swift; sourceTree = "<group>"; };
+		50365FA51D356A940064DFFE /* PromoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoAnnotation.swift; sourceTree = "<group>"; };
+		50365FA91D35A4130064DFFE /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		504F218C1D7CD8A500F34C7B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewCell.swift; sourceTree = "<group>"; };
+		506421AB1DC9F9FD002C5FD1 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfoController.swift; sourceTree = "<group>"; };
+		50688E621D6FA62E000BEB1B /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartsController.swift; sourceTree = "<group>"; };
+		506A0E111DAD620600F56CAA /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		506A0E131DAD84F700F56CAA /* CartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		506CF3EE1D1F15110052377C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		506CF3F01D202BC40052377C /* CategoriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
+		506CF3F21D202F200052377C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		506E97751D861C5B008C949E /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		506FC5E91DBDFE4900D564DF /* ShippingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingController.swift; sourceTree = "<group>"; };
+		507AFA321DAE839E0066780B /* CartItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemViewCell.swift; sourceTree = "<group>"; };
+		508222001DD540B200C4A242 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		508222021DD54AB700C4A242 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		508222061DD9DE0C00C4A242 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		5086A9771D3D249900EF22C5 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
 		509963CC1D0183A500F6012A /* PioAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PioAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509963CF1D0183A500F6012A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		509963D11D0183A500F6012A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		509963D31D0183A500F6012A /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		509963D51D0183A500F6012A /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		509963D81D0183A500F6012A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		509963DA1D0183A500F6012A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509963DD1D0183A500F6012A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		509963DF1D0183A500F6012A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		509963E41D0183A500F6012A /* PioAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		509963E81D0183A500F6012A /* PioAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PioAlertTests.swift; sourceTree = "<group>"; };
-		509963EA1D0183A500F6012A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		509963EF1D0183A500F6012A /* PioAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PioAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		509963F31D0183A500F6012A /* PioAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PioAlertUITests.swift; sourceTree = "<group>"; };
-		509963F51D0183A500F6012A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PioAlert.entitlements; sourceTree = "<group>"; };
+		50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PioHeader.xib; sourceTree = "<group>"; };
+		50CDB9C11DCE63500002F2D5 /* PioHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioHeader.swift; sourceTree = "<group>"; };
+		50DA257B1D7C762F00F423BF /* CompanyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyController.swift; sourceTree = "<group>"; };
+		50DA257D1D7C960A00F423BF /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		50E431E71DA6675D00E55947 /* PioNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioNavigationController.swift; sourceTree = "<group>"; };
+		50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsedCouponController.swift; sourceTree = "<group>"; };
+		50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDisplayController.swift; sourceTree = "<group>"; };
+		50EBEC201D3E69DF0008EB1A /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		535360E772C86400789FB863 /* Pods_PioAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PioAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.debug.xcconfig"; sourceTree = "<group>"; };
+		CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,33 +114,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509963E11D0183A500F6012A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509963EC1D0183A500F6012A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				502848BC1D02499A00C60823 /* MapKit.framework in Frameworks */,
+				6F8E4A79711A3EA2CF2A2FF7 /* Pods_PioAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502848B41D02421700C60823 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				50688E621D6FA62E000BEB1B /* blip.caf */,
+				502848B01D01F82600C60823 /* Promo.swift */,
+				505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */,
+				506421AB1DC9F9FD002C5FD1 /* FormCell.swift */,
+				504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */,
+				502848AE1D01F7D300C60823 /* WebApi.swift */,
+				506CF3F21D202F200052377C /* Category.swift */,
+				5026D3B91D2A6D1100B3F46D /* CatButton.swift */,
+				50365FA51D356A940064DFFE /* PromoAnnotation.swift */,
+				5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */,
+				50DA257D1D7C960A00F423BF /* Company.swift */,
+				504F218C1D7CD8A500F34C7B /* Product.swift */,
+				506E97751D861C5B008C949E /* BackgroundTask.swift */,
+				50E431E71DA6675D00E55947 /* PioNavigationController.swift */,
+				506A0E111DAD620600F56CAA /* Cart.swift */,
+				507AFA321DAE839E0066780B /* CartItemViewCell.swift */,
+				508222021DD54AB700C4A242 /* Result.swift */,
+				508222061DD9DE0C00C4A242 /* ResultCell.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		509963C31D0183A500F6012A = {
 			isa = PBXGroup;
 			children = (
 				509963CE1D0183A500F6012A /* PioAlert */,
-				509963E71D0183A500F6012A /* PioAlertTests */,
-				509963F21D0183A500F6012A /* PioAlertUITests */,
 				509963CD1D0183A500F6012A /* Products */,
+				94054425A23C5DE85DEFF2C9 /* Pods */,
+				EE6F69B0BBC69D8118CF1242 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				509963CC1D0183A500F6012A /* PioAlert.app */,
-				509963E41D0183A500F6012A /* PioAlertTests.xctest */,
-				509963EF1D0183A500F6012A /* PioAlertUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,34 +168,55 @@
 		509963CE1D0183A500F6012A /* PioAlert */ = {
 			isa = PBXGroup;
 			children = (
+				50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */,
 				509963CF1D0183A500F6012A /* AppDelegate.swift */,
-				509963D11D0183A500F6012A /* RootViewController.swift */,
-				509963D31D0183A500F6012A /* DataViewController.swift */,
-				509963D51D0183A500F6012A /* ModelController.swift */,
+				502848B21D0241C700C60823 /* MasterViewController.swift */,
+				506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */,
+				508222001DD540B200C4A242 /* SearchController.swift */,
+				506CF3F01D202BC40052377C /* CategoriesController.swift */,
+				502085E71D2CEC0600E749EE /* NotificationsController.swift */,
+				502848B71D02476B00C60823 /* ScrollingContentController.swift */,
+				50365FA31D354A430064DFFE /* PromoDetailController.swift */,
+				50365FA91D35A4130064DFFE /* CouponController.swift */,
+				50DA257B1D7C762F00F423BF /* CompanyController.swift */,
+				500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */,
+				502848B91D02492400C60823 /* MapContentController.swift */,
+				5086A9771D3D249900EF22C5 /* OptionsController.swift */,
+				50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */,
+				50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */,
+				500758131D68878E00051603 /* LocationController.swift */,
+				506A0E131DAD84F700F56CAA /* CartController.swift */,
+				506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */,
+				50EBEC201D3E69DF0008EB1A /* InfoController.swift */,
+				506FC5E91DBDFE4900D564DF /* ShippingController.swift */,
+				50CDB9C11DCE63500002F2D5 /* PioHeader.swift */,
+				50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */,
 				509963D71D0183A500F6012A /* Main.storyboard */,
 				509963DA1D0183A500F6012A /* Assets.xcassets */,
 				509963DC1D0183A500F6012A /* LaunchScreen.storyboard */,
 				509963DF1D0183A500F6012A /* Info.plist */,
+				506CF3EE1D1F15110052377C /* GoogleService-Info.plist */,
+				502848B41D02421700C60823 /* Utility */,
 			);
 			path = PioAlert;
 			sourceTree = "<group>";
 		};
-		509963E71D0183A500F6012A /* PioAlertTests */ = {
+		94054425A23C5DE85DEFF2C9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				509963E81D0183A500F6012A /* PioAlertTests.swift */,
-				509963EA1D0183A500F6012A /* Info.plist */,
+				988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */,
+				CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */,
 			);
-			path = PioAlertTests;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		509963F21D0183A500F6012A /* PioAlertUITests */ = {
+		EE6F69B0BBC69D8118CF1242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				509963F31D0183A500F6012A /* PioAlertUITests.swift */,
-				509963F51D0183A500F6012A /* Info.plist */,
+				502848BB1D02499A00C60823 /* MapKit.framework */,
+				535360E772C86400789FB863 /* Pods_PioAlert.framework */,
 			);
-			path = PioAlertUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 509963F81D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlert" */;
 			buildPhases = (
+				517DB219A57B930906790CD5 /* [CP] Check Pods Manifest.lock */,
 				509963C81D0183A500F6012A /* Sources */,
 				509963C91D0183A500F6012A /* Frameworks */,
 				509963CA1D0183A500F6012A /* Resources */,
+				6411C7F4D5C23A6BFAAA86BE /* [CP] Embed Pods Frameworks */,
+				6C61855A55D5A0B54063938C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,42 +242,6 @@
 			productReference = 509963CC1D0183A500F6012A /* PioAlert.app */;
 			productType = "com.apple.product-type.application";
 		};
-		509963E31D0183A500F6012A /* PioAlertTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 509963FB1D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlertTests" */;
-			buildPhases = (
-				509963E01D0183A500F6012A /* Sources */,
-				509963E11D0183A500F6012A /* Frameworks */,
-				509963E21D0183A500F6012A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				509963E61D0183A500F6012A /* PBXTargetDependency */,
-			);
-			name = PioAlertTests;
-			productName = PioAlertTests;
-			productReference = 509963E41D0183A500F6012A /* PioAlertTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		509963EE1D0183A500F6012A /* PioAlertUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 509963FE1D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlertUITests" */;
-			buildPhases = (
-				509963EB1D0183A500F6012A /* Sources */,
-				509963EC1D0183A500F6012A /* Frameworks */,
-				509963ED1D0183A500F6012A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				509963F11D0183A500F6012A /* PBXTargetDependency */,
-			);
-			name = PioAlertUITests;
-			productName = PioAlertUITests;
-			productReference = 509963EF1D0183A500F6012A /* PioAlertUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,19 +249,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = LiveLife;
 				TargetAttributes = {
 					509963CB1D0183A500F6012A = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					509963E31D0183A500F6012A = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 509963CB1D0183A500F6012A;
-					};
-					509963EE1D0183A500F6012A = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 509963CB1D0183A500F6012A;
+						DevelopmentTeam = SUPP8Q77NM;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -224,8 +285,6 @@
 			projectRoot = "";
 			targets = (
 				509963CB1D0183A500F6012A /* PioAlert */,
-				509963E31D0183A500F6012A /* PioAlertTests */,
-				509963EE1D0183A500F6012A /* PioAlertUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,69 +295,111 @@
 			buildActionMask = 2147483647;
 			files = (
 				509963DE1D0183A500F6012A /* LaunchScreen.storyboard in Resources */,
+				506CF3EF1D1F15110052377C /* GoogleService-Info.plist in Resources */,
 				509963DB1D0183A500F6012A /* Assets.xcassets in Resources */,
+				50CDB9C01DCE62BF0002F2D5 /* PioHeader.xib in Resources */,
+				50688E631D6FA62E000BEB1B /* blip.caf in Resources */,
 				509963D91D0183A500F6012A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		509963E21D0183A500F6012A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509963ED1D0183A500F6012A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		517DB219A57B930906790CD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6411C7F4D5C23A6BFAAA86BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C61855A55D5A0B54063938C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		509963C81D0183A500F6012A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509963D21D0183A500F6012A /* RootViewController.swift in Sources */,
-				509963D61D0183A500F6012A /* ModelController.swift in Sources */,
-				509963D41D0183A500F6012A /* DataViewController.swift in Sources */,
+				506A0E121DAD620600F56CAA /* Cart.swift in Sources */,
+				502848BA1D02492400C60823 /* MapContentController.swift in Sources */,
+				506421AE1DC9FB41002C5FD1 /* ExtraInfoController.swift in Sources */,
+				506A0E101DAD5F7D00F56CAA /* CartsController.swift in Sources */,
+				506CF3F31D202F200052377C /* Category.swift in Sources */,
+				507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */,
+				508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */,
+				5086A9781D3D249900EF22C5 /* OptionsController.swift in Sources */,
+				508222011DD540B200C4A242 /* SearchController.swift in Sources */,
+				50365FA41D354A430064DFFE /* PromoDetailController.swift in Sources */,
+				508222031DD54AB700C4A242 /* Result.swift in Sources */,
+				504F218F1D7CDD1A00F34C7B /* ProductCellView.swift in Sources */,
+				506A0E141DAD84F700F56CAA /* CartController.swift in Sources */,
+				50365FA61D356A940064DFFE /* PromoAnnotation.swift in Sources */,
+				502848B31D0241C700C60823 /* MasterViewController.swift in Sources */,
+				50EBEC1F1D3E5C830008EB1A /* CouponDisplayController.swift in Sources */,
+				50E431E81DA6675D00E55947 /* PioNavigationController.swift in Sources */,
+				50DA257E1D7C960A00F423BF /* Company.swift in Sources */,
+				502848AF1D01F7D300C60823 /* WebApi.swift in Sources */,
+				500758141D68878E00051603 /* LocationController.swift in Sources */,
+				50EBEC1D1D3E4FBA0008EB1A /* UsedCouponController.swift in Sources */,
+				506CF3F11D202BC40052377C /* CategoriesController.swift in Sources */,
+				504F218D1D7CD8A500F34C7B /* Product.swift in Sources */,
+				506421AC1DC9F9FD002C5FD1 /* FormCell.swift in Sources */,
+				50365FAA1D35A4130064DFFE /* CouponController.swift in Sources */,
+				50EBEC211D3E69DF0008EB1A /* InfoController.swift in Sources */,
+				502848B81D02476B00C60823 /* ScrollingContentController.swift in Sources */,
+				50CDB9C21DCE63500002F2D5 /* PioHeader.swift in Sources */,
+				502085E81D2CEC0600E749EE /* NotificationsController.swift in Sources */,
+				502848B11D01F82600C60823 /* Promo.swift in Sources */,
 				509963D01D0183A500F6012A /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509963E01D0183A500F6012A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				509963E91D0183A500F6012A /* PioAlertTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509963EB1D0183A500F6012A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				509963F41D0183A500F6012A /* PioAlertUITests.swift in Sources */,
+				506FC5EA1DBDFE4900D564DF /* ShippingController.swift in Sources */,
+				505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */,
+				5086A9761D3D1ACB00EF22C5 /* LikeButton.swift in Sources */,
+				50DA257C1D7C762F00F423BF /* CompanyController.swift in Sources */,
+				506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */,
+				500EB29D1DA687E60012FAF8 /* ProductDetailController.swift in Sources */,
+				5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		509963E61D0183A500F6012A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 509963CB1D0183A500F6012A /* PioAlert */;
-			targetProxy = 509963E51D0183A500F6012A /* PBXContainerItemProxy */;
-		};
-		509963F11D0183A500F6012A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 509963CB1D0183A500F6012A /* PioAlert */;
-			targetProxy = 509963F01D0183A500F6012A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		509963D71D0183A500F6012A /* Main.storyboard */ = {
@@ -334,13 +435,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -379,8 +482,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -399,75 +504,60 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		509963F91D0183A500F6012A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/Max/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = PioAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		509963FA1D0183A500F6012A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/Max/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = PioAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		509963FC1D0183A500F6012A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PioAlertTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlertTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PioAlert.app/PioAlert";
-			};
-			name = Debug;
-		};
-		509963FD1D0183A500F6012A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PioAlertTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlertTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PioAlert.app/PioAlert";
-			};
-			name = Release;
-		};
-		509963FF1D0183A500F6012A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PioAlertUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlertUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PioAlert;
-			};
-			name = Debug;
-		};
-		509964001D0183A500F6012A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PioAlertUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlertUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PioAlert;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -490,22 +580,7 @@
 				509963FA1D0183A500F6012A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		509963FB1D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlertTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				509963FC1D0183A500F6012A /* Debug */,
-				509963FD1D0183A500F6012A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		509963FE1D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlertUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				509963FF1D0183A500F6012A /* Debug */,
-				509964001D0183A500F6012A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
