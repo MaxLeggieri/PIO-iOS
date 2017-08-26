@@ -8,14 +8,14 @@
 import UIKit
 
 class BackgroundTask {
-    private let application: UIApplication
-    private var identifier = UIBackgroundTaskInvalid
+    fileprivate let application: UIApplication
+    fileprivate var identifier = UIBackgroundTaskInvalid
     
     init(application: UIApplication) {
         self.application = application
     }
     
-    class func run(application: UIApplication, handler: (BackgroundTask) -> ()) {
+    class func run(_ application: UIApplication, handler: (BackgroundTask) -> ()) {
         // NOTE: The handler must call end() when it is done
         
         let backgroundTask = BackgroundTask(application: application)
@@ -24,9 +24,9 @@ class BackgroundTask {
     }
     
     func begin() {
-        self.identifier = application.beginBackgroundTaskWithExpirationHandler {
+        self.identifier = application.beginBackgroundTask (expirationHandler: {
             self.end()
-        }
+        })
     }
     
     func end() {

@@ -4,17 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>it_IT</string>
+	<key>CFBundleDisplayName</key>
+	<string>PIO</string>
 	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>MKDirectionsRequest</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>com.apple.maps.directionsrequest</string>
-			</array>
-		</dict>
-	</array>
+	<array/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,11 +15,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Pio</string>
+	<string>PIO</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>2.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -34,7 +27,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb246188275756267</string>
+				<string>fb1851533448411785</string>
 			</array>
 		</dict>
 		<dict>
@@ -55,11 +48,13 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>21</string>
+	<string>44</string>
 	<key>FacebookAppID</key>
-	<string>246188275756267</string>
+	<string>1851533448411785</string>
 	<key>FacebookDisplayName</key>
-	<string>Pio</string>
+	<string>PIO</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -71,14 +66,6 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MKDirectionsApplicationSupportedModes</key>
-	<array>
-		<string>MKDirectionsModeBike</string>
-		<string>MKDirectionsModeBus</string>
-		<string>MKDirectionsModeCar</string>
-		<string>MKDirectionsModePedestrian</string>
-		<string>MKDirectionsModeTrain</string>
-	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -106,16 +93,29 @@
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
+			<key>pioalert.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Usato per la scansione dei coupon</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Trattiamo i dati personali con il massimo della protezione possibile non condividendola con nessuno</string>
+	<string>Quest'app utilizza l'innovativa tecnologia iBeacon per mostrarti le migliori offerte quando sei all'interno di uno dei punti vendita convenzionati con PIO. I tuoi dati vengono trattati con la massima sicurezza e non sono mai condivisi con nessuno.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Trattiamo i dati personali con il massimo della protezione possibile non condividendola con nessuno</string>
+	<string>Quest'app utilizza l'innovativa tecnologia iBeacon per mostrarti le migliori offerte quando sei all'interno di uno dei punti vendita convenzionati con PIO. I tuoi dati vengono trattati con la massima sicurezza e non sono mai condivisi con nessuno.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lato-Medium.ttf</string>
+		<string>Lato-Bold.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
-		<string>external-accessory</string>
 		<string>fetch</string>
 		<string>location</string>
 		<string>remote-notification</string>
@@ -123,7 +123,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Virgi</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -134,5 +134,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

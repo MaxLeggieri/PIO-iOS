@@ -15,15 +15,16 @@ class CartItemViewCell: UITableViewCell {
     @IBOutlet weak var pPrice:UILabel!
     @IBOutlet weak var pTotal:UILabel!
     @IBOutlet weak var pQuantity:UILabel!
-    @IBOutlet weak var pChangeButton:UIButton!
+    @IBOutlet weak var pChangeButton:RoundedButton!
     @IBOutlet weak var pImage:UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

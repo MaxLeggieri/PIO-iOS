@@ -20,7 +20,7 @@ class Result {
         
         
         type = json["type"] as! String
-        id = json["id"]?.integerValue
+        id = json["id"]?.intValue
         title = json["title"] as! String
         image = json["img"] as! String
         desc = json["desc"] as! String

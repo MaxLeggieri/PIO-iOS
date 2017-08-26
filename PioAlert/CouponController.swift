@@ -15,13 +15,19 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var selectedPromo:Promo!
     @IBOutlet weak var messageLabel:UILabel!
     @IBOutlet weak var topBarView:UIView!
+    //@IBOutlet weak var topBarView:UIView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var presenting:UIViewController!
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    @IBAction func dismissCouponReader(sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -29,7 +35,7 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
-        let captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
         // Get an instance of the AVCaptureDeviceInput class using the previous device object.
         //var error:NSError?
@@ -58,7 +64,7 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         captureSession?.addOutput(captureMetadataOutput)
         
         // Set delegate and use the default dispatch queue to execute the call back
-        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
         
         
@@ -72,23 +78,23 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         captureSession?.startRunning()
         
         // Move the message label to the top view
-        view.bringSubviewToFront(messageLabel)
-        view.bringSubviewToFront(topBarView)
+        view.bringSubview(toFront: messageLabel)
+        view.bringSubview(toFront: topBarView)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
-        qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
+        qrCodeFrameView?.layer.borderColor = UIColor.green.cgColor
         qrCodeFrameView?.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView!)
-        view.bringSubviewToFront(qrCodeFrameView!)
+        view.bringSubview(toFront: qrCodeFrameView!)
         
     }
     
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
-            qrCodeFrameView?.frame = CGRectZero
+            qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR code is detected"
             return
         }
@@ -98,29 +104,29 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         if metadataObj.type == AVMetadataObjectTypeQRCode {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds
             
             if metadataObj.stringValue != nil {
                 
                 if metadataObj.stringValue == selectedPromo!.couponCode {
                     messageLabel.text = "Il tuo coupon è stato convalidato!"
-                    messageLabel.backgroundColor = UIColor.greenColor()
+                    messageLabel.backgroundColor = UIColor.green
                     
                     print(metadataObj.stringValue)
                     
                     let systemSoundID: SystemSoundID = 1111
                     AudioServicesPlaySystemSound (systemSoundID)
                     
-                    let vc = self.presentingViewController as! PromoDetailController
-                    vc.couponButton.enabled = false
+                    let vc = presenting as! PromoViewController
+                    vc.couponButton.isEnabled = false
                     vc.couponButton.alpha = 0.3
                     
                     WebApi.sharedInstance.useCoupon(metadataObj.stringValue, idad: selectedPromo.promoId)
                     selectedPromo.usedCoupon = 1
                 } else {
                     messageLabel.text = "Il tuo coupon non è corretto..."
-                    messageLabel.backgroundColor = UIColor.redColor()
+                    messageLabel.backgroundColor = UIColor.red
                     
                     print(metadataObj.stringValue)
                     
@@ -134,19 +140,14 @@ class CouponController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    func didSendApiMethod(method: String, result: String) {
+    func didSendApiMethod(_ method: String, result: String) {
         print(result)
     }
 
-    func errorSendingApiMethod(method: String, error: String) {
+    func errorSendingApiMethod(_ method: String, error: String) {
         print(error)
     }
-    @IBAction func dismiss(sender: UIButton) {
-        
-        
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

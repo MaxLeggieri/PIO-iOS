@@ -10,9 +10,9 @@ import UIKit
 
 public enum FormCellType : Int {
     
-    case Default
-    case Date
-    case Email
+    case `default`
+    case date
+    case email
     
 }
 
@@ -21,13 +21,13 @@ class FormCell: UITableViewCell {
     
     @IBOutlet weak var formTextField:UITextField!
     
-    var cellType = FormCellType.Default
+    var cellType = FormCellType.default
     var dataIsValid = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        formTextField.addTarget(self, action: #selector(textFieldChanged), forControlEvents: .EditingChanged)
+        formTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         /*
         if cellType == FormCell.FormCellTypeDate {
@@ -46,7 +46,7 @@ class FormCell: UITableViewCell {
         
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -58,9 +58,9 @@ class FormCell: UITableViewCell {
     
     func textFieldChanged() {
         
-        if cellType == .Date {
+        if cellType == .date {
             var final = [Character]()
-            let t = formTextField.text?.stringByReplacingOccurrencesOfString("/", withString: "")
+            let t = formTextField.text?.replacingOccurrences(of: "/", with: "")
             
             if lastT == t {
                 return
@@ -86,39 +86,39 @@ class FormCell: UITableViewCell {
             formTextField.text = String(final)
             
             if isValidDate(formTextField.text!) {
-                self.accessoryType = .Checkmark
+                self.accessoryType = .checkmark
                 dataIsValid = true
             } else {
-                self.accessoryType = .None
+                self.accessoryType = .none
                 dataIsValid = false
             }
             
         }
-        else if cellType == .Email {
+        else if cellType == .email {
             if isValidEmail(formTextField.text!) {
-                self.accessoryType = .Checkmark
+                self.accessoryType = .checkmark
                 dataIsValid = true
             } else {
-                self.accessoryType = .None
+                self.accessoryType = .none
                 dataIsValid = false
             }
         }
     }
     
-    func isValidEmail(testStr:String) -> Bool {
+    func isValidEmail(_ testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(testStr)
+        return emailTest.evaluate(with: testStr)
     }
     
-    func isValidDate(text: String) -> Bool {
+    func isValidDate(_ text: String) -> Bool {
         
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         
-        let date = formatter.dateFromString(text)
+        let date = formatter.date(from: text)
         
-        return date != nil && text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 10
+        return date != nil && text.lengthOfBytes(using: String.Encoding.utf8) == 10
         
     }
 }

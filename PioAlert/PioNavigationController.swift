@@ -10,15 +10,21 @@ import UIKit
 
 class PioNavigationController: UINavigationController {
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.tintColor = UIColor.whiteColor()
-        self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationBar.tintColor = UIColor.white
+        self.hidesBarsOnSwipe = false;
+        self.hidesBarsOnTap = false;
+        
+        
+        
+        //self.navigationItem.backBarButtonItem?.title = ""
         //self.navigationBar.barStyle = UIBarStyle.
         //self.navigationBar.barTintColor = Color.primaryDark
         /*

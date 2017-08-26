@@ -17,7 +17,9 @@ class ShippingController: UITableViewController {
     @IBOutlet weak var postalCode:UITextField!
     @IBOutlet weak var city:UITextField!
     @IBOutlet weak var area:UITextField!
+    @IBOutlet weak var phone:UITextField!
     @IBOutlet weak var confirmButton:UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +28,30 @@ class ShippingController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: #selector(ShippingController.cancelAction))
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(ShippingController.cancelAction))
         
-        self.navigationItem.title = "Modifica indirizzo"
+        //self.navigationItem.title = "Modifica indirizzo"
         
-        if NSUserDefaults.standardUserDefaults().boolForKey("gotShippingAddress") {
-            name.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingName")
-            surname.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingSurname")
-            address.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingAddress")
-            postalCode.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingPostalCode")
-            city.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingCity")
-            area.text = NSUserDefaults.standardUserDefaults().stringForKey("shippingArea")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let userAddress = WebApi.sharedInstance.shippingAddressGet()
+        
+        
+        
+        if let add = userAddress["address"] as? String {
+            name.text = userAddress["first_name"] as? String
+            surname.text = userAddress["last_name"] as? String
+            address.text = add
+            city.text = userAddress["town"] as? String
+            postalCode.text = userAddress["zip"] as? String
+            area.text = userAddress["province"] as? String
+            phone.text = userAddress["tel"] as? String
+        } else {
+            print("No data for user...")
         }
     }
 
@@ -45,90 +60,35 @@ class ShippingController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func cancelAction() {
-        
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func dismissShipping(sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func updateShippingAddress() {
         
-        NSUserDefaults.standardUserDefaults().setValue(name.text, forKey: "shippingName")
-        NSUserDefaults.standardUserDefaults().setValue(surname.text, forKey: "shippingSurname")
-        NSUserDefaults.standardUserDefaults().setValue(address.text, forKey: "shippingAddress")
-        NSUserDefaults.standardUserDefaults().setValue(postalCode.text, forKey: "shippingPostalCode")
-        NSUserDefaults.standardUserDefaults().setValue(city.text, forKey: "shippingCity")
-        NSUserDefaults.standardUserDefaults().setValue(area.text, forKey: "shippingArea")
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "gotShippingAddress")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        var data = [String:String]()
+        data["first_name"] = name.text
+        data["last_name"] = surname.text
+        data["address"] = address.text
+        data["town"] = city.text
+        data["zip"] = postalCode.text
+        data["province"] = area.text
+        data["tel"] = phone.text
+        
+        WebApi.sharedInstance.shippingAddressChange(data)
         
         
-        // ERRORE PioAlert.PromoDetailController...
+        self.dismiss(animated: true, completion: nil)
         
-        //let controller = self.presentingViewController as! CartController
-        //controller.checkShipping()
-        
-        self.navigationController?.popViewControllerAnimated(true)
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
-        
-        view.backgroundColor = UIColor.whiteColor()
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Lato-Medium", size: 14)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

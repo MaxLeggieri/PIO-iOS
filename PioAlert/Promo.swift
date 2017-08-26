@@ -30,6 +30,7 @@ class Promo {
     var distanceHuman:String!
     
     var youtube:String!
+    var youtubePreview:String!
     var link:String!
     var attachment:String!
     var couponCode:String!
@@ -37,6 +38,10 @@ class Promo {
     var liked:Bool!
     
     var cimage:String!
+    var companyAddress:String!
+    var companyEmail:String!
+    
+    var expirationHuman:String!
     
     init(pid: Int) {
         promoId = pid

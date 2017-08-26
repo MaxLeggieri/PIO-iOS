@@ -11,14 +11,25 @@ import FBSDKCoreKit
 import GoogleSignIn
 import GGLCore
 import CoreLocation
-
+import Braintree
+import UserNotifications
+//import GooglePlaces
 
 let PIO_NETWORK_UUID = "7ADF3A88-FCCF-4C68-B9E0-F12143E3FCDB"
 
 struct Color {
-    static let primary = UIColor(red: 0, green: 0.592, blue: 0.655, alpha: 1)
-    static let primaryDark = UIColor(red: 0, green: 0.474, blue: 0.529, alpha: 1)
-    static let accent = UIColor(red: 1.000, green: 0.922, blue: 0.231, alpha: 1)
+    
+    //[UIColor colorWithRed:0.024 green:0.165 blue:0.471 alpha:1.00]
+    
+    // [UIColor colorWithRed:1.000 green:0.875 blue:0.000 alpha:1.00]
+    
+    
+    //[UIColor colorWithRed:0.080 green:0.115 blue:0.147 alpha:1.00]
+    
+    static let primary = UIColor(red: 0.024, green: 0.165, blue: 0.471, alpha: 1)
+    static let superDark = UIColor(red: 0.0, green: 0.0, blue: 0.080, alpha: 1)
+    static let primaryDark = UIColor(red: 0.080, green: 0.115, blue: 0.147, alpha: 1)
+    static let accent = UIColor(red: 1.000, green: 0.875, blue: 0.000, alpha: 1)
     static let facebook = UIColor(red: 26/255, green: 102/255, blue: 177/255, alpha: 1)
 }
 
@@ -28,53 +39,86 @@ struct Login {
     static let GoogleLogged = 2
 }
 
+protocol NotificationDelegate {
+    func notificationReceived(ids: [String])
+}
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error == nil) {
+            // Perform any operations on signed in user here.
+            
+            
+            
+            WebApi.sharedInstance.sendGoogleUserData(user)
+            
+            PioUser.sharedUser.setUserName(user.profile.givenName)
+            PioUser.sharedUser.setuserImagePath(user.profile.imageURL(withDimension: 40).absoluteString)
+            
+            print("logged in with Google")
+            
+            
+        } else {
+            WebApi.sharedInstance.isLogged = false
+            print("\(error.localizedDescription)")
+        }
+    }
+
 
     var window: UIWindow?
-    let locationManager = CLLocationManager()
-    var currentLocation: CLLocation?
     
     var gotNotification = false
-    var notificationData:[NSObject: AnyObject]?
-    var masterViewController:MasterViewController?
+    var notificationData:[AnyHashable: Any]?
+    //var masterViewController:MasterViewController?
     
-    var beaconRegion:CLBeaconRegion!
     
-    var canMonitoringRegions = false
     
     var appIsInBackgroundOrKilled = false
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    var notificationDelegate:NotificationDelegate?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
         
         GIDSignIn.sharedInstance().delegate = self
         
-        if let notification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? [NSObject : AnyObject] {
+        if let notification = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [AnyHashable: Any] {
+            print("Notification open from tray...")
             gotNotification = true
             notificationData = notification
-        }
-        
-        
-        if (launchOptions?[UIApplicationLaunchOptionsLocationKey] as? [NSObject : AnyObject]) != nil {
-            locationManager.requestAlwaysAuthorization()
-            //startLocationManager()
-            //startMonitoringPioBeacons()
+            let idsString = notificationData!["idad"] as! String
+            notificationIDs = idsString.components(separatedBy: ",")
+            
             
         }
         
         
+        if (launchOptions?[UIApplicationLaunchOptionsKey.location] as? [AnyHashable: Any]) != nil {
+            
+            PioLocationManager.sharedManager.locationManager.requestAlwaysAuthorization()
+            
+            
+        }
         
+        
+        BTAppSwitch.setReturnURLScheme("com.livelife.PioAlert.payments")
+        
+        //GMSPlacesClient.provideAPIKey("AIzaSyBTq8Z4oTTLiC211VgP-ZZ9LbIDvfdc4rY")
         
         return true
     }
+    
+    
     
     /*
  
@@ -84,66 +128,101 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
  
     */
     
+    
+    var registeredForNotifications = false
     func registerForNotifications() {
-        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
-        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(pushNotificationSettings)
-        UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        
+        if registeredForNotifications {
+            return
+        }
+        
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+                (granted, error) in
+                print("Permission granted: \(granted)")
+                
+                guard granted else { return }
+                self.getNotificationSettings()
+            }
+        } else {
+            let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
+            let pushNotificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(pushNotificationSettings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
     }
     
+    func getNotificationSettings() {
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+                print("Notification settings: \(settings)")
+                guard settings.authorizationStatus == .authorized else { return }
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
     
-    
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+    var currentToken:String!
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
         
-        //print("DEVICE TOKEN = \(deviceToken)")
         
-        
-        let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
+        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
         var tokenString = ""
         
-        for i in 0..<deviceToken.length {
+        for i in 0..<deviceToken.count {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         
-        print("Device Token:", tokenString)
         
-        WebApi.sharedInstance.notificationToken = tokenString
-        WebApi.sharedInstance.canReceiveNotifications = true
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "canReceiveNotifications")
-        NSUserDefaults.standardUserDefaults().setValue(tokenString, forKey: "deviceToken")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        if tokenString != currentToken {
         
+            print("didRegisterForRemoteNotificationsWithDeviceToken:", tokenString)
         
-        WebApi.sharedInstance.sendDeviceToken()
+            WebApi.sharedInstance.notificationToken = tokenString
+            WebApi.sharedInstance.canReceiveNotifications = true
+            UserDefaults.standard.set(true, forKey: "canReceiveNotifications")
+            UserDefaults.standard.synchronize()
         
-        
-        
-        
+            WebApi.sharedInstance.tokenHandler()
+            currentToken = tokenString
+            registeredForNotifications = true
+        }
     }
     
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         
         print(error)
         WebApi.sharedInstance.canReceiveNotifications = false
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "canReceiveNotifications")
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "refusedNotifications")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(true, forKey: "canReceiveNotifications")
+        UserDefaults.standard.set(true, forKey: "refusedNotifications")
+        UserDefaults.standard.synchronize()
         
         WebApi.sharedInstance.deviceToken = "user_refused"
-        WebApi.sharedInstance.sendDeviceToken()
+        WebApi.sharedInstance.tokenHandler()
         
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         
         
-        print("didReceiveRemoteNotification...")
+        
         gotNotification = true
         notificationData = userInfo
+        let idsString = notificationData!["idad"] as! String
+        notificationIDs = idsString.components(separatedBy: ",")
         
+        if notificationDelegate != nil {
+            notificationDelegate?.notificationReceived(ids: notificationIDs)
+        }
+        print("didReceiveRemoteNotification... \(notificationIDs.count)")
         
-        if((self.masterViewController?.isViewLoaded()) != nil) {
+        /*
+        if((self.masterViewController?.isViewLoaded) != nil) {
             if gotNotification {
                 gotNotification = false
                 showAlert()
@@ -151,6 +230,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
                 //masterViewController!.scrollToNotified()
             }
         }
+        */
         
         
         
@@ -161,232 +241,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
     
     func showAlert() {
         
-        
-        
         WebApi.sharedInstance.sendNotificationConfirm(notificationData!)
-        print(notificationData)
+        print(notificationData ?? "no notificationData")
         
+        /*
         let title = notificationData!["aps"]!["alert"]!!["title"] as! String
         let body = notificationData!["aps"]!["alert"]!!["body"] as! String
         let idsString = notificationData!["idad"] as! String
-        notificationIDs = idsString.componentsSeparatedByString(",")
+        notificationIDs = idsString.components(separatedBy: ",")
         
         
-        let alertController = UIAlertController(title: title, message: body, preferredStyle: .Alert)
-        let actionShow = UIAlertAction(title: "Mostra", style: .Default, handler: {(alert: UIAlertAction!) in
+        let alertController = UIAlertController(title: title, message: body, preferredStyle: .alert)
+        let actionShow = UIAlertAction(title: "Mostra", style: .default, handler: {(alert: UIAlertAction!) in
         
             self.gotNotification = false
-            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            UIApplication.shared.applicationIconBadgeNumber = 0
             
             self.masterViewController?.showNotificationsAds()
-            
             
         })
         alertController.addAction(actionShow)
         
-        self.masterViewController!.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func startLocationManager() {
-        print("starting LOCATION MANAGER")
-        geocoding = true
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        //locationManager.requestWhenInUseAuthorization()
+        self.masterViewController!.present(alertController, animated: true, completion: nil)
         
-        //locationManager.requestWhenInUseAuthorization()
-        //locationManager.startUpdatingLocation()
+        gotNotification = false
+        */
     }
     
     
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        manager.stopUpdatingLocation()
-        print(error)
-    }
-    
-    var token: dispatch_once_t = 0
+    var token: Int = 0
     var chance = 3
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
-        
-        if location?.horizontalAccuracy > 200 {
-            //print("location accuracy: \(location?.horizontalAccuracy)")
-            return
-        }
-        
-        currentLocation = location
-        //print(currentLocation)
-            
-        
-        NSUserDefaults.standardUserDefaults().setDouble(location!.coordinate.latitude, forKey: "lat")
-        NSUserDefaults.standardUserDefaults().setDouble(location!.coordinate.longitude, forKey: "lng")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        dispatch_once(&token) {
-            print("registerForNotifications()...")
-            self.registerForNotifications()
-        }
-        
-        manager.stopUpdatingLocation()
-        geocodeLocation(location!)
-        
-        
-    }
-    
-    var bgTask:UIBackgroundTaskIdentifier?
-    
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("Did entered region for: "+region.identifier)
-    }
-    
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("Did exit region for: "+region.identifier)
-    }
-    /*
-    func launchBgBeaconRanging() {
-        bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithName("rangingBeacons", expirationHandler: {
-            
-            print("Background task end...")
-            
-        })
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            
-            self.locationManager.startRangingBeaconsInRegion(self.beaconRegion)
-            
-        })
-    }
-    */
     
     
-    
-    func sendBeaconNotification(body: String) {
-        let notification = UILocalNotification()
-        notification.alertBody = body
-        notification.alertAction = "Guarda l'offerta"
-        notification.fireDate = NSDate()
-        notification.soundName = "blip.caf"//UILocalNotificationDefaultSoundName
-        //notification.userInfo = ["title": "Benvenuto!", "UUID": PIO_NETWORK_UUID] // assign a unique identifier to the notification so that we can retrieve it later
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    }
-    
-    
-    
-    dynamic var lastCloserBeacon:CLBeacon!
-    
-    var beaconAlertOn = false
-    
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        
-        
-        
-        //print("Found beacons...")
-        
-        
-        let knownBeacons = beacons.filter{ ($0.proximity != CLProximity.Unknown) &&  ($0.proximity != CLProximity.Far) && ($0.accuracy <= 2.0) }
-        //let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Far }
-        
-        if knownBeacons.count == 0 {
-            return
-        }
-        
-        
-        
-        if knownBeacons.first!.proximityUUID.UUIDString == PIO_NETWORK_UUID {
-            
-            lastCloserBeacon = knownBeacons.first
-            /*
-            print("########## PIO BEACON ##########")
-            print("UUID: "+lastCloserBeacon.proximityUUID.UUIDString)
-            print("Accuracy: \(lastCloserBeacon.accuracy)")
-            print("RSSI: \(lastCloserBeacon.rssi)")
-            print("Proximity: "+getBeaconProximityString(lastCloserBeacon.proximity.rawValue))
-            */
-            print("Getting data for Company: "+lastCloserBeacon.major.stringValue+" Zone: "+lastCloserBeacon.minor.stringValue)
-            
-            print("\n")
-            
-            /*
-            var body = ""
-            switch lastCloserBeacon.minor.integerValue {
-            case 1:
-                body = "Benvenuto al camino! Freddo?"
-                break
-            case 2:
-                body = "Benvenuto in cucina. Non scuocere la pasta!"
-                break
-            case 3:
-                body = "Sei nel corridoio... Il bagno è più avanti a sinistra"
-                break
-            default:
-                break
-            }
-            
-            
-            if appIsInBackgroundOrKilled {
-                sendBeaconNotification(lastCloserBeacon, body: body)
-                
-                if self.bgTask != UIBackgroundTaskInvalid{
-                    UIApplication.sharedApplication().endBackgroundTask(
-                        self.bgTask!)
-                    self.bgTask = UIBackgroundTaskInvalid
-                }
-            } else {
-                let alertController = UIAlertController(title: "Ciao!", message: body, preferredStyle: .Alert)
-                let doneAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
-                    print("you have pressed OK button")
-                    self.beaconAlertOn = false
-                    
-                }
-                alertController.addAction(doneAction)
-                
-                if !beaconAlertOn {
-                    self.masterViewController!.presentViewController(alertController, animated: true, completion:nil)
-                    self.beaconAlertOn = true
-                }
-                
-            }
-            */
-            
-            
-        }
-        
-    }
-    
-    func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion) {
-        
-        
-        if state == CLRegionState.Inside {
-            print("locationManager didDetermineState INSIDE for "+region.identifier)
-        }
-        else if state == CLRegionState.Outside  {
-            print("locationManager didDetermineState OUTSIDE for "+region.identifier)
-        }
-        else {
-            print("locationManager didDetermineState OTHER for "+region.identifier)
-        }
-        
-    }
-    
-    func getBeaconProximityString(value: Int) -> String {
+    func getBeaconProximityString(_ value: Int) -> String {
         
         
         switch value {
-        case CLProximity.Far.rawValue:
+        case CLProximity.far.rawValue:
             return "Far"
             
-        case CLProximity.Near.rawValue:
+        case CLProximity.near.rawValue:
             return "Near"
             
-        case CLProximity.Immediate.rawValue:
+        case CLProximity.immediate.rawValue:
             return "Immediate"
             
-        case CLProximity.Unknown.rawValue:
+        case CLProximity.unknown.rawValue:
             return "Unknown"
             
         default:
@@ -396,9 +298,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
         
     }
     
+    /*
     var geocoding = false
-    
-    func geocodeLocation(location: CLLocation) {
+    func geocodeLocation(_ location: CLLocation) {
         CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
             print(location)
             
@@ -428,8 +330,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
                 //print("LOCATION: "+address)
                 
                 WebApi.sharedInstance.userAddress = address
-                NSUserDefaults.standardUserDefaults().setValue(address, forKey: "userAddress")
-                NSUserDefaults.standardUserDefaults().synchronize()
+                UserDefaults.standard.setValue(address, forKey: "userAddress")
+                UserDefaults.standard.synchronize()
                 
                 self.geocoding = false
                 
@@ -440,66 +342,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
             }
         });
     }
-    
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        switch status {
-        case .NotDetermined:
-            print("NotDetermined")
-            //locationManager.requestAlwaysAuthorization()
-            break
-        case .AuthorizedWhenInUse:
-            print("AuthorizedWhenInUse")
-            locationManager.startUpdatingLocation()
-            
-            startMonitoringPioBeacons()
-            
-            break
-        case .AuthorizedAlways:
-            print("AuthorizedAlways")
-            
-            locationManager.startUpdatingLocation()
-            
-            startMonitoringPioBeacons()
-            
-            
-            break
-        case .Restricted:
-            print("Restricted")
-            // restricted by e.g. parental controls. User can't enable Location Services
-            break
-        case .Denied:
-            print("Denied")
-            // user denied your app access to Location Services, but can grant access from Settings.app
-            break
-        }
-    }
+    */
     
     
-    func updateLocationAddress() {
-        geocoding = true
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-    }
     
-    
-    func startMonitoringPioBeacons() {
-        
-        if beaconRegion == nil {
-            beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: PIO_NETWORK_UUID)!, identifier: "PioNEAR")
-            
-            
-            beaconRegion.notifyEntryStateOnDisplay = true
-            beaconRegion.notifyOnEntry = true
-            beaconRegion.notifyOnExit = true
-            locationManager.startMonitoringForRegion(beaconRegion)
-            locationManager.startRangingBeaconsInRegion(beaconRegion)
-        }
-        
-        
-    }
-    
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
         /*
         var options: [String: AnyObject] = [UIApplicationOpenURLOptionsSourceApplicationKey:sourceApplication!,UIApplicationOpenURLOptionsAnnotationKey: annotation]
@@ -507,75 +354,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
         
         
         
-        if FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation) {
+        if FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) {
             return true
         }
-        else if GIDSignIn.sharedInstance().handleURL(url,sourceApplication:
+        else if GIDSignIn.sharedInstance().handle(url,sourceApplication:
             sourceApplication, annotation: annotation) {
             return true
         }
+        
+        if url.scheme?.localizedCaseInsensitiveCompare("com.livelife.PioAlert.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, sourceApplication: sourceApplication)
+        }
+        
+        print("sourceApplication: "+sourceApplication!+" url: "+url.absoluteString)
         
         
         return false
     }
     
-    
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
-        if (error == nil) {
-            // Perform any operations on signed in user here.
-            
-            
-            
-            WebApi.sharedInstance.sendGoogleUserData(user)
-            WebApi.sharedInstance.loggedWith = Login.GoogleLogged
-            
-            WebApi.sharedInstance.userName = user.profile.givenName
-            WebApi.sharedInstance.userImagePath = user.profile.imageURLWithDimension(40).absoluteString
-            
-            NSUserDefaults.standardUserDefaults().setValue(WebApi.sharedInstance.userName, forKey: "userName")
-            NSUserDefaults.standardUserDefaults().setValue(WebApi.sharedInstance.userImagePath, forKey: "userImagePath")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            NSUserDefaults.standardUserDefaults().setValue(WebApi.sharedInstance.loggedWith, forKey: "loggedWith")
-            print("logged in with Google")
-            
-            
-        } else {
-            WebApi.sharedInstance.isLogged = false
-            print("\(error.localizedDescription)")
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        
+        
+        // 1
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let url = userActivity.webpageURL,
+            let components =  URLComponents(url: url, resolvingAgainstBaseURL: true) else {
+                return false
         }
+        
+        print("continueUserActivity: "+components.path+" "+components.query!)
+        
+        
+        let queryComponents = components.query!.components(separatedBy: "&")
+        let idadComp = queryComponents[0].components(separatedBy: "=")
+        
+        let idad = idadComp[1]
+        
+        let promo = WebApi.sharedInstance.getAdById(idad)
+        
+        
+        
+        let storyboard = UIStoryboard(name: "Virgi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PromoViewController") as! PromoViewController
+        
+        vc.promo = promo
+        
+        Utility.sharedInstance.homeController.present(vc, animated: true, completion: nil)
+ 
+        
+        return false
+        
+        
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!) {
+    
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
+    
+    /*
+    func sign(signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!,
+                withError error: Error!{
         // Perform any operations when the user disconnects from app here.
         // ...
     }
+    */
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
         
         appIsInBackgroundOrKilled = true
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         appIsInBackgroundOrKilled = true
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
         FBSDKAppEvents.activateApp()
         
         appIsInBackgroundOrKilled = false
+        application.applicationIconBadgeNumber = 0;
         
         /*
         if((self.masterViewController?.isViewLoaded()) != nil) {
@@ -597,10 +468,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
         }
         */
         
+        if notificationDelegate != nil && gotNotification {
+            notificationDelegate?.notificationReceived(ids: notificationIDs)
+        }
+        
         
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
         appIsInBackgroundOrKilled = true

@@ -7,106 +7,179 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500758141D68878E00051603 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500758131D68878E00051603 /* LocationController.swift */; };
-		500EB29D1DA687E60012FAF8 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */; };
-		502085E81D2CEC0600E749EE /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502085E71D2CEC0600E749EE /* NotificationsController.swift */; };
+		501DCF6C1F200D5900214627 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DCF6B1F200D5900214627 /* MainMenuController.swift */; };
+		501DCF6E1F211B6500214627 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DCF6D1F211B6500214627 /* PromoViewController.swift */; };
 		5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026D3B91D2A6D1100B3F46D /* CatButton.swift */; };
+		502731BC1F1E163000A647F4 /* ShowcaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502731BB1F1E163000A647F4 /* ShowcaseController.swift */; };
+		502731BE1F1E912000A647F4 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502731BD1F1E912000A647F4 /* ShopController.swift */; };
+		502731C01F1EB26600A647F4 /* NotifiedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502731BF1F1EB26600A647F4 /* NotifiedController.swift */; };
 		502848AF1D01F7D300C60823 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848AE1D01F7D300C60823 /* WebApi.swift */; };
 		502848B11D01F82600C60823 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B01D01F82600C60823 /* Promo.swift */; };
-		502848B31D0241C700C60823 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B21D0241C700C60823 /* MasterViewController.swift */; };
-		502848B81D02476B00C60823 /* ScrollingContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B71D02476B00C60823 /* ScrollingContentController.swift */; };
-		502848BA1D02492400C60823 /* MapContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502848B91D02492400C60823 /* MapContentController.swift */; };
 		502848BC1D02499A00C60823 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502848BB1D02499A00C60823 /* MapKit.framework */; };
-		50365FA41D354A430064DFFE /* PromoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA31D354A430064DFFE /* PromoDetailController.swift */; };
+		502DB7191F2F6D6E00C1138D /* PioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502DB7181F2F6D6E00C1138D /* PioPlayer.swift */; };
+		502DB71B1F2F709800C1138D /* RankingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502DB71A1F2F709800C1138D /* RankingController.swift */; };
+		502DB71D1F2FA2C300C1138D /* AppInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502DB71C1F2FA2C300C1138D /* AppInfoController.swift */; };
+		502DB7201F2FA3BD00C1138D /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502DB71E1F2FA3BD00C1138D /* Lato-Medium.ttf */; };
+		502DB7211F2FA3BD00C1138D /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 502DB71F1F2FA3BD00C1138D /* Lato-Bold.ttf */; };
+		502DB7231F2FB1B700C1138D /* CGController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502DB7221F2FB1B700C1138D /* CGController.swift */; };
 		50365FA61D356A940064DFFE /* PromoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA51D356A940064DFFE /* PromoAnnotation.swift */; };
-		50365FAA1D35A4130064DFFE /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50365FA91D35A4130064DFFE /* CouponController.swift */; };
+		503B5EBF1F2C7D360019BADA /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B5EBE1F2C7D360019BADA /* ShopViewController.swift */; };
+		503B5EC11F2E47F80019BADA /* OrderAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503B5EC01F2E47F80019BADA /* OrderAllController.swift */; };
+		504F13261E857C7200EE1698 /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F13251E857C7200EE1698 /* CategoryCellView.swift */; };
+		504F132C1E8C6AA200EE1698 /* BirthdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F132B1E8C6AA200EE1698 /* BirthdateCell.swift */; };
 		504F218D1D7CD8A500F34C7B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F218C1D7CD8A500F34C7B /* Product.swift */; };
 		504F218F1D7CDD1A00F34C7B /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */; };
+		505B1A661E017D01009C9582 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B1A651E017D01009C9582 /* RoundedButton.swift */; };
 		505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */; };
 		506421AC1DC9F9FD002C5FD1 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506421AB1DC9F9FD002C5FD1 /* FormCell.swift */; };
-		506421AE1DC9FB41002C5FD1 /* ExtraInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */; };
-		50688E631D6FA62E000BEB1B /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 50688E621D6FA62E000BEB1B /* blip.caf */; };
-		506A0E101DAD5F7D00F56CAA /* CartsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */; };
 		506A0E121DAD620600F56CAA /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E111DAD620600F56CAA /* Cart.swift */; };
-		506A0E141DAD84F700F56CAA /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506A0E131DAD84F700F56CAA /* CartController.swift */; };
+		506B73BD1EBA7DEB006C1CEB /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B73BC1EBA7DEB006C1CEB /* MapTableViewCell.swift */; };
+		506B73BF1EBA7F45006C1CEB /* PromoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B73BE1EBA7F45006C1CEB /* PromoCollectionCell.swift */; };
 		506CF3EF1D1F15110052377C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 506CF3EE1D1F15110052377C /* GoogleService-Info.plist */; };
-		506CF3F11D202BC40052377C /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CF3F01D202BC40052377C /* CategoriesController.swift */; };
 		506CF3F31D202F200052377C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CF3F21D202F200052377C /* Category.swift */; };
 		506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506E97751D861C5B008C949E /* BackgroundTask.swift */; };
-		506FC5EA1DBDFE4900D564DF /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506FC5E91DBDFE4900D564DF /* ShippingController.swift */; };
+		5070B9621F3C615E007D176F /* PioPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070B9611F3C615E007D176F /* PioPlace.swift */; };
+		5070B9641F3C6A08007D176F /* PoiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070B9631F3C6A08007D176F /* PoiController.swift */; };
 		507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507AFA321DAE839E0066780B /* CartItemViewCell.swift */; };
-		508222011DD540B200C4A242 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222001DD540B200C4A242 /* SearchController.swift */; };
+		507F6BEF1F2A40D200DB93C2 /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506FC5E91DBDFE4900D564DF /* ShippingController.swift */; };
+		507F6BF11F2A4E4200DB93C2 /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F6BF01F2A4E4200DB93C2 /* RoundBorderView.swift */; };
+		507F6BF31F2A566D00DB93C2 /* ModifyCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F6BF21F2A566D00DB93C2 /* ModifyCartController.swift */; };
+		507F6BF51F2B9BBF00DB93C2 /* CartAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507F6BF41F2B9BBF00DB93C2 /* CartAllController.swift */; };
 		508222031DD54AB700C4A242 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222021DD54AB700C4A242 /* Result.swift */; };
 		508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508222061DD9DE0C00C4A242 /* ResultCell.swift */; };
 		5086A9761D3D1ACB00EF22C5 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */; };
-		5086A9781D3D249900EF22C5 /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5086A9771D3D249900EF22C5 /* OptionsController.swift */; };
+		5087E87C1E8F085E00783F84 /* Virgi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5087E87B1E8F085E00783F84 /* Virgi.storyboard */; };
+		5091A9391EBC690C0044B878 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091A9381EBC690C0044B878 /* ProductCollectionViewCell.swift */; };
+		5091A93D1EBD04E00044B878 /* CompanyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091A93C1EBD04E00044B878 /* CompanyCollectionViewCell.swift */; };
+		5097063C1F130B1000CA7C04 /* PromoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097063B1F130B0F00CA7C04 /* PromoController.swift */; };
+		5097063E1F1389DF00CA7C04 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097063D1F1389DF00CA7C04 /* CatCell.swift */; };
 		509963D01D0183A500F6012A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963CF1D0183A500F6012A /* AppDelegate.swift */; };
-		509963D91D0183A500F6012A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509963D71D0183A500F6012A /* Main.storyboard */; };
 		509963DB1D0183A500F6012A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509963DA1D0183A500F6012A /* Assets.xcassets */; };
-		509963DE1D0183A500F6012A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509963DC1D0183A500F6012A /* LaunchScreen.storyboard */; };
-		50CDB9C01DCE62BF0002F2D5 /* PioHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */; };
-		50CDB9C21DCE63500002F2D5 /* PioHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CDB9C11DCE63500002F2D5 /* PioHeader.swift */; };
-		50DA257C1D7C762F00F423BF /* CompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DA257B1D7C762F00F423BF /* CompanyController.swift */; };
+		50A585991EBBB48B00E2FEB9 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A585981EBBB48B00E2FEB9 /* CompanyTableViewCell.swift */; };
+		50A709721EB0920200828CF3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709711EB0920200828CF3 /* LoginController.swift */; };
+		50A709751EB0B65200828CF3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709741EB0B65200828CF3 /* ProfileController.swift */; };
+		50A709771EB0B73400828CF3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709761EB0B73400828CF3 /* CategoryCell.swift */; };
+		50A709791EB123E900828CF3 /* ConsentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709781EB123E900828CF3 /* ConsentController.swift */; };
+		50A7097D1EB1271000828CF3 /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7097C1EB1271000828CF3 /* EmailCell.swift */; };
+		50A7097F1EB1283900828CF3 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A7097E1EB1283900828CF3 /* BirthdayCell.swift */; };
+		50A709811EB12A4600828CF3 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709801EB12A4600828CF3 /* JobCell.swift */; };
+		50B08F9B1E46A35E00FC2AEB /* blip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 50B08F9A1E46A35E00FC2AEB /* blip.caf */; };
+		50B7D4151EA91EFC00048EA5 /* PioUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D4141EA91EFC00048EA5 /* PioUser.swift */; };
+		50B7D4191EA92A9100048EA5 /* PioAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D4181EA92A9100048EA5 /* PioAnnotation.swift */; };
+		50B7D41B1EA9333000048EA5 /* PioLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */; };
+		50CC71F11EA649AB0025866C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC71F01EA649AB0025866C /* HomeController.swift */; };
+		50CC71F71EA64DA80025866C /* Virgi.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CC71F61EA64DA80025866C /* Virgi.xcassets */; };
+		50CE74541F44DAAB00956D61 /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CE74531F44DAAB00956D61 /* CouponController.swift */; };
+		50CFDCF21EB4AFF700D8ED13 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CFDCF11EB4AFF700D8ED13 /* SearchResult.swift */; };
+		50D7F8B21EB1DD570007B8E0 /* SexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7F8B11EB1DD570007B8E0 /* SexCell.swift */; };
+		50D7F8B41EB1DF390007B8E0 /* PrivacyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7F8B31EB1DF390007B8E0 /* PrivacyCell.swift */; };
+		50D7F8B61EB1FBE00007B8E0 /* IPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D7F8B51EB1FBE00007B8E0 /* IPController.swift */; };
+		50D8170E1EC4815000B3BE75 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D8170D1EC4815000B3BE75 /* SearchResultController.swift */; };
 		50DA257E1D7C960A00F423BF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DA257D1D7C960A00F423BF /* Company.swift */; };
+		50DE063B1F26AD40002A997B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE063A1F26AD40002A997B /* ProductViewController.swift */; };
 		50E431E81DA6675D00E55947 /* PioNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E431E71DA6675D00E55947 /* PioNavigationController.swift */; };
-		50EBEC1D1D3E4FBA0008EB1A /* UsedCouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */; };
-		50EBEC1F1D3E5C830008EB1A /* CouponDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */; };
-		50EBEC211D3E69DF0008EB1A /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBEC201D3E69DF0008EB1A /* InfoController.swift */; };
-		6F8E4A79711A3EA2CF2A2FF7 /* Pods_PioAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535360E772C86400789FB863 /* Pods_PioAlert.framework */; };
+		50EFA94C1E0A808E00E726C1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFA94B1E0A808E00E726C1 /* Utility.swift */; };
+		50EFA94E1E0BF0BB00E726C1 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EFA94D1E0BF0BB00E726C1 /* Order.swift */; };
+		50F0007A1F48A720008D4C97 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F000791F48A720008D4C97 /* ARViewController.swift */; };
+		50F0007C1F48A75E008D4C97 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F0007B1F48A75E008D4C97 /* SceneKit.framework */; };
+		50F23ADE1E156DA900DFD45F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F23ADD1E156DA900DFD45F /* Location.swift */; };
+		50F23AE21E1574AB00DFD45F /* CompanyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F23AE11E1574AB00DFD45F /* CompanyViewCell.swift */; };
+		50FECA861F27A864002D21C4 /* ImageFullscreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BAD391E09FD4800570AD2 /* ImageFullscreenController.swift */; };
+		50FECA871F28BE97002D21C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509963DC1D0183A500F6012A /* LaunchScreen.storyboard */; };
+		50FECA8D1F28C244002D21C4 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FECA8C1F28C244002D21C4 /* CartCell.swift */; };
+		50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FECA8E1F28C40C002D21C4 /* CartViewController.swift */; };
+		D948CC0F315CF8441E977E8F /* Pods_PioAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF51E95841EB289F0AB2CC66 /* Pods_PioAlert.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		500758131D68878E00051603 /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
-		500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
-		502085E71D2CEC0600E749EE /* NotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.debug.xcconfig"; sourceTree = "<group>"; };
+		15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.release.xcconfig"; sourceTree = "<group>"; };
+		500216E51E3FF83500D51F68 /* PioAlert.prod.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PioAlert.prod.entitlements; sourceTree = "<group>"; };
+		501DCF6B1F200D5900214627 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		501DCF6D1F211B6500214627 /* PromoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		5026D3B91D2A6D1100B3F46D /* CatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatButton.swift; sourceTree = "<group>"; };
+		502731BB1F1E163000A647F4 /* ShowcaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowcaseController.swift; sourceTree = "<group>"; };
+		502731BD1F1E912000A647F4 /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		502731BF1F1EB26600A647F4 /* NotifiedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifiedController.swift; sourceTree = "<group>"; };
 		502848AE1D01F7D300C60823 /* WebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		502848B01D01F82600C60823 /* Promo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
-		502848B21D0241C700C60823 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		502848B71D02476B00C60823 /* ScrollingContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingContentController.swift; sourceTree = "<group>"; };
-		502848B91D02492400C60823 /* MapContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContentController.swift; sourceTree = "<group>"; };
 		502848BB1D02499A00C60823 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		50365FA31D354A430064DFFE /* PromoDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoDetailController.swift; sourceTree = "<group>"; };
+		502DB7181F2F6D6E00C1138D /* PioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioPlayer.swift; sourceTree = "<group>"; };
+		502DB71A1F2F709800C1138D /* RankingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingController.swift; sourceTree = "<group>"; };
+		502DB71C1F2FA2C300C1138D /* AppInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoController.swift; sourceTree = "<group>"; };
+		502DB71E1F2FA3BD00C1138D /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		502DB71F1F2FA3BD00C1138D /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		502DB7221F2FB1B700C1138D /* CGController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGController.swift; sourceTree = "<group>"; };
 		50365FA51D356A940064DFFE /* PromoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoAnnotation.swift; sourceTree = "<group>"; };
-		50365FA91D35A4130064DFFE /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		503B5EBE1F2C7D360019BADA /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		503B5EC01F2E47F80019BADA /* OrderAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderAllController.swift; sourceTree = "<group>"; };
+		504F13251E857C7200EE1698 /* CategoryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
+		504F132B1E8C6AA200EE1698 /* BirthdateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdateCell.swift; sourceTree = "<group>"; };
 		504F218C1D7CD8A500F34C7B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		505B1A651E017D01009C9582 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewCell.swift; sourceTree = "<group>"; };
+		505BAD391E09FD4800570AD2 /* ImageFullscreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFullscreenController.swift; sourceTree = "<group>"; };
 		506421AB1DC9F9FD002C5FD1 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
-		506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfoController.swift; sourceTree = "<group>"; };
-		50688E621D6FA62E000BEB1B /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
-		506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartsController.swift; sourceTree = "<group>"; };
 		506A0E111DAD620600F56CAA /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		506A0E131DAD84F700F56CAA /* CartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		506B73BC1EBA7DEB006C1CEB /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		506B73BE1EBA7F45006C1CEB /* PromoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCollectionCell.swift; sourceTree = "<group>"; };
 		506CF3EE1D1F15110052377C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		506CF3F01D202BC40052377C /* CategoriesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesController.swift; sourceTree = "<group>"; };
 		506CF3F21D202F200052377C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		506E97751D861C5B008C949E /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		506FC5E91DBDFE4900D564DF /* ShippingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingController.swift; sourceTree = "<group>"; };
+		5070B9611F3C615E007D176F /* PioPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioPlace.swift; sourceTree = "<group>"; };
+		5070B9631F3C6A08007D176F /* PoiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiController.swift; sourceTree = "<group>"; };
 		507AFA321DAE839E0066780B /* CartItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemViewCell.swift; sourceTree = "<group>"; };
-		508222001DD540B200C4A242 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		507F6BF01F2A4E4200DB93C2 /* RoundBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
+		507F6BF21F2A566D00DB93C2 /* ModifyCartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyCartController.swift; sourceTree = "<group>"; };
+		507F6BF41F2B9BBF00DB93C2 /* CartAllController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartAllController.swift; sourceTree = "<group>"; };
 		508222021DD54AB700C4A242 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		508222061DD9DE0C00C4A242 /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
-		5086A9771D3D249900EF22C5 /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
+		5087E87B1E8F085E00783F84 /* Virgi.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Virgi.storyboard; sourceTree = "<group>"; };
+		5091A9381EBC690C0044B878 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		5091A93C1EBD04E00044B878 /* CompanyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5097063B1F130B0F00CA7C04 /* PromoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoController.swift; sourceTree = "<group>"; };
+		5097063D1F1389DF00CA7C04 /* CatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
 		509963CC1D0183A500F6012A /* PioAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PioAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509963CF1D0183A500F6012A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		509963D81D0183A500F6012A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		509963DA1D0183A500F6012A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509963DD1D0183A500F6012A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		509963DF1D0183A500F6012A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A585981EBBB48B00E2FEB9 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		50A709711EB0920200828CF3 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		50A709741EB0B65200828CF3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		50A709761EB0B73400828CF3 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		50A709781EB123E900828CF3 /* ConsentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentController.swift; sourceTree = "<group>"; };
+		50A7097C1EB1271000828CF3 /* EmailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
+		50A7097E1EB1283900828CF3 /* BirthdayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
+		50A709801EB12A4600828CF3 /* JobCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		50B08F9A1E46A35E00FC2AEB /* blip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blip.caf; sourceTree = "<group>"; };
+		50B7D4141EA91EFC00048EA5 /* PioUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioUser.swift; sourceTree = "<group>"; };
+		50B7D4181EA92A9100048EA5 /* PioAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioAnnotation.swift; sourceTree = "<group>"; };
+		50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioLocationManager.swift; sourceTree = "<group>"; };
 		50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PioAlert.entitlements; sourceTree = "<group>"; };
-		50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PioHeader.xib; sourceTree = "<group>"; };
-		50CDB9C11DCE63500002F2D5 /* PioHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioHeader.swift; sourceTree = "<group>"; };
-		50DA257B1D7C762F00F423BF /* CompanyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyController.swift; sourceTree = "<group>"; };
+		50CC71F01EA649AB0025866C /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		50CC71F61EA64DA80025866C /* Virgi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Virgi.xcassets; sourceTree = "<group>"; };
+		50CE74531F44DAAB00956D61 /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		50CFDCF11EB4AFF700D8ED13 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		50D7F8B11EB1DD570007B8E0 /* SexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexCell.swift; sourceTree = "<group>"; };
+		50D7F8B31EB1DF390007B8E0 /* PrivacyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyCell.swift; sourceTree = "<group>"; };
+		50D7F8B51EB1FBE00007B8E0 /* IPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPController.swift; sourceTree = "<group>"; };
+		50D8170D1EC4815000B3BE75 /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 		50DA257D1D7C960A00F423BF /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		50DE063A1F26AD40002A997B /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		50E431E71DA6675D00E55947 /* PioNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioNavigationController.swift; sourceTree = "<group>"; };
-		50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsedCouponController.swift; sourceTree = "<group>"; };
-		50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDisplayController.swift; sourceTree = "<group>"; };
-		50EBEC201D3E69DF0008EB1A /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		535360E772C86400789FB863 /* Pods_PioAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PioAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.debug.xcconfig"; sourceTree = "<group>"; };
-		CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.release.xcconfig"; sourceTree = "<group>"; };
+		50EFA94B1E0A808E00E726C1 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		50EFA94D1E0BF0BB00E726C1 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		50F000791F48A720008D4C97 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		50F0007B1F48A75E008D4C97 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		50F23ADD1E156DA900DFD45F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		50F23AE11E1574AB00DFD45F /* CompanyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewCell.swift; sourceTree = "<group>"; };
+		50FECA8C1F28C244002D21C4 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		50FECA8E1F28C40C002D21C4 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		FF51E95841EB289F0AB2CC66 /* Pods_PioAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PioAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +187,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F0007C1F48A75E008D4C97 /* SceneKit.framework in Frameworks */,
 				502848BC1D02499A00C60823 /* MapKit.framework in Frameworks */,
-				6F8E4A79711A3EA2CF2A2FF7 /* Pods_PioAlert.framework in Frameworks */,
+				D948CC0F315CF8441E977E8F /* Pods_PioAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,24 +199,35 @@
 		502848B41D02421700C60823 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				50688E621D6FA62E000BEB1B /* blip.caf */,
-				502848B01D01F82600C60823 /* Promo.swift */,
-				505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */,
-				506421AB1DC9F9FD002C5FD1 /* FormCell.swift */,
-				504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */,
-				502848AE1D01F7D300C60823 /* WebApi.swift */,
-				506CF3F21D202F200052377C /* Category.swift */,
-				5026D3B91D2A6D1100B3F46D /* CatButton.swift */,
-				50365FA51D356A940064DFFE /* PromoAnnotation.swift */,
-				5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */,
-				50DA257D1D7C960A00F423BF /* Company.swift */,
-				504F218C1D7CD8A500F34C7B /* Product.swift */,
 				506E97751D861C5B008C949E /* BackgroundTask.swift */,
-				50E431E71DA6675D00E55947 /* PioNavigationController.swift */,
+				504F132B1E8C6AA200EE1698 /* BirthdateCell.swift */,
+				50B08F9A1E46A35E00FC2AEB /* blip.caf */,
 				506A0E111DAD620600F56CAA /* Cart.swift */,
 				507AFA321DAE839E0066780B /* CartItemViewCell.swift */,
+				5026D3B91D2A6D1100B3F46D /* CatButton.swift */,
+				506CF3F21D202F200052377C /* Category.swift */,
+				504F13251E857C7200EE1698 /* CategoryCellView.swift */,
+				50DA257D1D7C960A00F423BF /* Company.swift */,
+				50F23AE11E1574AB00DFD45F /* CompanyViewCell.swift */,
+				506421AB1DC9F9FD002C5FD1 /* FormCell.swift */,
+				5086A9751D3D1ACB00EF22C5 /* LikeButton.swift */,
+				50F23ADD1E156DA900DFD45F /* Location.swift */,
+				50EFA94D1E0BF0BB00E726C1 /* Order.swift */,
+				50E431E71DA6675D00E55947 /* PioNavigationController.swift */,
+				504F218C1D7CD8A500F34C7B /* Product.swift */,
+				504F218E1D7CDD1A00F34C7B /* ProductCellView.swift */,
+				502848B01D01F82600C60823 /* Promo.swift */,
+				50365FA51D356A940064DFFE /* PromoAnnotation.swift */,
+				505B4B851D0359D500BAE9A8 /* PromoViewCell.swift */,
 				508222021DD54AB700C4A242 /* Result.swift */,
 				508222061DD9DE0C00C4A242 /* ResultCell.swift */,
+				505B1A651E017D01009C9582 /* RoundedButton.swift */,
+				50EFA94B1E0A808E00E726C1 /* Utility.swift */,
+				502848AE1D01F7D300C60823 /* WebApi.swift */,
+				50B7D4181EA92A9100048EA5 /* PioAnnotation.swift */,
+				507F6BF01F2A4E4200DB93C2 /* RoundBorderView.swift */,
+				502DB7181F2F6D6E00C1138D /* PioPlayer.swift */,
+				5070B9611F3C615E007D176F /* PioPlace.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -152,8 +237,8 @@
 			children = (
 				509963CE1D0183A500F6012A /* PioAlert */,
 				509963CD1D0183A500F6012A /* Products */,
-				94054425A23C5DE85DEFF2C9 /* Pods */,
 				EE6F69B0BBC69D8118CF1242 /* Frameworks */,
+				92FF8EF70ACED408BEA2E31A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,44 +253,85 @@
 		509963CE1D0183A500F6012A /* PioAlert */ = {
 			isa = PBXGroup;
 			children = (
-				50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */,
-				509963CF1D0183A500F6012A /* AppDelegate.swift */,
-				502848B21D0241C700C60823 /* MasterViewController.swift */,
-				506421AD1DC9FB41002C5FD1 /* ExtraInfoController.swift */,
-				508222001DD540B200C4A242 /* SearchController.swift */,
-				506CF3F01D202BC40052377C /* CategoriesController.swift */,
-				502085E71D2CEC0600E749EE /* NotificationsController.swift */,
-				502848B71D02476B00C60823 /* ScrollingContentController.swift */,
-				50365FA31D354A430064DFFE /* PromoDetailController.swift */,
-				50365FA91D35A4130064DFFE /* CouponController.swift */,
-				50DA257B1D7C762F00F423BF /* CompanyController.swift */,
-				500EB29C1DA687E60012FAF8 /* ProductDetailController.swift */,
-				502848B91D02492400C60823 /* MapContentController.swift */,
-				5086A9771D3D249900EF22C5 /* OptionsController.swift */,
-				50EBEC1C1D3E4FBA0008EB1A /* UsedCouponController.swift */,
-				50EBEC1E1D3E5C830008EB1A /* CouponDisplayController.swift */,
-				500758131D68878E00051603 /* LocationController.swift */,
-				506A0E131DAD84F700F56CAA /* CartController.swift */,
-				506A0E0F1DAD5F7D00F56CAA /* CartsController.swift */,
-				50EBEC201D3E69DF0008EB1A /* InfoController.swift */,
-				506FC5E91DBDFE4900D564DF /* ShippingController.swift */,
-				50CDB9C11DCE63500002F2D5 /* PioHeader.swift */,
-				50CDB9BF1DCE62BF0002F2D5 /* PioHeader.xib */,
-				509963D71D0183A500F6012A /* Main.storyboard */,
+				50A709731EB0B61B00828CF3 /* Virgi */,
+				50CC71EB1EA648140025866C /* Fonts */,
 				509963DA1D0183A500F6012A /* Assets.xcassets */,
-				509963DC1D0183A500F6012A /* LaunchScreen.storyboard */,
-				509963DF1D0183A500F6012A /* Info.plist */,
 				506CF3EE1D1F15110052377C /* GoogleService-Info.plist */,
+				509963DF1D0183A500F6012A /* Info.plist */,
+				509963DC1D0183A500F6012A /* LaunchScreen.storyboard */,
+				50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */,
+				500216E51E3FF83500D51F68 /* PioAlert.prod.entitlements */,
 				502848B41D02421700C60823 /* Utility */,
 			);
 			path = PioAlert;
 			sourceTree = "<group>";
 		};
-		94054425A23C5DE85DEFF2C9 /* Pods */ = {
+		50A709731EB0B61B00828CF3 /* Virgi */ = {
 			isa = PBXGroup;
 			children = (
-				988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */,
-				CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */,
+				509963CF1D0183A500F6012A /* AppDelegate.swift */,
+				502DB71C1F2FA2C300C1138D /* AppInfoController.swift */,
+				50A7097E1EB1283900828CF3 /* BirthdayCell.swift */,
+				507F6BF41F2B9BBF00DB93C2 /* CartAllController.swift */,
+				50FECA8C1F28C244002D21C4 /* CartCell.swift */,
+				50FECA8E1F28C40C002D21C4 /* CartViewController.swift */,
+				5097063D1F1389DF00CA7C04 /* CatCell.swift */,
+				50A709761EB0B73400828CF3 /* CategoryCell.swift */,
+				502DB7221F2FB1B700C1138D /* CGController.swift */,
+				5091A93C1EBD04E00044B878 /* CompanyCollectionViewCell.swift */,
+				50A585981EBBB48B00E2FEB9 /* CompanyTableViewCell.swift */,
+				50A709781EB123E900828CF3 /* ConsentController.swift */,
+				50CE74531F44DAAB00956D61 /* CouponController.swift */,
+				50A7097C1EB1271000828CF3 /* EmailCell.swift */,
+				50CC71F01EA649AB0025866C /* HomeController.swift */,
+				505BAD391E09FD4800570AD2 /* ImageFullscreenController.swift */,
+				50D7F8B51EB1FBE00007B8E0 /* IPController.swift */,
+				50A709801EB12A4600828CF3 /* JobCell.swift */,
+				50A709711EB0920200828CF3 /* LoginController.swift */,
+				501DCF6B1F200D5900214627 /* MainMenuController.swift */,
+				506B73BC1EBA7DEB006C1CEB /* MapTableViewCell.swift */,
+				507F6BF21F2A566D00DB93C2 /* ModifyCartController.swift */,
+				502731BF1F1EB26600A647F4 /* NotifiedController.swift */,
+				503B5EC01F2E47F80019BADA /* OrderAllController.swift */,
+				50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */,
+				50B7D4141EA91EFC00048EA5 /* PioUser.swift */,
+				5070B9631F3C6A08007D176F /* PoiController.swift */,
+				50D7F8B31EB1DF390007B8E0 /* PrivacyCell.swift */,
+				5091A9381EBC690C0044B878 /* ProductCollectionViewCell.swift */,
+				50DE063A1F26AD40002A997B /* ProductViewController.swift */,
+				50A709741EB0B65200828CF3 /* ProfileController.swift */,
+				506B73BE1EBA7F45006C1CEB /* PromoCollectionCell.swift */,
+				5097063B1F130B0F00CA7C04 /* PromoController.swift */,
+				501DCF6D1F211B6500214627 /* PromoViewController.swift */,
+				502DB71A1F2F709800C1138D /* RankingController.swift */,
+				50CFDCF11EB4AFF700D8ED13 /* SearchResult.swift */,
+				50D8170D1EC4815000B3BE75 /* SearchResultController.swift */,
+				50D7F8B11EB1DD570007B8E0 /* SexCell.swift */,
+				506FC5E91DBDFE4900D564DF /* ShippingController.swift */,
+				502731BD1F1E912000A647F4 /* ShopController.swift */,
+				503B5EBE1F2C7D360019BADA /* ShopViewController.swift */,
+				502731BB1F1E163000A647F4 /* ShowcaseController.swift */,
+				5087E87B1E8F085E00783F84 /* Virgi.storyboard */,
+				50CC71F61EA64DA80025866C /* Virgi.xcassets */,
+				50F000791F48A720008D4C97 /* ARViewController.swift */,
+			);
+			name = Virgi;
+			sourceTree = "<group>";
+		};
+		50CC71EB1EA648140025866C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				502DB71E1F2FA3BD00C1138D /* Lato-Medium.ttf */,
+				502DB71F1F2FA3BD00C1138D /* Lato-Bold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		92FF8EF70ACED408BEA2E31A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */,
+				15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -213,8 +339,9 @@
 		EE6F69B0BBC69D8118CF1242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50F0007B1F48A75E008D4C97 /* SceneKit.framework */,
 				502848BB1D02499A00C60823 /* MapKit.framework */,
-				535360E772C86400789FB863 /* Pods_PioAlert.framework */,
+				FF51E95841EB289F0AB2CC66 /* Pods_PioAlert.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,12 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 509963F81D0183A500F6012A /* Build configuration list for PBXNativeTarget "PioAlert" */;
 			buildPhases = (
-				517DB219A57B930906790CD5 /* [CP] Check Pods Manifest.lock */,
+				62D188FD3A75D892430E2631 /* [CP] Check Pods Manifest.lock */,
 				509963C81D0183A500F6012A /* Sources */,
 				509963C91D0183A500F6012A /* Frameworks */,
 				509963CA1D0183A500F6012A /* Resources */,
-				6411C7F4D5C23A6BFAAA86BE /* [CP] Embed Pods Frameworks */,
-				6C61855A55D5A0B54063938C /* [CP] Copy Pods Resources */,
+				0B8C33A49D562D609F6D10B9 /* [CP] Embed Pods Frameworks */,
+				1EB2E01BC301BAAE2BF5F6B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,22 +376,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = LiveLife;
 				TargetAttributes = {
 					509963CB1D0183A500F6012A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SUPP8Q77NM;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
 						};
@@ -294,34 +424,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509963DE1D0183A500F6012A /* LaunchScreen.storyboard in Resources */,
+				50FECA871F28BE97002D21C4 /* LaunchScreen.storyboard in Resources */,
+				502DB7211F2FA3BD00C1138D /* Lato-Bold.ttf in Resources */,
+				5087E87C1E8F085E00783F84 /* Virgi.storyboard in Resources */,
+				50CC71F71EA64DA80025866C /* Virgi.xcassets in Resources */,
 				506CF3EF1D1F15110052377C /* GoogleService-Info.plist in Resources */,
+				502DB7201F2FA3BD00C1138D /* Lato-Medium.ttf in Resources */,
 				509963DB1D0183A500F6012A /* Assets.xcassets in Resources */,
-				50CDB9C01DCE62BF0002F2D5 /* PioHeader.xib in Resources */,
-				50688E631D6FA62E000BEB1B /* blip.caf in Resources */,
-				509963D91D0183A500F6012A /* Main.storyboard in Resources */,
+				50B08F9B1E46A35E00FC2AEB /* blip.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		517DB219A57B930906790CD5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6411C7F4D5C23A6BFAAA86BE /* [CP] Embed Pods Frameworks */ = {
+		0B8C33A49D562D609F6D10B9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,7 +453,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C61855A55D5A0B54063938C /* [CP] Copy Pods Resources */ = {
+		1EB2E01BC301BAAE2BF5F6B5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,6 +468,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		62D188FD3A75D892430E2631 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -358,58 +490,83 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507F6BEF1F2A40D200DB93C2 /* ShippingController.swift in Sources */,
+				50FECA861F27A864002D21C4 /* ImageFullscreenController.swift in Sources */,
+				5070B9621F3C615E007D176F /* PioPlace.swift in Sources */,
+				50FECA8D1F28C244002D21C4 /* CartCell.swift in Sources */,
+				5070B9641F3C6A08007D176F /* PoiController.swift in Sources */,
+				5097063E1F1389DF00CA7C04 /* CatCell.swift in Sources */,
 				506A0E121DAD620600F56CAA /* Cart.swift in Sources */,
-				502848BA1D02492400C60823 /* MapContentController.swift in Sources */,
-				506421AE1DC9FB41002C5FD1 /* ExtraInfoController.swift in Sources */,
-				506A0E101DAD5F7D00F56CAA /* CartsController.swift in Sources */,
+				50DE063B1F26AD40002A997B /* ProductViewController.swift in Sources */,
+				50F0007A1F48A720008D4C97 /* ARViewController.swift in Sources */,
+				504F13261E857C7200EE1698 /* CategoryCellView.swift in Sources */,
+				502731C01F1EB26600A647F4 /* NotifiedController.swift in Sources */,
+				5091A9391EBC690C0044B878 /* ProductCollectionViewCell.swift in Sources */,
+				50A709811EB12A4600828CF3 /* JobCell.swift in Sources */,
 				506CF3F31D202F200052377C /* Category.swift in Sources */,
+				50B7D4151EA91EFC00048EA5 /* PioUser.swift in Sources */,
 				507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */,
 				508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */,
-				5086A9781D3D249900EF22C5 /* OptionsController.swift in Sources */,
-				508222011DD540B200C4A242 /* SearchController.swift in Sources */,
-				50365FA41D354A430064DFFE /* PromoDetailController.swift in Sources */,
+				507F6BF31F2A566D00DB93C2 /* ModifyCartController.swift in Sources */,
+				50D7F8B21EB1DD570007B8E0 /* SexCell.swift in Sources */,
+				50D7F8B61EB1FBE00007B8E0 /* IPController.swift in Sources */,
 				508222031DD54AB700C4A242 /* Result.swift in Sources */,
+				50EFA94C1E0A808E00E726C1 /* Utility.swift in Sources */,
 				504F218F1D7CDD1A00F34C7B /* ProductCellView.swift in Sources */,
-				506A0E141DAD84F700F56CAA /* CartController.swift in Sources */,
 				50365FA61D356A940064DFFE /* PromoAnnotation.swift in Sources */,
-				502848B31D0241C700C60823 /* MasterViewController.swift in Sources */,
-				50EBEC1F1D3E5C830008EB1A /* CouponDisplayController.swift in Sources */,
+				50F23AE21E1574AB00DFD45F /* CompanyViewCell.swift in Sources */,
 				50E431E81DA6675D00E55947 /* PioNavigationController.swift in Sources */,
 				50DA257E1D7C960A00F423BF /* Company.swift in Sources */,
+				50CC71F11EA649AB0025866C /* HomeController.swift in Sources */,
 				502848AF1D01F7D300C60823 /* WebApi.swift in Sources */,
-				500758141D68878E00051603 /* LocationController.swift in Sources */,
-				50EBEC1D1D3E4FBA0008EB1A /* UsedCouponController.swift in Sources */,
-				506CF3F11D202BC40052377C /* CategoriesController.swift in Sources */,
+				501DCF6C1F200D5900214627 /* MainMenuController.swift in Sources */,
+				50A7097F1EB1283900828CF3 /* BirthdayCell.swift in Sources */,
+				507F6BF51F2B9BBF00DB93C2 /* CartAllController.swift in Sources */,
 				504F218D1D7CD8A500F34C7B /* Product.swift in Sources */,
 				506421AC1DC9F9FD002C5FD1 /* FormCell.swift in Sources */,
-				50365FAA1D35A4130064DFFE /* CouponController.swift in Sources */,
-				50EBEC211D3E69DF0008EB1A /* InfoController.swift in Sources */,
-				502848B81D02476B00C60823 /* ScrollingContentController.swift in Sources */,
-				50CDB9C21DCE63500002F2D5 /* PioHeader.swift in Sources */,
-				502085E81D2CEC0600E749EE /* NotificationsController.swift in Sources */,
+				50B7D4191EA92A9100048EA5 /* PioAnnotation.swift in Sources */,
+				50EFA94E1E0BF0BB00E726C1 /* Order.swift in Sources */,
+				50A709751EB0B65200828CF3 /* ProfileController.swift in Sources */,
+				50D8170E1EC4815000B3BE75 /* SearchResultController.swift in Sources */,
+				505B1A661E017D01009C9582 /* RoundedButton.swift in Sources */,
+				50A709791EB123E900828CF3 /* ConsentController.swift in Sources */,
+				50A709721EB0920200828CF3 /* LoginController.swift in Sources */,
+				502DB7191F2F6D6E00C1138D /* PioPlayer.swift in Sources */,
+				502731BC1F1E163000A647F4 /* ShowcaseController.swift in Sources */,
+				50F23ADE1E156DA900DFD45F /* Location.swift in Sources */,
+				50CFDCF21EB4AFF700D8ED13 /* SearchResult.swift in Sources */,
 				502848B11D01F82600C60823 /* Promo.swift in Sources */,
 				509963D01D0183A500F6012A /* AppDelegate.swift in Sources */,
-				506FC5EA1DBDFE4900D564DF /* ShippingController.swift in Sources */,
+				503B5EC11F2E47F80019BADA /* OrderAllController.swift in Sources */,
+				5097063C1F130B1000CA7C04 /* PromoController.swift in Sources */,
+				5091A93D1EBD04E00044B878 /* CompanyCollectionViewCell.swift in Sources */,
+				50CE74541F44DAAB00956D61 /* CouponController.swift in Sources */,
 				505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */,
+				503B5EBF1F2C7D360019BADA /* ShopViewController.swift in Sources */,
 				5086A9761D3D1ACB00EF22C5 /* LikeButton.swift in Sources */,
-				50DA257C1D7C762F00F423BF /* CompanyController.swift in Sources */,
+				502DB7231F2FB1B700C1138D /* CGController.swift in Sources */,
+				502731BE1F1E912000A647F4 /* ShopController.swift in Sources */,
+				506B73BF1EBA7F45006C1CEB /* PromoCollectionCell.swift in Sources */,
+				50B7D41B1EA9333000048EA5 /* PioLocationManager.swift in Sources */,
+				507F6BF11F2A4E4200DB93C2 /* RoundBorderView.swift in Sources */,
+				50A7097D1EB1271000828CF3 /* EmailCell.swift in Sources */,
+				501DCF6E1F211B6500214627 /* PromoViewController.swift in Sources */,
+				50A585991EBBB48B00E2FEB9 /* CompanyTableViewCell.swift in Sources */,
+				502DB71B1F2F709800C1138D /* RankingController.swift in Sources */,
+				504F132C1E8C6AA200EE1698 /* BirthdateCell.swift in Sources */,
 				506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */,
-				500EB29D1DA687E60012FAF8 /* ProductDetailController.swift in Sources */,
 				5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */,
+				50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */,
+				50D7F8B41EB1DF390007B8E0 /* PrivacyCell.swift in Sources */,
+				506B73BD1EBA7DEB006C1CEB /* MapTableViewCell.swift in Sources */,
+				50A709771EB0B73400828CF3 /* CategoryCell.swift in Sources */,
+				502DB71D1F2FA2C300C1138D /* AppInfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		509963D71D0183A500F6012A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				509963D81D0183A500F6012A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		509963DC1D0183A500F6012A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,6 +601,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -488,9 +646,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Massimiliano Leggieri (SUPP8Q77NM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Massimiliano Leggieri (SUPP8Q77NM)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -511,18 +671,22 @@
 		};
 		509963F91D0183A500F6012A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 988F182D1737B2E493A2B7F1 /* Pods-PioAlert.debug.xcconfig */;
+			baseConfigurationReference = 023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/Max/Documents/FacebookSDK,
 				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = PioAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -531,33 +695,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		509963FA1D0183A500F6012A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA26E9F8EE30462BC7A98656 /* Pods-PioAlert.release.xcconfig */;
+			baseConfigurationReference = 15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.prod.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/Max/Documents/FacebookSDK,
 				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = PioAlert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.livelife.PioAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

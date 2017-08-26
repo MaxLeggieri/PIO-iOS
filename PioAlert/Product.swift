@@ -8,7 +8,15 @@
 
 import Foundation
 
+enum SellingMethod {
+    case none
+    case paypalDhl
+    case emailPrenotation
+    case directLink
+}
+
 class Product {
+    
     
     var pid:Int!
     var idCom:Int!
@@ -18,9 +26,19 @@ class Product {
     var price:String!
     var initialPrice:String!
     var priceUnit:String!
+    var priceOff:String!
     var discountPercent:String!
     var image:String!
+    var available:Int!
     var quantity:Int!
+    
+    var companyName:String!
+    var companyAddress:String!
+    var companyEmail:String!
+    
+    var hashtags:String!
+    
+    var category:String!
     
     init(pid: Int) {
         self.pid = pid

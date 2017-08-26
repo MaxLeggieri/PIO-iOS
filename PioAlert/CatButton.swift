@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CatButton: UIButton {
+open class CatButton: UIButton {
 
     /*
     // Only override drawRect: if you perform custom drawing.
