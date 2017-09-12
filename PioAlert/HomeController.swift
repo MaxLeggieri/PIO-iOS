@@ -4,7 +4,7 @@
 //
 //  Created by LiveLife on 18/04/2017.
 //  Copyright © 2017 LiveLife. All rights reserved.
-//
+//9898411358,9712132558
 
 import Foundation
 import UIKit
@@ -76,9 +76,9 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             
             
-            let score = PioUser.sharedUser.rankData["score"] as! String
-            print("Score: "+score)
-            self.mainMenuController.userPointsLabel.text = score+" pts"
+            let score = PioUser.sharedUser.rankData["score"] as? String
+            print("Score: "+score!)
+            self.mainMenuController.userPointsLabel.text = score!+" pts"
             
             self.tabBarController?.view.addSubview(self.mainMenuController.view)
             var frame = self.mainMenuController.view.frame
@@ -159,21 +159,35 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         promoTableView.delegate = self
         exploreMapView.delegate = self
         
-        if UserDefaults.standard.string(forKey: "deviceToken") == nil {
-            let dt = UIDevice.current.identifierForVendor?.uuidString
-            UserDefaults.standard.setValue(dt, forKey: "deviceToken")
-            UserDefaults.standard.synchronize()
-            WebApi.sharedInstance.deviceToken = dt!
-        } else {
-            WebApi.sharedInstance.deviceToken = UserDefaults.standard.string(forKey: "deviceToken")!
-            print("Device token: "+WebApi.sharedInstance.deviceToken);
+        if Reachability.isConnectedToNetwork(){
+            if UserDefaults.standard.string(forKey: "deviceToken") == nil {
+                let dt = UIDevice.current.identifierForVendor?.uuidString
+                UserDefaults.standard.setValue(dt, forKey: "deviceToken")
+                UserDefaults.standard.synchronize()
+                WebApi.sharedInstance.deviceToken = dt!
+            } else {
+                WebApi.sharedInstance.deviceToken = UserDefaults.standard.string(forKey: "deviceToken")!
+                print("Device token: "+WebApi.sharedInstance.deviceToken);
+            }
+            
+            
+            if WebApi.sharedInstance.uid == 0 {
+                WebApi.sharedInstance.uid = UserDefaults.standard.integer(forKey: "uid")
+            }
+            
+            PioUser.sharedUser.updateUser()
+ 
         }
-        
-        if WebApi.sharedInstance.uid == 0 {
-            WebApi.sharedInstance.uid = UserDefaults.standard.integer(forKey: "uid")
+        else {
+            let alert = UIAlertController(title: "Please check your internet connection", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
-        
-        PioUser.sharedUser.updateUser()
+
         
         
         

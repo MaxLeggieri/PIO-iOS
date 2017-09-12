@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMz-5T-cPX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMz-5T-cPX">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
         </array>
@@ -203,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kw2-xb-gEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94.20289855072464" y="-651.35869565217399"/>
+            <point key="canvasLocation" x="-928" y="-1107"/>
         </scene>
         <!--Main Menu Controller-->
         <scene sceneID="04h-72-H98">
@@ -294,7 +297,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SO4-Sj-HeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.79999999999995" y="-653.52323838080963"/>
+            <point key="canvasLocation" x="-68" y="-1107"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="G1m-2P-9OV">
@@ -514,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgJ-1N-tCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557" y="-654"/>
+            <point key="canvasLocation" x="979" y="-1107"/>
         </scene>
         <!--Esplora-->
         <scene sceneID="Nvz-Ui-A25">
@@ -1089,7 +1092,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSP-Wb-CTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685.50724637681162" y="27.717391304347828"/>
+            <point key="canvasLocation" x="1215" y="-64"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="EWX-Mk-HcV">
@@ -1175,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsr-ee-Yxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383.2" y="29.23538230884558"/>
+            <point key="canvasLocation" x="1935" y="-1833"/>
         </scene>
         <!--Profile Controller-->
         <scene sceneID="glI-qF-V0A">
@@ -1318,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc5-gc-ScB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126.0869565217395" y="26.90217391304348"/>
+            <point key="canvasLocation" x="2972" y="-364"/>
         </scene>
         <!--Controller-->
         <scene sceneID="vun-Rz-TYW">
@@ -1388,7 +1391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20U-MH-4TW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3563.7681159420295" y="-396.19565217391306"/>
+            <point key="canvasLocation" x="5618" y="-717"/>
         </scene>
         <!--Consent Controller-->
         <scene sceneID="wlw-p5-WeW">
@@ -1657,7 +1660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umq-mr-J7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.5" y="24.5"/>
+            <point key="canvasLocation" x="4215" y="-18"/>
         </scene>
         <!--Controller-->
         <scene sceneID="oye-hr-afM">
@@ -1728,7 +1731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9a-jH-ORl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3568" y="247"/>
+            <point key="canvasLocation" x="5618" y="198"/>
         </scene>
         <!--Poi Controller-->
         <scene sceneID="P2c-zl-3AX">
@@ -1870,7 +1873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTP-Zg-adA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4507.2463768115949" y="245.38043478260872"/>
+            <point key="canvasLocation" x="6585" y="85"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8i2-jW-9xL">
@@ -1898,7 +1901,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8U-DS-4IJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1068" y="306"/>
+            <point key="canvasLocation" x="-2201" y="-397"/>
         </scene>
         <!--Promo-->
         <scene sceneID="yGU-VL-5jX">
@@ -2141,7 +2144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkx-UT-Hb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226.08695652173915" y="783.42391304347836"/>
+            <point key="canvasLocation" x="-28" y="728"/>
         </scene>
         <!--Promo View Controller-->
         <scene sceneID="WOD-Hj-47N">
@@ -2152,14 +2155,14 @@
                         <viewControllerLayoutGuide type="bottom" id="p0N-v9-xgh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xqA-mG-CJV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTm-Tu-Qox">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-Zp-MY8">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNy-rG-gic">
                                                 <rect key="frame" x="0.0" y="64" width="414" height="233"/>
@@ -2318,13 +2321,13 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-hE-j72">
-                                                <rect key="frame" x="0.0" y="1189" width="414" height="311"/>
+                                                <rect key="frame" x="0.0" y="1489" width="414" height="311"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Hf7-hE-j72" secondAttribute="height" multiplier="414:311" id="bSi-H9-1cu"/>
                                                 </constraints>
                                             </mapView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9He-rs-c0J" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="278" y="1207" width="120" height="30"/>
+                                                <rect key="frame" x="278" y="1509" width="120" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="pJv-EL-cKN"/>
                                                     <constraint firstAttribute="height" constant="30" id="yjM-jK-7Mr"/>
@@ -2345,17 +2348,65 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kbq-Ix-qfq">
-                                                <rect key="frame" x="32" y="830" width="350" height="263"/>
+                                                <rect key="frame" x="32" y="1130" width="350" height="263"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="kbq-Ix-qfq" secondAttribute="height" multiplier="350:263" id="dSr-gf-QTW"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube_overlay_button" translatesAutoresizingMaskIntoConstraints="NO" id="OFB-rR-kLh">
-                                                <rect key="frame" x="32" y="830" width="350" height="263"/>
+                                                <rect key="frame" x="32" y="1130" width="350" height="263"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OFB-rR-kLh" secondAttribute="height" multiplier="350:263" id="XTk-23-Pnu"/>
                                                 </constraints>
                                             </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-6a-WEl">
+                                                <rect key="frame" x="0.0" y="830" width="414" height="250"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="DgL-QU-4h8"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QeH-rj-MIf">
+                                                    <size key="itemSize" width="200" height="250"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PromoCollectionCell" id="Jxs-PB-2zn" customClass="PromoCollectionCell" customModule="PioAlert" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="QOp-3B-cCK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHS-KK-WLx">
+                                                                    <rect key="frame" x="5" y="205" width="190" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€ 1,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-xY-oXq">
+                                                                    <rect key="frame" x="5" y="229" width="190" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" red="0.36862745098039218" green="0.38823529411764707" blue="0.38823529411764707" alpha="0.512268926056338" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </view>
+                                                        <size key="customSize" width="200" height="250"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="pV1-LL-nPa" id="0dG-T5-zq7"/>
+                                                    <outlet property="delegate" destination="pV1-LL-nPa" id="bzT-Y8-RTo"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2371,9 +2422,10 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <constraint firstItem="vk1-7y-OdM" firstAttribute="top" secondItem="xRh-Yj-qzg" secondAttribute="bottom" constant="8" id="4oq-o9-C78"/>
                                             <constraint firstItem="6Wn-L2-At9" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="57A-gE-SW3"/>
                                             <constraint firstAttribute="trailing" secondItem="9He-rs-c0J" secondAttribute="trailing" constant="16" id="BuG-wi-M65"/>
+                                            <constraint firstItem="Hf7-hE-j72" firstAttribute="top" secondItem="kbq-Ix-qfq" secondAttribute="bottom" constant="96" id="ChP-sq-CFo"/>
                                             <constraint firstItem="Yt3-Uf-Vmx" firstAttribute="leading" secondItem="6Wn-L2-At9" secondAttribute="trailing" constant="8" id="EVg-wH-h7r"/>
+                                            <constraint firstItem="aNw-6a-WEl" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" id="Irj-D7-3tz"/>
                                             <constraint firstAttribute="trailing" secondItem="WQr-OP-brL" secondAttribute="trailing" constant="31" id="KFz-eo-i3G"/>
-                                            <constraint firstItem="kbq-Ix-qfq" firstAttribute="top" secondItem="42m-3N-FXi" secondAttribute="bottom" constant="63" id="Mbe-Sj-avb"/>
                                             <constraint firstItem="QqC-ig-oQM" firstAttribute="top" secondItem="BNy-rG-gic" secondAttribute="bottom" constant="16" id="Mup-CC-XwJ"/>
                                             <constraint firstItem="xRh-Yj-qzg" firstAttribute="top" secondItem="YPK-ap-fj7" secondAttribute="bottom" constant="25.670000000000002" id="NDT-kF-gUX"/>
                                             <constraint firstAttribute="trailing" secondItem="iLL-Kk-jgd" secondAttribute="trailing" constant="31" id="NO8-SI-udq"/>
@@ -2384,12 +2436,11 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <constraint firstItem="Yt3-Uf-Vmx" firstAttribute="top" secondItem="iLL-Kk-jgd" secondAttribute="bottom" id="RJL-Vs-LM4"/>
                                             <constraint firstItem="O10-b7-fJr" firstAttribute="top" secondItem="of7-y9-1E7" secondAttribute="bottom" constant="8" id="ROu-Pe-Qhk"/>
                                             <constraint firstItem="of7-y9-1E7" firstAttribute="top" secondItem="Yt3-Uf-Vmx" secondAttribute="bottom" constant="32" id="RU8-PL-up5"/>
-                                            <constraint firstItem="OFB-rR-kLh" firstAttribute="top" secondItem="42m-3N-FXi" secondAttribute="bottom" constant="63" id="SjV-wm-eYV"/>
                                             <constraint firstItem="kbq-Ix-qfq" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="UIT-dW-mGa"/>
-                                            <constraint firstItem="Hf7-hE-j72" firstAttribute="top" secondItem="9He-rs-c0J" secondAttribute="bottom" constant="-47.666666666666742" id="Vae-K4-YZ7"/>
                                             <constraint firstItem="Hf7-hE-j72" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" id="XEA-US-GDb"/>
                                             <constraint firstAttribute="trailing" secondItem="O10-b7-fJr" secondAttribute="trailing" constant="32" id="Xfm-nZ-UB2"/>
                                             <constraint firstItem="vk1-7y-OdM" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="Yvb-sV-4ds"/>
+                                            <constraint firstItem="aNw-6a-WEl" firstAttribute="top" secondItem="42m-3N-FXi" secondAttribute="bottom" constant="63" id="aOh-i2-cOw"/>
                                             <constraint firstItem="xRh-Yj-qzg" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="bVA-Yx-6HY"/>
                                             <constraint firstItem="YPK-ap-fj7" firstAttribute="top" secondItem="O10-b7-fJr" secondAttribute="bottom" constant="8" id="cLi-qZ-cbE"/>
                                             <constraint firstItem="Wga-Yx-sF3" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="cdA-dl-QlT"/>
@@ -2397,10 +2448,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <constraint firstItem="YPK-ap-fj7" firstAttribute="leading" secondItem="Hmn-Zp-MY8" secondAttribute="leading" constant="32" id="dj7-OY-D62"/>
                                             <constraint firstItem="vLb-dA-pqy" firstAttribute="top" secondItem="BNy-rG-gic" secondAttribute="bottom" constant="16" id="gS0-6W-RpC"/>
                                             <constraint firstItem="JiA-9y-08Q" firstAttribute="leading" secondItem="Wga-Yx-sF3" secondAttribute="trailing" constant="8" id="gzz-4I-rIE"/>
+                                            <constraint firstItem="9He-rs-c0J" firstAttribute="top" secondItem="Hf7-hE-j72" secondAttribute="top" constant="20" id="h2b-5J-9ml"/>
                                             <constraint firstItem="6Wn-L2-At9" firstAttribute="top" secondItem="BNy-rG-gic" secondAttribute="bottom" constant="-20" id="h3W-oO-39w"/>
                                             <constraint firstAttribute="trailing" secondItem="of7-y9-1E7" secondAttribute="trailing" constant="32" id="hYh-0n-VDh"/>
+                                            <constraint firstItem="kbq-Ix-qfq" firstAttribute="top" secondItem="aNw-6a-WEl" secondAttribute="bottom" constant="50" id="i7K-1X-05p"/>
+                                            <constraint firstItem="OFB-rR-kLh" firstAttribute="top" secondItem="aNw-6a-WEl" secondAttribute="bottom" constant="50" id="iiF-ks-hry"/>
                                             <constraint firstItem="JiA-9y-08Q" firstAttribute="top" secondItem="vk1-7y-OdM" secondAttribute="bottom" constant="23" id="iy3-7n-8hj"/>
                                             <constraint firstItem="42m-3N-FXi" firstAttribute="leading" secondItem="JiA-9y-08Q" secondAttribute="trailing" constant="8" id="jeo-Ka-t6Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="aNw-6a-WEl" secondAttribute="trailing" id="jmg-w1-pTb"/>
                                             <constraint firstItem="iLL-Kk-jgd" firstAttribute="top" secondItem="vLb-dA-pqy" secondAttribute="bottom" id="mes-wU-zbm"/>
                                             <constraint firstItem="Hf7-hE-j72" firstAttribute="top" secondItem="OFB-rR-kLh" secondAttribute="bottom" constant="96" id="qVG-Cb-uVb"/>
                                             <constraint firstAttribute="trailing" secondItem="Hf7-hE-j72" secondAttribute="trailing" id="qba-Li-MCH"/>
@@ -2466,10 +2521,11 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="1800"/>
                     <connections>
                         <outlet property="attachmentButton" destination="JiA-9y-08Q" id="S5V-FT-adS"/>
                         <outlet property="backButton" destination="hZx-Qw-csL" id="8VJ-8l-6ZD"/>
+                        <outlet property="collectionView" destination="aNw-6a-WEl" id="Ti8-6i-qQt"/>
                         <outlet property="companyImage" destination="6Wn-L2-At9" id="7zS-qU-ClL"/>
                         <outlet property="companyName" destination="iLL-Kk-jgd" id="5DB-8Y-AU7"/>
                         <outlet property="couponButton" destination="42m-3N-FXi" id="hJa-0H-UeU"/>
@@ -2494,7 +2550,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLb-M5-ILP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="1095"/>
+            <point key="canvasLocation" x="1215" y="1873"/>
         </scene>
         <!--Cart All Controller-->
         <scene sceneID="2B5-QS-z5D">
@@ -2937,7 +2993,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nessun ordine presente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ4-1q-aaV">
-                                <rect key="frame" x="45.5" y="271" width="229.5" height="26"/>
+                                <rect key="frame" x="44" y="271" width="234" height="26"/>
                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="22"/>
                                 <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2955,7 +3011,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhV-ue-pQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1200" y="2215"/>
+            <point key="canvasLocation" x="-1266" y="2700"/>
         </scene>
         <!--Negozi-->
         <scene sceneID="vi1-yM-oUH">
@@ -3176,7 +3232,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81S-i0-NN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="2186"/>
+            <point key="canvasLocation" x="-347" y="2700"/>
         </scene>
         <!--Shop View Controller-->
         <scene sceneID="Up2-Hi-gje">
@@ -3636,7 +3692,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9r-or-LAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="2408"/>
+            <point key="canvasLocation" x="596" y="4570"/>
         </scene>
         <!--Ranking Controller-->
         <scene sceneID="dGs-W7-RD8">
@@ -3944,7 +4000,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bi-08-Xzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1207.2463768115942" y="2894.8369565217395"/>
+            <point key="canvasLocation" x="-1208" y="4131"/>
         </scene>
         <!--Notifiche-->
         <scene sceneID="xsB-pe-hG3">
@@ -4091,7 +4147,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wb1-wW-Aj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236.23188405797103" y="2868.75"/>
+            <point key="canvasLocation" x="-304" y="4130"/>
         </scene>
         <!--Coupon Controller-->
         <scene sceneID="Pfl-fC-vOE">
@@ -4162,7 +4218,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kta-WZ-Q85" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261" y="763"/>
+            <point key="canvasLocation" x="2873" y="512"/>
         </scene>
         <!--Product View Controller-->
         <scene sceneID="eRV-V4-gk1">
@@ -4173,14 +4229,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                         <viewControllerLayoutGuide type="bottom" id="LzC-BA-QWa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="joj-ce-eNt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEK-FJ-CHt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carico..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vre-xO-6I4">
-                                        <rect key="frame" x="175.5" y="27" width="64.5" height="23"/>
+                                        <rect key="frame" x="128.5" y="27" width="64.5" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -4209,13 +4265,13 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-MH-HV4">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1272"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-oN-Fsu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="649"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-rc-2NH">
-                                                <rect key="frame" x="32" y="20" width="350" height="24"/>
+                                                <rect key="frame" x="32" y="20" width="256" height="24"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -4228,7 +4284,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99999.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA8-52-D5I">
-                                                <rect key="frame" x="237" y="134" width="145" height="23"/>
+                                                <rect key="frame" x="237" y="134" width="51" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="fxI-jL-d0J"/>
                                                 </constraints>
@@ -4237,7 +4293,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99999.99" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIa-yj-AhZ">
-                                                <rect key="frame" x="237" y="103" width="145" height="23"/>
+                                                <rect key="frame" x="237" y="103" width="51" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="PxB-Lp-2yM"/>
                                                 </constraints>
@@ -4246,7 +4302,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prezzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjv-Iu-5FF">
-                                                <rect key="frame" x="237" y="76" width="146" height="21"/>
+                                                <rect key="frame" x="237" y="76" width="52" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Bre-Ei-346"/>
                                                 </constraints>
@@ -4255,7 +4311,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Risparmi € 99.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-Ul-ZTQ">
-                                                <rect key="frame" x="237" y="170" width="145" height="23"/>
+                                                <rect key="frame" x="237" y="170" width="51" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="zMr-KC-e6a"/>
                                                 </constraints>
@@ -4264,7 +4320,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 pezzi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-Wn-xsY">
-                                                <rect key="frame" x="237" y="229" width="145" height="23"/>
+                                                <rect key="frame" x="237" y="229" width="51" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="vs9-G3-AIM"/>
                                                 </constraints>
@@ -4273,7 +4329,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disponibili" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4k-mC-1II">
-                                                <rect key="frame" x="237" y="206" width="137" height="21"/>
+                                                <rect key="frame" x="237" y="206" width="43" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="VcG-gY-lsy"/>
                                                 </constraints>
@@ -4282,7 +4338,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo presso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-ua-MCu">
-                                                <rect key="frame" x="32" y="294" width="350" height="21"/>
+                                                <rect key="frame" x="32" y="294" width="256" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="wTP-P5-lgL"/>
                                                 </constraints>
@@ -4291,19 +4347,19 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Negozio" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-TA-SzZ">
-                                                <rect key="frame" x="32" y="323" width="351" height="24"/>
+                                                <rect key="frame" x="32" y="323" width="257" height="24"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via Lunga 64, 12345 Roma" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uW-No-VkT">
-                                                <rect key="frame" x="32" y="356.5" width="350" height="18"/>
+                                                <rect key="frame" x="32" y="356.5" width="256" height="18"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                 <color key="textColor" red="0.36470588235294116" green="0.6470588235294118" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UN-Vt-P9a">
-                                                <rect key="frame" x="33" y="402.5" width="350" height="102"/>
+                                                <rect key="frame" x="33" y="402.5" width="256" height="143"/>
                                                 <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique.
 Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
@@ -4311,14 +4367,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-Wl-xEp">
-                                                <rect key="frame" x="33" y="524.5" width="350" height="1"/>
+                                                <rect key="frame" x="33" y="565.5" width="256" height="1"/>
                                                 <color key="backgroundColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gqc-Sc-Ron"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sct-jV-Kpe" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="86" y="551.5" width="242" height="34"/>
+                                                <rect key="frame" x="39" y="592.5" width="242" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="242" id="Wka-Tp-Flj"/>
                                                     <constraint firstAttribute="height" constant="34" id="jY9-2e-NM5"/>
@@ -4395,7 +4451,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e21-Tt-MNd">
-                                <rect key="frame" x="0.0" y="1336" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="64"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.79215686269999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="6C8-dE-Z4d"/>
@@ -4439,7 +4495,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcq-G9-vHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="1461"/>
+            <point key="canvasLocation" x="2723" y="2700"/>
         </scene>
         <!--Modify Cart Controller-->
         <scene sceneID="0Rz-7A-Kdf">
@@ -4582,7 +4638,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DxV-2z-kLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3026.0869565217395" y="790.76086956521749"/>
+            <point key="canvasLocation" x="3662" y="783"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="Ps1-bn-EwN">
@@ -4593,14 +4649,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                         <viewControllerLayoutGuide type="bottom" id="2pF-2L-y04"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LYv-x5-9Uo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNb-Ua-rl6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carico..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-zP-1CK">
-                                        <rect key="frame" x="175" y="27" width="64.5" height="23"/>
+                                        <rect key="frame" x="127" y="27" width="68" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -4630,10 +4686,10 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UmZ-Nz-una">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1336"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="jDM-9r-AIj">
-                                    <rect key="frame" x="0.0" y="160" width="414" height="479"/>
+                                    <rect key="frame" x="0.0" y="160" width="320" height="479"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spedito a:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-c6-Icg">
@@ -4647,7 +4703,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ti contatteremo via e-mail per completare la tua prenotazione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96W-aw-IIY">
-                                            <rect key="frame" x="36" y="61" width="342" height="66"/>
+                                            <rect key="frame" x="36" y="61" width="248" height="66"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="66" id="0L6-OC-Fd0"/>
                                             </constraints>
@@ -4669,14 +4725,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6m-x5-dUa">
-                                            <rect key="frame" x="36" y="185" width="342" height="3"/>
+                                            <rect key="frame" x="36" y="185" width="248" height="3"/>
                                             <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="3" id="XeV-RR-NCE"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-jO-5Iz">
-                                            <rect key="frame" x="36" y="205" width="76" height="28"/>
+                                            <rect key="frame" x="36" y="205" width="77.5" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="hmA-1q-OHv"/>
                                             </constraints>
@@ -4685,7 +4741,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spedizione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX4-Ws-Nqj">
-                                            <rect key="frame" x="36" y="250" width="86.5" height="28"/>
+                                            <rect key="frame" x="36" y="250" width="89.5" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="7sK-Tn-ofg"/>
                                             </constraints>
@@ -4694,7 +4750,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTALE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-dE-NdI">
-                                            <rect key="frame" x="36" y="295" width="66.5" height="28"/>
+                                            <rect key="frame" x="36" y="295" width="65.5" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="iwX-8h-dVa"/>
                                             </constraints>
@@ -4703,7 +4759,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99.99" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5d-vS-Rfr">
-                                            <rect key="frame" x="317" y="205" width="61" height="28"/>
+                                            <rect key="frame" x="223" y="205" width="61" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="Ts6-hD-atD"/>
                                             </constraints>
@@ -4712,7 +4768,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khB-Cw-2Bq">
-                                            <rect key="frame" x="327" y="250" width="51" height="28"/>
+                                            <rect key="frame" x="233" y="250" width="51" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="efd-wJ-r0t"/>
                                             </constraints>
@@ -4721,7 +4777,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99.99" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgW-1k-HAv">
-                                            <rect key="frame" x="296.5" y="290" width="81.5" height="37"/>
+                                            <rect key="frame" x="203.5" y="290" width="80.5" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="fmp-mr-kOd"/>
                                             </constraints>
@@ -4730,7 +4786,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-px-23q">
-                                            <rect key="frame" x="0.0" y="415" width="414" height="64"/>
+                                            <rect key="frame" x="0.0" y="415" width="320" height="64"/>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.79215686269999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="64" id="Uxm-xM-cfX"/>
@@ -4743,7 +4799,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Inserisci un messaggio per il negozio qui" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-2u-4EI">
-                                            <rect key="frame" x="36" y="356" width="342" height="30"/>
+                                            <rect key="frame" x="36" y="356" width="248" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="MMr-5U-BHA"/>
                                             </constraints>
@@ -4785,14 +4841,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cartCell" rowHeight="132" id="MyS-Nn-48z" customClass="CartCell" customModule="PioAlert" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="132"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MyS-Nn-48z" id="Nf5-xP-f9V">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-ci-Q32">
-                                                    <rect key="frame" x="32" y="0.0" width="350" height="132"/>
+                                                    <rect key="frame" x="32" y="0.0" width="256" height="132"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-v1-nIo">
                                                             <rect key="frame" x="12" y="11" width="110" height="110"/>
@@ -4802,7 +4858,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-A4-j2u">
-                                                            <rect key="frame" x="130" y="23" width="212" height="22"/>
+                                                            <rect key="frame" x="130" y="24" width="118" height="21"/>
                                                             <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="18"/>
                                                             <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -4828,7 +4884,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <state key="normal" title="Modifica"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c82-mW-vAh">
-                                                            <rect key="frame" x="267" y="83" width="68" height="30"/>
+                                                            <rect key="frame" x="174" y="83" width="67" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="I6L-5x-025"/>
                                                             </constraints>
@@ -4899,7 +4955,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDC-jd-Xd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3024.6376811594205" y="1460.8695652173915"/>
+            <point key="canvasLocation" x="4506" y="1460"/>
         </scene>
         <!--fullscreenImageController-->
         <scene sceneID="RWe-Ra-0Vy">
@@ -4984,22 +5040,22 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxE-Yx-eQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="1461"/>
+            <point key="canvasLocation" x="3615" y="1460"/>
         </scene>
         <!--Modifica indirizzo-->
         <scene sceneID="Usy-fN-9MT">
             <objects>
                 <tableViewController id="DiT-7J-wLE" customClass="ShippingController" customModule="PioAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MQd-Yj-MB8">
-                        <rect key="frame" x="0.0" y="64" width="414" height="1336"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="s3u-vw-tb5">
-                            <rect key="frame" x="0.0" y="737" width="414" height="95"/>
+                            <rect key="frame" x="0.0" y="737" width="320" height="95"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z8-Ja-yjO">
-                                    <rect key="frame" x="0.0" y="31" width="414" height="64"/>
+                                    <rect key="frame" x="0.0" y="31" width="320" height="64"/>
                                     <color key="backgroundColor" red="0.97254901959999995" green="0.79215686269999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="64" id="dPe-Ck-PJX"/>
@@ -5024,14 +5080,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Nome" id="VCd-Mr-x0H">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jvt-HI-dkS">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jvt-HI-dkS" id="gMJ-IX-LCe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Il tuo nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YC3-NO-h2q">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5050,14 +5106,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Cognome" id="rBO-m2-EL4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HJe-At-rkP">
-                                        <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HJe-At-rkP" id="haf-Me-7kY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Il tuo cognome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SzT-e1-8h1">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5076,14 +5132,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Indirizzo" id="HHN-cC-IST">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ofM-go-JGx">
-                                        <rect key="frame" x="0.0" y="255.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="255.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ofM-go-JGx" id="CDr-AK-Ke3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="es. Piazza Italia 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-1J-r89">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5102,14 +5158,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="C.A.P." id="Lmi-e5-1av">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nyr-xh-qx8">
-                                        <rect key="frame" x="0.0" y="355.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="355.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nyr-xh-qx8" id="kg5-n2-d44">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Codice di avviamento postale" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74A-zW-P8M">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5128,14 +5184,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Comune" id="4cc-qO-5mE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2AK-dw-yFH">
-                                        <rect key="frame" x="0.0" y="455.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="455.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2AK-dw-yFH" id="fMc-eY-JBS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Il tuo comune" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sZ-HH-mWc">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5154,14 +5210,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Provincia" id="zb7-bN-DZ5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="P7U-ZU-YMV">
-                                        <rect key="frame" x="0.0" y="555.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="555.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P7U-ZU-YMV" id="I5f-Aw-y6h">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="La tua provincia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WTo-5g-qRh">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -5180,14 +5236,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                             <tableViewSection headerTitle="Telefono" footerTitle="I campi sono tutti obbligatori" id="hT4-rl-TSk">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1zE-nH-jVV">
-                                        <rect key="frame" x="0.0" y="663" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="663" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1zE-nH-jVV" id="0AI-xe-4dV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="es. 3311234567" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxb-TP-PbI">
-                                                    <rect key="frame" x="20" y="0.0" width="386" height="44"/>
+                                                    <rect key="frame" x="20" y="0.0" width="292" height="44"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -5230,7 +5286,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQs-GM-R74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4771.0144927536239" y="1460.8695652173915"/>
+            <point key="canvasLocation" x="6585" y="1460"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X3r-Q1-HBL">
@@ -5253,7 +5309,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NU9-a5-hyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3863.7681159420295" y="1460.8695652173915"/>
+            <point key="canvasLocation" x="5531" y="1460"/>
         </scene>
     </scenes>
     <resources>
@@ -5276,6 +5332,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
         <image name="menu-vetrina-60" width="30" height="30"/>
         <image name="pio_big" width="180" height="180"/>
         <image name="pointer" width="40" height="40"/>
+        <image name="sample" width="200" height="200"/>
         <image name="signin-Facebook" width="25" height="24"/>
         <image name="signin-bg" width="750" height="1335"/>
         <image name="signin-google" width="25" height="25"/>
@@ -5284,10 +5341,10 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
         <image name="youtube_overlay_button" width="480" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="leB-wh-Eyh"/>
         <segue reference="YiD-yy-bOF"/>
-        <segue reference="kcX-py-Tjw"/>
-        <segue reference="tFC-pv-Mpn"/>
-        <segue reference="C5c-Ji-6rI"/>
+        <segue reference="U7H-Fr-s9j"/>
+        <segue reference="eQ6-jK-TbE"/>
         <segue reference="zWU-wm-cIM"/>
     </inferredMetricsTieBreakers>
 </document>

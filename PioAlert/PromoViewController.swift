@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class PromoViewController: UIViewController, MKMapViewDelegate {
+class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource  {
     
     @IBOutlet weak var scrollView:UIScrollView!
     @IBOutlet weak var scrollContainer:UIView!
@@ -34,6 +34,8 @@ class PromoViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var promoMapView:MKMapView!
     @IBOutlet weak var navigateToButton:RoundedButton!
     
+    @IBOutlet weak var collectionView:UICollectionView?
+
     var promo:Promo!
     var imgFolder = "https://www.pioalert.com"
 
@@ -46,13 +48,14 @@ class PromoViewController: UIViewController, MKMapViewDelegate {
         let screenSize: CGRect = UIScreen.main.bounds
         scrollView.contentSize = CGSize(width: screenSize.width, height: scrollContainer.bounds.size.height)
         scrollView.frame = view.bounds
+        print(scrollContainer.bounds.size.height)
+        self.collectionView?.delegate = self
+        self.collectionView?.dataSource = self
         /*
         
  
         
         */
-        
-        
         navTitle.text = promo.brandName
         companyName.text = promo.brandName
         promoDistance.text = "a "+promo.distanceHuman+" da te"
@@ -83,7 +86,7 @@ class PromoViewController: UIViewController, MKMapViewDelegate {
             youtubeButton.removeFromSuperview()
             videoImagePreview.removeFromSuperview()
             
-            let mapTopSpace = NSLayoutConstraint(item: promoMapView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: linkButton, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 32)
+            let mapTopSpace = NSLayoutConstraint(item: promoMapView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: collectionView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 32)
             
             mapTopSpace.isActive = true
             
@@ -284,5 +287,37 @@ class PromoViewController: UIViewController, MKMapViewDelegate {
             vc.company = WebApi.sharedInstance.getCompanyData(String(promo.brandId))
         }
     }
+    
+    //MARK: Collection View Delegate and DataSource
+    //MARK: - Collection View Delegate
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromoCollectionCell", for: indexPath) as! PromoCollectionCell
+        return cell
+    }
+    
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 10.0
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 10.0
+    }
+    
+    
+
 
 }

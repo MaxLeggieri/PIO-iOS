@@ -118,7 +118,9 @@ class WebApi {
     
     
     func sendFbUserData(_ fbJson: AnyObject) {
-        
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
         
         do {
             
@@ -151,7 +153,7 @@ class WebApi {
                     
                     let response = result!["response"] as? [String:AnyObject]
                     
-                    self.uid = (response?["uid"] as! NSString).integerValue
+                    self.uid = ((response?["uid"] as? NSString)?.integerValue)!
                     UserDefaults.standard.set(self.uid, forKey: "uid")
                     UserDefaults.standard.synchronize()
                     
@@ -1785,8 +1787,9 @@ class WebApi {
                     let player = PioPlayer(json: obj)
                     players.append(player)
                 }
+                //crash
                 
-                let you = data["you"] as! [String:AnyObject]
+                let you = data["you"] as? [String:AnyObject]
                 
                 PioUser.sharedUser.rankData = you
             }
