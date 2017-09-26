@@ -34,15 +34,16 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
     @IBOutlet weak var promoMapView:MKMapView!
     @IBOutlet weak var navigateToButton:RoundedButton!
     
+    @IBOutlet weak var collectionViewHightConstraint:NSLayoutConstraint!
     @IBOutlet weak var collectionView:UICollectionView?
-
+    var prodContent = [Product]()
     var promo:Promo!
     var imgFolder = "https://www.pioalert.com"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(promo.title)
+        print(promo.releatedProductId)
         
         
         let screenSize: CGRect = UIScreen.main.bounds
@@ -56,6 +57,12 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
  
         
         */
+        self.prodContent = WebApi.sharedInstance.getProductByMultipleId(promo.releatedProductId)
+
+        if prodContent.count == 0 {
+            collectionViewHightConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
         navTitle.text = promo.brandName
         companyName.text = promo.brandName
         promoDistance.text = "a "+promo.distanceHuman+" da te"
@@ -125,6 +132,7 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
             WebApi.sharedInstance.downloadedFrom(videoImagePreview, link: promo.youtubePreview, mode: .scaleAspectFit, shadow: true)
         }
         
+
         zoomToRegion()
         
     }
@@ -292,12 +300,21 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
     //MARK: - Collection View Delegate
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return prodContent.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromoCollectionCell", for: indexPath) as! PromoCollectionCell
+        
+        let product = prodContent[indexPath.row] as Product
+
+        if cell.imageView.image == nil { WebApi.sharedInstance.downloadedFrom(cell.imageView, link: imgFolder+product.image, mode: .scaleAspectFit, shadow: false)
+        }
+
+        let titleText = product.name
+        cell.titleLabel.text = titleText
+        cell.subtitleLabel.text = product.price
         return cell
     }
     

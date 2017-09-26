@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMz-5T-cPX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMz-5T-cPX">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
@@ -163,13 +166,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebo-GK-zRa">
-                                <rect key="frame" x="16" y="468" width="288" height="22"/>
+                                <rect key="frame" x="16" y="469" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lX-Qe-Yx7">
-                                <rect key="frame" x="16" y="422" width="288" height="28"/>
+                                <rect key="frame" x="16" y="424" width="288" height="27"/>
                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="23"/>
                                 <color key="textColor" red="0.30196078431372547" green="0.5725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -267,7 +270,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vkF-XZ-t5h">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="50"/>
+                                            <rect key="frame" x="16" y="0.0" width="289" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="19"/>
                                             <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
@@ -368,14 +371,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="juX-PJ-FmC">
-                                                    <rect key="frame" x="12" y="17" width="25" height="25"/>
+                                                    <rect key="frame" x="4" y="9" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="Th4-Sj-bsZ"/>
                                                         <constraint firstAttribute="height" constant="25" id="xMj-MQ-WXG"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2i-UB-Fg0">
-                                                    <rect key="frame" x="50" y="21" width="122" height="19"/>
+                                                    <rect key="frame" x="42" y="13" width="138" height="19"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -447,7 +450,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a 99 km da te" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRC-dU-1Bo">
-                                                            <rect key="frame" x="121" y="91" width="96" height="23"/>
+                                                            <rect key="frame" x="121" y="91" width="98" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="YBS-PK-aXD"/>
                                                             </constraints>
@@ -1280,7 +1283,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dicci cosa ti interessa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZE-pA-kwl">
-                                        <rect key="frame" x="79.5" y="65" width="161" height="20"/>
+                                        <rect key="frame" x="77" y="65" width="166" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="70L-aH-50L"/>
                                         </constraints>
@@ -1800,7 +1803,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRp-h6-824">
-                                <rect key="frame" x="66" y="377.5" width="108" height="24"/>
+                                <rect key="frame" x="66" y="377.5" width="104" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="oDc-zO-rSf"/>
                                 </constraints>
@@ -2044,14 +2047,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Eu-RD-Fk0">
-                                                    <rect key="frame" x="12" y="17" width="25" height="25"/>
+                                                    <rect key="frame" x="4" y="9" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="hyl-hc-DEB"/>
                                                         <constraint firstAttribute="width" constant="25" id="zNs-Z8-5AN"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-Bz-UyV">
-                                                    <rect key="frame" x="50" y="21" width="122" height="19"/>
+                                                    <rect key="frame" x="42" y="13" width="138" height="19"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
                                                     <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2162,7 +2165,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmn-Zp-MY8">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1795"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNy-rG-gic">
                                                 <rect key="frame" x="0.0" y="64" width="414" height="233"/>
@@ -2188,7 +2191,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a 9 km da te" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt3-Uf-Vmx">
-                                                <rect key="frame" x="140" y="357" width="76" height="21"/>
+                                                <rect key="frame" x="140" y="357" width="78" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="iuY-Iw-BpW"/>
                                                 </constraints>
@@ -2243,7 +2246,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPK-ap-fj7">
-                                                <rect key="frame" x="32" y="480" width="350" height="163.5"/>
+                                                <rect key="frame" x="32" y="480" width="350" height="158.5"/>
                                                 <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique.
 Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
@@ -2251,14 +2254,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRh-Yj-qzg">
-                                                <rect key="frame" x="32" y="669" width="350" height="1"/>
+                                                <rect key="frame" x="32" y="664" width="350" height="1"/>
                                                 <color key="backgroundColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="UsJ-gg-kmj"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visto 999 volte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk1-7y-OdM">
-                                                <rect key="frame" x="32" y="678" width="350" height="26"/>
+                                                <rect key="frame" x="32" y="673" width="350" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="Yn0-ij-8sr"/>
                                                 </constraints>
@@ -2267,7 +2270,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wga-Yx-sF3" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="727" width="84" height="40"/>
+                                                <rect key="frame" x="32" y="722" width="84" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="84" id="1hk-09-pab"/>
                                                     <constraint firstAttribute="height" constant="40" id="YK6-J8-Lui"/>
@@ -2285,7 +2288,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiA-9y-08Q" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="124" y="727" width="101" height="40"/>
+                                                <rect key="frame" x="124" y="722" width="101" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="gch-dA-YLG"/>
                                                     <constraint firstAttribute="width" constant="101" id="nB7-Wl-84c"/>
@@ -2303,7 +2306,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42m-3N-FXi" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="233" y="727" width="94" height="40"/>
+                                                <rect key="frame" x="233" y="722" width="94" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="DbT-my-LyW"/>
                                                     <constraint firstAttribute="width" constant="94" id="xh8-Ux-P36"/>
@@ -2321,13 +2324,13 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hf7-hE-j72">
-                                                <rect key="frame" x="0.0" y="1489" width="414" height="311"/>
+                                                <rect key="frame" x="0.0" y="1484" width="414" height="311"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Hf7-hE-j72" secondAttribute="height" multiplier="414:311" id="bSi-H9-1cu"/>
                                                 </constraints>
                                             </mapView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9He-rs-c0J" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="278" y="1509" width="120" height="30"/>
+                                                <rect key="frame" x="278" y="1504" width="120" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="pJv-EL-cKN"/>
                                                     <constraint firstAttribute="height" constant="30" id="yjM-jK-7Mr"/>
@@ -2348,19 +2351,19 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kbq-Ix-qfq">
-                                                <rect key="frame" x="32" y="1130" width="350" height="263"/>
+                                                <rect key="frame" x="32" y="1125" width="350" height="263"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="kbq-Ix-qfq" secondAttribute="height" multiplier="350:263" id="dSr-gf-QTW"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube_overlay_button" translatesAutoresizingMaskIntoConstraints="NO" id="OFB-rR-kLh">
-                                                <rect key="frame" x="32" y="1130" width="350" height="263"/>
+                                                <rect key="frame" x="32" y="1125" width="350" height="263"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OFB-rR-kLh" secondAttribute="height" multiplier="350:263" id="XTk-23-Pnu"/>
                                                 </constraints>
                                             </imageView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aNw-6a-WEl">
-                                                <rect key="frame" x="0.0" y="830" width="414" height="250"/>
+                                                <rect key="frame" x="0.0" y="825" width="414" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="DgL-QU-4h8"/>
@@ -2379,7 +2382,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="QOp-3B-cCK">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOp-3B-cCK">
                                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
@@ -2400,6 +2403,11 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             </subviews>
                                                         </view>
                                                         <size key="customSize" width="200" height="250"/>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="QOp-3B-cCK" id="C11-ii-cwG"/>
+                                                            <outlet property="subtitleLabel" destination="QB1-xY-oXq" id="y9t-dg-hHA"/>
+                                                            <outlet property="titleLabel" destination="lHS-KK-WLx" id="hsT-ql-dvq"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -2526,6 +2534,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                         <outlet property="attachmentButton" destination="JiA-9y-08Q" id="S5V-FT-adS"/>
                         <outlet property="backButton" destination="hZx-Qw-csL" id="8VJ-8l-6ZD"/>
                         <outlet property="collectionView" destination="aNw-6a-WEl" id="Ti8-6i-qQt"/>
+                        <outlet property="collectionViewHightConstraint" destination="DgL-QU-4h8" id="gaF-RL-6Mq"/>
                         <outlet property="companyImage" destination="6Wn-L2-At9" id="7zS-qU-ClL"/>
                         <outlet property="companyName" destination="iLL-Kk-jgd" id="5DB-8Y-AU7"/>
                         <outlet property="couponButton" destination="42m-3N-FXi" id="hJa-0H-UeU"/>
@@ -2641,7 +2650,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99.99" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NND-qL-DJd">
-                                                            <rect key="frame" x="121" y="84" width="68" height="30"/>
+                                                            <rect key="frame" x="121" y="84" width="67" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="02T-Eg-dDv"/>
                                                             </constraints>
@@ -2760,7 +2769,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99999.99" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6l-El-lr0">
-                                                            <rect key="frame" x="121" y="91" width="92.5" height="23"/>
+                                                            <rect key="frame" x="121" y="91" width="90.5" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="EgD-rO-Ept"/>
                                                             </constraints>
@@ -2769,7 +2778,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 99999.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-MM-mMF">
-                                                            <rect key="frame" x="228.5" y="91" width="92.5" height="23"/>
+                                                            <rect key="frame" x="226.5" y="91" width="90.5" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="EUh-4u-wAf"/>
                                                             </constraints>
@@ -2839,14 +2848,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZY-Sa-GWe">
-                                                    <rect key="frame" x="12" y="17" width="25" height="25"/>
+                                                    <rect key="frame" x="4" y="9" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="PL0-o2-qju"/>
                                                         <constraint firstAttribute="width" constant="25" id="nRx-po-71z"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSj-JD-SGu">
-                                                    <rect key="frame" x="50" y="21" width="122" height="19"/>
+                                                    <rect key="frame" x="42" y="13" width="138" height="19"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2993,7 +3002,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nessun ordine presente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ4-1q-aaV">
-                                <rect key="frame" x="44" y="271" width="234" height="26"/>
+                                <rect key="frame" x="43" y="271" width="234" height="26"/>
                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="22"/>
                                 <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3065,7 +3074,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a 99 km da te" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-dq-hZ6">
-                                                            <rect key="frame" x="121" y="91" width="96" height="23"/>
+                                                            <rect key="frame" x="121" y="91" width="98" height="23"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="23" id="MaS-d8-DBx"/>
                                                             </constraints>
@@ -3132,14 +3141,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRo-zd-mRI">
-                                                    <rect key="frame" x="12" y="17" width="25" height="25"/>
+                                                    <rect key="frame" x="4" y="9" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="JKU-P4-iLp"/>
                                                         <constraint firstAttribute="height" constant="25" id="O0d-0F-OJw"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-Xp-4Hh">
-                                                    <rect key="frame" x="50" y="21" width="122" height="19"/>
+                                                    <rect key="frame" x="42" y="13" width="138" height="19"/>
                                                     <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="16"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -3250,7 +3259,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aly-0h-opK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1395"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7by-Rs-jSs">
                                                 <rect key="frame" x="0.0" y="64" width="414" height="233"/>
@@ -3266,7 +3275,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a 9 km da te" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exA-jm-8L7">
-                                                <rect key="frame" x="140" y="356" width="76" height="21"/>
+                                                <rect key="frame" x="140" y="356" width="78" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="IRG-nF-qf9"/>
                                                 </constraints>
@@ -3275,7 +3284,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negozio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz7-He-fBw">
-                                                <rect key="frame" x="140" y="334" width="65.5" height="22"/>
+                                                <rect key="frame" x="140" y="334" width="66.5" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="7i9-oY-Njc"/>
                                                 </constraints>
@@ -3284,7 +3293,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGB-Pf-TZm">
-                                                <rect key="frame" x="33" y="401" width="350" height="163.5"/>
+                                                <rect key="frame" x="33" y="401" width="350" height="158.5"/>
                                                 <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique.
 Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
@@ -3292,7 +3301,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-2p-XBS">
-                                                <rect key="frame" x="33" y="587" width="30" height="30"/>
+                                                <rect key="frame" x="33" y="582" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="1eD-Ji-g55"/>
                                                     <constraint firstAttribute="width" constant="30" id="zPG-rG-Lkd"/>
@@ -3303,7 +3312,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-gr-JpQ">
-                                                <rect key="frame" x="32" y="630" width="30" height="30"/>
+                                                <rect key="frame" x="32" y="625" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GS0-V7-7CU"/>
                                                     <constraint firstAttribute="width" constant="30" id="fXj-4W-KeD"/>
@@ -3314,7 +3323,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chU-Ca-meh" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="99" y="684" width="217" height="36"/>
+                                                <rect key="frame" x="99" y="679" width="217" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="HrG-Vn-aQA"/>
                                                     <constraint firstAttribute="width" constant="217" id="NZK-rP-QuA"/>
@@ -3331,7 +3340,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJx-Fu-Dho">
-                                                <rect key="frame" x="83" y="590" width="108" height="24"/>
+                                                <rect key="frame" x="83" y="585" width="104" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="IiS-rr-8XP"/>
                                                 </constraints>
@@ -3344,7 +3353,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80b-AI-kOl">
-                                                <rect key="frame" x="82" y="629" width="301" height="33"/>
+                                                <rect key="frame" x="82" y="624" width="301" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="33" id="tmf-0y-nNu"/>
                                                 </constraints>
@@ -3357,14 +3366,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhu-58-oPk">
-                                                <rect key="frame" x="0.0" y="746" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="741" width="414" height="30"/>
                                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8Ug-ho-9iC"/>
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-yx-oFc">
-                                                <rect key="frame" x="0.0" y="776" width="414" height="287"/>
+                                                <rect key="frame" x="0.0" y="1088" width="414" height="287"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prodotti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohS-7Q-RAI">
                                                         <rect key="frame" x="22" y="28" width="384" height="21"/>
@@ -3461,14 +3470,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tz-uc-cgM">
-                                                <rect key="frame" x="0.0" y="1063" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="1058" width="414" height="30"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="cxf-YN-8G1"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvF-1q-aJR">
-                                                <rect key="frame" x="0.0" y="1093" width="414" height="287"/>
+                                                <rect key="frame" x="0.0" y="771" width="414" height="287"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTt-vJ-Rw8">
                                                         <rect key="frame" x="15" y="24" width="384" height="21"/>
@@ -3570,16 +3579,16 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <constraint firstItem="exA-jm-8L7" firstAttribute="leading" secondItem="qQs-Kt-RRM" secondAttribute="trailing" constant="8" id="1c4-MO-Thb"/>
                                             <constraint firstItem="qQs-Kt-RRM" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" constant="32" id="20g-9L-peN"/>
                                             <constraint firstItem="3tz-uc-cgM" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" id="9Ug-o6-UxQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="lMN-yx-oFc" secondAttribute="bottom" constant="20" id="CeG-zz-CpP"/>
                                             <constraint firstItem="7by-Rs-jSs" firstAttribute="top" secondItem="Aly-0h-opK" secondAttribute="top" constant="64" id="DoB-6t-wqj"/>
-                                            <constraint firstAttribute="bottom" secondItem="kvF-1q-aJR" secondAttribute="bottom" constant="20" id="FF4-61-XAA"/>
                                             <constraint firstItem="jhl-gr-JpQ" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" constant="32" id="IIb-GL-ngP"/>
                                             <constraint firstItem="7by-Rs-jSs" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" id="Ig8-Ta-tNt"/>
                                             <constraint firstItem="uhu-58-oPk" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" id="Jrh-Hj-KdT"/>
                                             <constraint firstItem="lMN-yx-oFc" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" id="KF6-ks-Es6"/>
                                             <constraint firstItem="OJx-Fu-Dho" firstAttribute="leading" secondItem="fcB-2p-XBS" secondAttribute="trailing" constant="20" id="Kll-LN-QmL"/>
-                                            <constraint firstItem="lMN-yx-oFc" firstAttribute="top" secondItem="uhu-58-oPk" secondAttribute="bottom" id="LV9-1t-ZST"/>
                                             <constraint firstItem="80b-AI-kOl" firstAttribute="leading" secondItem="jhl-gr-JpQ" secondAttribute="trailing" constant="20" id="Ln4-FN-BIS"/>
                                             <constraint firstAttribute="trailing" secondItem="qGB-Pf-TZm" secondAttribute="trailing" constant="31" id="Mf9-sA-xvp"/>
+                                            <constraint firstItem="3tz-uc-cgM" firstAttribute="top" secondItem="kvF-1q-aJR" secondAttribute="bottom" id="Ns5-GD-CnC"/>
                                             <constraint firstItem="qGB-Pf-TZm" firstAttribute="top" secondItem="exA-jm-8L7" secondAttribute="bottom" constant="24" id="Oyc-mp-0oi"/>
                                             <constraint firstAttribute="trailing" secondItem="kvF-1q-aJR" secondAttribute="trailing" id="QfY-31-FND"/>
                                             <constraint firstItem="qGB-Pf-TZm" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" constant="33" id="Qnh-bl-Bq5"/>
@@ -3587,14 +3596,13 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             <constraint firstItem="vz7-He-fBw" firstAttribute="leading" secondItem="qQs-Kt-RRM" secondAttribute="trailing" constant="8" id="Wz7-zK-lTw"/>
                                             <constraint firstItem="OJx-Fu-Dho" firstAttribute="top" secondItem="qGB-Pf-TZm" secondAttribute="bottom" constant="25.666666666666629" id="XDE-IM-8z7"/>
                                             <constraint firstItem="chU-Ca-meh" firstAttribute="top" secondItem="80b-AI-kOl" secondAttribute="bottom" constant="22" id="bPP-oq-f7g"/>
+                                            <constraint firstItem="kvF-1q-aJR" firstAttribute="top" secondItem="uhu-58-oPk" secondAttribute="bottom" id="bV5-lQ-10V"/>
                                             <constraint firstAttribute="trailing" secondItem="lMN-yx-oFc" secondAttribute="trailing" id="cFy-Pc-8lF"/>
                                             <constraint firstItem="qQs-Kt-RRM" firstAttribute="top" secondItem="7by-Rs-jSs" secondAttribute="bottom" constant="-20" id="dIB-Xz-UKl"/>
-                                            <constraint firstItem="lMN-yx-oFc" firstAttribute="top" secondItem="uhu-58-oPk" secondAttribute="bottom" id="dc0-zH-9hM"/>
                                             <constraint firstItem="chU-Ca-meh" firstAttribute="centerX" secondItem="Aly-0h-opK" secondAttribute="centerX" id="fGa-c1-A7N"/>
-                                            <constraint firstItem="3tz-uc-cgM" firstAttribute="top" secondItem="lMN-yx-oFc" secondAttribute="bottom" id="foI-Uh-Vcp"/>
                                             <constraint firstItem="fcB-2p-XBS" firstAttribute="top" secondItem="qGB-Pf-TZm" secondAttribute="bottom" constant="22.666666666666629" id="gIG-EO-FhK"/>
                                             <constraint firstAttribute="trailing" secondItem="uhu-58-oPk" secondAttribute="trailing" id="gqG-tm-Feo"/>
-                                            <constraint firstItem="kvF-1q-aJR" firstAttribute="top" secondItem="3tz-uc-cgM" secondAttribute="bottom" id="gtc-5A-cL3"/>
+                                            <constraint firstItem="lMN-yx-oFc" firstAttribute="top" secondItem="3tz-uc-cgM" secondAttribute="bottom" id="gyS-cz-OAg"/>
                                             <constraint firstItem="uhu-58-oPk" firstAttribute="top" secondItem="chU-Ca-meh" secondAttribute="bottom" constant="26" id="hke-PN-rRB"/>
                                             <constraint firstItem="80b-AI-kOl" firstAttribute="top" secondItem="OJx-Fu-Dho" secondAttribute="bottom" constant="15" id="isf-H2-Jii"/>
                                             <constraint firstItem="fcB-2p-XBS" firstAttribute="leading" secondItem="Aly-0h-opK" secondAttribute="leading" constant="33" id="odE-M4-e6J"/>
@@ -3818,7 +3826,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promozioni aperte: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZe-1B-BzU">
-                                            <rect key="frame" x="67" y="199" width="183.5" height="22"/>
+                                            <rect key="frame" x="67" y="199" width="185.5" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="lCF-aq-VK5"/>
                                             </constraints>
@@ -3929,7 +3937,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly9-wG-gIg">
-                                                            <rect key="frame" x="241.5" y="38" width="38.5" height="21"/>
+                                                            <rect key="frame" x="243" y="38" width="37" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="nGY-kC-WNb"/>
                                                             </constraints>
@@ -4236,7 +4244,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carico..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vre-xO-6I4">
-                                        <rect key="frame" x="128.5" y="27" width="64.5" height="23"/>
+                                        <rect key="frame" x="126" y="27" width="68" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -4268,7 +4276,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 <rect key="frame" x="0.0" y="64" width="320" height="440"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-oN-Fsu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="649"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-rc-2NH">
                                                 <rect key="frame" x="32" y="20" width="256" height="24"/>
@@ -4359,7 +4367,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UN-Vt-P9a">
-                                                <rect key="frame" x="33" y="402.5" width="256" height="143"/>
+                                                <rect key="frame" x="33" y="402.5" width="256" height="139"/>
                                                 <string key="text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique.
 Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod.</string>
                                                 <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="17"/>
@@ -4367,14 +4375,14 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-Wl-xEp">
-                                                <rect key="frame" x="33" y="565.5" width="256" height="1"/>
+                                                <rect key="frame" x="33" y="561.5" width="256" height="1"/>
                                                 <color key="backgroundColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gqc-Sc-Ron"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sct-jV-Kpe" customClass="RoundedButton" customModule="PioAlert" customModuleProvider="target">
-                                                <rect key="frame" x="39" y="592.5" width="242" height="34"/>
+                                                <rect key="frame" x="39" y="588.5" width="242" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="242" id="Wka-Tp-Flj"/>
                                                     <constraint firstAttribute="height" constant="34" id="jY9-2e-NM5"/>
@@ -4561,7 +4569,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDJ-xn-r8A">
-                                        <rect key="frame" x="140.5" y="51.5" width="13" height="28"/>
+                                        <rect key="frame" x="140.5" y="51.5" width="13" height="27"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                         <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4656,7 +4664,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carico..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-zP-1CK">
-                                        <rect key="frame" x="127" y="27" width="68" height="23"/>
+                                        <rect key="frame" x="126" y="27" width="68" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -5047,7 +5055,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
             <objects>
                 <tableViewController id="DiT-7J-wLE" customClass="ShippingController" customModule="PioAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MQd-Yj-MB8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="s3u-vw-tb5">
@@ -5294,7 +5302,7 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bzY-xj-kcy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Oan-ph-3ZN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.97254901959999995" green="0.79215686269999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -5332,7 +5340,6 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
         <image name="menu-vetrina-60" width="30" height="30"/>
         <image name="pio_big" width="180" height="180"/>
         <image name="pointer" width="40" height="40"/>
-        <image name="sample" width="200" height="200"/>
         <image name="signin-Facebook" width="25" height="24"/>
         <image name="signin-bg" width="750" height="1335"/>
         <image name="signin-google" width="25" height="25"/>
@@ -5341,10 +5348,10 @@ Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt 
         <image name="youtube_overlay_button" width="480" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="leB-wh-Eyh"/>
-        <segue reference="YiD-yy-bOF"/>
-        <segue reference="U7H-Fr-s9j"/>
-        <segue reference="eQ6-jK-TbE"/>
         <segue reference="zWU-wm-cIM"/>
+        <segue reference="C5c-Ji-6rI"/>
+        <segue reference="eQ6-jK-TbE"/>
+        <segue reference="tFC-pv-Mpn"/>
+        <segue reference="YiD-yy-bOF"/>
     </inferredMetricsTieBreakers>
 </document>
