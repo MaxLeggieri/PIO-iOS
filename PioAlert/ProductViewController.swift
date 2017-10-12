@@ -197,7 +197,6 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
             
             if product.calendarType == "1" {
                 if (checkInDateString != "" && quantity != "") {
-                
                 WebApi.sharedInstance.basketMoveCalendar(product.pid, quantity: quantity!, calendarType: product.calendarType!, calendarTime : checkInDateString!)
 
                 }
