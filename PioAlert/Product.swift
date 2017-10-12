@@ -37,11 +37,19 @@ class Product {
     var companyEmail:String!
     
     var hashtags:String!
-    
     var category:String!
     
+    var calendarType: String?
+    var workingDays: String?
+    var fromTime: String?
+    var toTime: String?
+
     init(pid: Int) {
         self.pid = pid
+        self.calendarType = ""
+        self.workingDays = ""
+        self.fromTime = ""
+        self.toTime = ""
     }
     
     func debugPrint() {

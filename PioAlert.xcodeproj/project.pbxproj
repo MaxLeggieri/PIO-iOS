@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36C15C2A1F8F556800E7B418 /* CalendarDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C15C241F8F556700E7B418 /* CalendarDayCell.xib */; };
+		36C15C2B1F8F556800E7B418 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C251F8F556700E7B418 /* DateExtension.swift */; };
+		36C15C2C1F8F556800E7B418 /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C261F8F556700E7B418 /* CalendarDayCell.swift */; };
+		36C15C2D1F8F556800E7B418 /* CalendarMonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C15C271F8F556700E7B418 /* CalendarMonthCell.xib */; };
+		36C15C2E1F8F556800E7B418 /* CalendarMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C281F8F556800E7B418 /* CalendarMonthCell.swift */; };
+		36C15C2F1F8F556800E7B418 /* CalendarSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C291F8F556800E7B418 /* CalendarSubViewController.swift */; };
 		501DCF6C1F200D5900214627 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DCF6B1F200D5900214627 /* MainMenuController.swift */; };
 		501DCF6E1F211B6500214627 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501DCF6D1F211B6500214627 /* PromoViewController.swift */; };
 		5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026D3B91D2A6D1100B3F46D /* CatButton.swift */; };
@@ -94,6 +100,12 @@
 /* Begin PBXFileReference section */
 		023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.debug.xcconfig"; sourceTree = "<group>"; };
 		15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.release.xcconfig"; sourceTree = "<group>"; };
+		36C15C241F8F556700E7B418 /* CalendarDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarDayCell.xib; path = Calendar/CalendarDayCell.xib; sourceTree = "<group>"; };
+		36C15C251F8F556700E7B418 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Calendar/DateExtension.swift; sourceTree = "<group>"; };
+		36C15C261F8F556700E7B418 /* CalendarDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarDayCell.swift; path = Calendar/CalendarDayCell.swift; sourceTree = "<group>"; };
+		36C15C271F8F556700E7B418 /* CalendarMonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarMonthCell.xib; path = Calendar/CalendarMonthCell.xib; sourceTree = "<group>"; };
+		36C15C281F8F556800E7B418 /* CalendarMonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarMonthCell.swift; path = Calendar/CalendarMonthCell.swift; sourceTree = "<group>"; };
+		36C15C291F8F556800E7B418 /* CalendarSubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarSubViewController.swift; path = Calendar/CalendarSubViewController.swift; sourceTree = "<group>"; };
 		500216E51E3FF83500D51F68 /* PioAlert.prod.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PioAlert.prod.entitlements; sourceTree = "<group>"; };
 		501DCF6B1F200D5900214627 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		501DCF6D1F211B6500214627 /* PromoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +208,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C15C231F8F555A00E7B418 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				36C15C261F8F556700E7B418 /* CalendarDayCell.swift */,
+				36C15C241F8F556700E7B418 /* CalendarDayCell.xib */,
+				36C15C281F8F556800E7B418 /* CalendarMonthCell.swift */,
+				36C15C271F8F556700E7B418 /* CalendarMonthCell.xib */,
+				36C15C291F8F556800E7B418 /* CalendarSubViewController.swift */,
+				36C15C251F8F556700E7B418 /* DateExtension.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		502848B41D02421700C60823 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +336,7 @@
 				502731BD1F1E912000A647F4 /* ShopController.swift */,
 				503B5EBE1F2C7D360019BADA /* ShopViewController.swift */,
 				502731BB1F1E163000A647F4 /* ShowcaseController.swift */,
+				36C15C231F8F555A00E7B418 /* Calendar */,
 				5087E87B1E8F085E00783F84 /* Virgi.storyboard */,
 				50CC71F61EA64DA80025866C /* Virgi.xcassets */,
 				50F000791F48A720008D4C97 /* ARViewController.swift */,
@@ -424,8 +450,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FECA871F28BE97002D21C4 /* LaunchScreen.storyboard in Resources */,
+				36C15C2A1F8F556800E7B418 /* CalendarDayCell.xib in Resources */,
 				502DB7211F2FA3BD00C1138D /* Lato-Bold.ttf in Resources */,
 				5087E87C1E8F085E00783F84 /* Virgi.storyboard in Resources */,
+				36C15C2D1F8F556800E7B418 /* CalendarMonthCell.xib in Resources */,
 				50CC71F71EA64DA80025866C /* Virgi.xcassets in Resources */,
 				506CF3EF1D1F15110052377C /* GoogleService-Info.plist in Resources */,
 				502DB7201F2FA3BD00C1138D /* Lato-Medium.ttf in Resources */,
@@ -538,6 +566,8 @@
 				509963D01D0183A500F6012A /* AppDelegate.swift in Sources */,
 				503B5EC11F2E47F80019BADA /* OrderAllController.swift in Sources */,
 				5097063C1F130B1000CA7C04 /* PromoController.swift in Sources */,
+				36C15C2B1F8F556800E7B418 /* DateExtension.swift in Sources */,
+				36C15C2E1F8F556800E7B418 /* CalendarMonthCell.swift in Sources */,
 				5091A93D1EBD04E00044B878 /* CompanyCollectionViewCell.swift in Sources */,
 				50CE74541F44DAAB00956D61 /* CouponController.swift in Sources */,
 				505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */,
@@ -550,6 +580,7 @@
 				507F6BF11F2A4E4200DB93C2 /* RoundBorderView.swift in Sources */,
 				50A7097D1EB1271000828CF3 /* EmailCell.swift in Sources */,
 				501DCF6E1F211B6500214627 /* PromoViewController.swift in Sources */,
+				36C15C2F1F8F556800E7B418 /* CalendarSubViewController.swift in Sources */,
 				50A585991EBBB48B00E2FEB9 /* CompanyTableViewCell.swift in Sources */,
 				502DB71B1F2F709800C1138D /* RankingController.swift in Sources */,
 				504F132C1E8C6AA200EE1698 /* BirthdateCell.swift in Sources */,
@@ -557,6 +588,7 @@
 				5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */,
 				50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */,
 				50D7F8B41EB1DF390007B8E0 /* PrivacyCell.swift in Sources */,
+				36C15C2C1F8F556800E7B418 /* CalendarDayCell.swift in Sources */,
 				506B73BD1EBA7DEB006C1CEB /* MapTableViewCell.swift in Sources */,
 				50A709771EB0B73400828CF3 /* CategoryCell.swift in Sources */,
 				502DB71D1F2FA2C300C1138D /* AppInfoController.swift in Sources */,

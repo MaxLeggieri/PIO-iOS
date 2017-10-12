@@ -347,11 +347,12 @@ class WebApi {
         
         
         do {
-            
+//            http://www.pioalert.com/api/?method=ads2user&uid=1&lat=40.379603&lng=15.534326&catlev=3&device_token=user_refused&page=1&idcategory=0
             var params = "?method=ads2user"
             params += "&uid="+String(uid)
             params += "&lat="+String(PioUser.sharedUser.location.coordinate.latitude)
             params += "&lng="+String(PioUser.sharedUser.location.coordinate.longitude)
+
             //params += "&maxdist="+String(UserDefaults.standard.integer(forKey: "maxDistanceFromAds"))
             params += "&catlev=3"
             params += "&device_token="+deviceToken
@@ -364,8 +365,6 @@ class WebApi {
             } else {
                 params += "&idcategory="+filter
             }
-            
-            
             
             params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
             
@@ -885,9 +884,10 @@ class WebApi {
             
             var params = "?method=companyProducts"
             params += "&idcom="+String(cid)
-            params += "&ord=lastin"
-            //params += "&direction=asc"
-            
+            params += "&ord=idp"
+            params += "&direction=desc"
+            params += "&rec=5"
+
             params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
             
             print(apiAddress+params)
@@ -1071,6 +1071,54 @@ class WebApi {
         return p
         
     }
+    
+    func getProductByMultipleId(_ idProd: String) -> [Product] {
+        
+        var prods = [Product]()
+
+        do {
+            
+            var params = "?method=product"
+            params += "&idproduct="+idProd
+            params += "&lat="+String(PioUser.sharedUser.location.coordinate.latitude)
+            params += "&lng="+String(PioUser.sharedUser.location.coordinate.longitude)
+            
+            params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            
+            
+            print("calling: "+apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+
+            
+            if let dictionary = object as? [String: AnyObject] {
+
+                let response = dictionary["response"]
+                let data = response!["data"] as! [String:AnyObject]
+                let products = data["products"] as? [[String:AnyObject]]
+                //let promos = ads!["d"] as? [[String:AnyObject]]
+                
+                if (products == nil) {
+                    return [Product]()
+                }
+                
+                for product in products! {
+                    //print(product)
+                    let p = createProductFromJson(product)
+                    prods.append(p)
+                }
+            }
+        }
+        catch {
+            print("Error on getProductById")
+            
+        }
+        
+        return prods
+        
+    }
+
     
     func getAllCategories() -> [Category] {
         
@@ -1342,6 +1390,42 @@ class WebApi {
         
         
     }
+    
+    // BASKET
+    //basketAddProduct
+    func basketMoveCalendar(_ idp: Int, quantity: String, calendarType: String, calendarTime: String ) {
+        
+        do {
+            
+            var params = "?method=basketMove"
+            
+            params += "&uid="+String(uid)
+            params += "&idp="+String(idp)
+            params += "&device_token="+deviceToken
+            params += "&quantity="+String(quantity)
+            params += "&calendarType="+String(calendarType)
+            params += "&calendarTime="+String(calendarTime)
+            print(apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            if let dictionary = object as? [String: AnyObject] {
+                
+                
+                let response = dictionary["response"]
+                if delegate != nil {
+                    delegate?.didSendApiMethod("basketMove", result: response.debugDescription)
+                }
+            }
+        } catch {
+            print("Error on basketAddProduct")
+            
+            
+        }
+        
+        
+    }
+
     
     func basketProductUp(_ idp: Int) {
         
@@ -1972,6 +2056,10 @@ class WebApi {
         p.lat = promo["lat"]?.doubleValue
         p.lon = promo["lng"]?.doubleValue
         
+        p.releatedProductId = promo["relatedProductsIds"] as? String
+       // p.catId = promo["catId"] as! [AnyObject]
+       // p.catName = promo["cat"] as! [AnyObject]
+
         
         
         return p
@@ -1993,7 +2081,11 @@ class WebApi {
         p.companyName = product["brandname"] as? String
         p.category = product["catText"] as? String
         p.hashtags = product["hashtags"] as? String
-        
+        p.calendarType = product["calendarType"] as? String
+        p.workingDays = product["workingDays"] as? String
+        p.fromTime = product["fromtime"] as? String
+        p.toTime = product["totime"] as? String
+
         
         
         if p.initialPrice == nil {
@@ -2015,6 +2107,7 @@ class WebApi {
         p.companyEmail = product["where"]?["email"] as? String
         p.companyAddress = product["where"]?["addressloc"] as? String
         
+       
         return p
     }
     
