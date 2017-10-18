@@ -13,7 +13,7 @@ class MainMenuController: UITableViewController {
     
     let menu = [
             ["I miei interessi","Carrelli","Ordini","Classifica","Aziende Felix"],
-            ["Esci","Info"]
+            ["Promo Express","Esci","Info"]
     ]
     
     
@@ -103,12 +103,20 @@ class MainMenuController: UITableViewController {
             
         }
         else if indexPath.section == 1 {
-            if indexPath.row == 0 {
+            if (indexPath.row == 0) {
+                if !PioUser.sharedUser.companyLogged {
+                    self.performSegue(withIdentifier: "showLoginFromMenu", sender: self)
+                }
+                else {
+                    self.performSegue(withIdentifier: "showCreateADFromMenu", sender: self)
+                }
+            }
+            else if indexPath.row == 1 {
                 homeController.togglePioMenu()
                 PioUser.sharedUser.setLogged(false)
                 homeController.checkUserStatus()
             }
-            else if indexPath.row == 1 {
+            else if indexPath.row == 2 {
                 self.performSegue(withIdentifier: "showInfoFromMenu", sender: self)
             }
         }

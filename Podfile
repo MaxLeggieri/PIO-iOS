@@ -16,5 +16,6 @@ pod 'BraintreeDropIn'
 pod 'Braintree/3D-Secure'
 pod 'ImageSlideshow', '~> 1.3'
 pod 'GooglePlaces'
+pod 'IQKeyboardManagerSwift', '4.0.10'
 
 end

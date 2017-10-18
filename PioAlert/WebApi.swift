@@ -53,6 +53,7 @@ class WebApi {
     
     var apiAddress = "http://www.pioalert.com/api/"
     var isLogged = false
+    var isCompanyLogged = false
     var isProfiled = false
     var isCheckedMissing = false
     var canReceiveNotifications = false
@@ -72,9 +73,7 @@ class WebApi {
     //var liked = [Int]()
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    
-    
+
     func apistart() -> [String:AnyObject] {
         
         var result = [String:AnyObject]()
@@ -244,6 +243,171 @@ class WebApi {
             print(error)
         }
     }
+    
+    func companyLogin(_ username: String, password: String ) {
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
+        
+        do {
+                
+                var params = "?method=login"
+                params += "&user_name="+String(username)
+                params += "&password="+String(password)
+                params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                
+                print(apiAddress+params)
+                
+                let data = getJSON(apiAddress+params)
+                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                
+                if let dictionary = object as? [String: AnyObject] {
+                    
+                    // JSONObject response = new JSONObject(result).getJSONObject("response");
+                    // JSONArray data = response.getJSONObject("data").getJSONObject("ads").getJSONArray("d");
+                    
+                    print(dictionary)
+                    
+                    
+                    let response = dictionary["response"]
+                    let data = response!["data"] as! [String:AnyObject]
+                    self.isCompanyLogged = true
+                    PioUser.sharedUser.companyDict = data
+                    self.delegate?.didSendApiMethod("login", result: "success")
+
+                }
+            
+                
+            } catch {
+                print("Error on getCategoryAds...")
+            }
+        
+    }
+    
+    func createAdd(_ username: String, password: String ) {
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
+        
+        do {
+            
+            var params = "?method=login"
+            params += "&user_name="+String(username)
+            params += "&password="+String(password)
+            params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            
+            print(apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            
+            if let dictionary = object as? [String: AnyObject] {
+                
+                // JSONObject response = new JSONObject(result).getJSONObject("response");
+                // JSONArray data = response.getJSONObject("data").getJSONObject("ads").getJSONArray("d");
+                
+                print(dictionary)
+                
+                
+                let response = dictionary["response"]
+//                let data = response!["data"] as! [String:AnyObject]
+                self.isCompanyLogged = true
+                self.delegate?.didSendApiMethod("login", result: "true")
+                
+                
+            }
+            
+            
+        } catch {
+            print("Error on getCategoryAds...")
+        }
+        
+    }
+
+    func imageUploadRequest(imageView: UIImage, uploadUrl: NSURL, param: [String:String]?) {
+        
+        let request = NSMutableURLRequest(url:uploadUrl as URL);
+        request.httpMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        let imageData = UIImageJPEGRepresentation(imageView, 1)
+        
+        if(imageData==nil)  { return; }
+        
+        request.httpBody = createBodyWithParameters(parameters: param, filePathKey: "image", imageDataKey: imageData! as NSData, boundary: boundary) as Data
+        
+        //myActivityIndicator.startAnimating();
+        
+        let task =  URLSession.shared.dataTask(with: request as URLRequest,
+                                                                     completionHandler: {
+                                                                        (data, response, error) -> Void in
+                                                                        if let data = data {
+                                                                            
+                                                                            // You can print out response object
+                                                                            print("******* response = \(response)")
+                                                                            
+                                                                            print(data.count)
+                                                                            // you can use data here
+                                                                            
+                                                                            // Print out reponse body
+                                                                            let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                                                                            print("****** response data = \(responseString!)")
+                                                                            
+                                                                            let json =  try!JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+                                                                            
+                                                                            print("json value \(json)")
+                                                                            
+                                                                            //var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &err)
+                                                                            
+                                                                            DispatchQueue.main.async(execute: {
+                                                                                //self.myActivityIndicator.stopAnimating()
+                                                                                //self.imageView.image = nil;
+                                                                            });
+                                                                            
+                                                                        } else if let error = error {
+//                                                                            print(error.description)
+                                                                        }
+        })
+        task.resume()
+        
+        
+    }
+    
+    
+    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+        let body = NSMutableData();
+        
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.appendString(string: "--\(boundary)\r\n")
+                body.appendString(string: "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.appendString(string: "\(value)\r\n")
+            }
+        }
+        
+        let filename = "user-profile.jpg"
+        let mimetype = "image/jpg"
+        body.appendString(string: "--\(boundary)\r\n")
+        body.appendString(string: "Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+        body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
+        body.append(imageDataKey as Data)
+        body.appendString(string: "\r\n")
+        
+        body.appendString(string: "--\(boundary)--\r\n")
+        
+        return body
+    }
+    
+    
+    
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
+    
     
     func setUsersCategories(_ cats: String) -> Bool {
         
@@ -1120,6 +1284,7 @@ class WebApi {
     }
 
     
+    
     func getAllCategories() -> [Category] {
         
         var allCats = [Category]()
@@ -1231,7 +1396,6 @@ class WebApi {
                 
                 let claimTitle = response["claim"] as! String
                 let claimDesc = response["claimText"] as! String
-                
                 claim.append(claimTitle)
                 claim.append(claimDesc)
                 
@@ -2394,13 +2558,9 @@ class WebApi {
             }
         }).resume()
     }
-    
-    
-    
-    
-    
-}
 
+
+}
 public extension UIDevice {
     
     var modelName: String {
@@ -2441,4 +2601,11 @@ public extension UIDevice {
         }
     }
     
+}
+extension NSMutableData {
+    
+    func appendString(string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        append(data!)
+    }
 }

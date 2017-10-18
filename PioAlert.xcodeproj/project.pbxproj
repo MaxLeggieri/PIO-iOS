@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B3F9C11F9702C500D0D977 /* CompanyLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F9BD1F9702C400D0D977 /* CompanyLoginViewController.swift */; };
+		36B3F9C21F9702C500D0D977 /* CreateADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F9BE1F9702C400D0D977 /* CreateADViewController.swift */; };
+		36B3F9C31F9702C500D0D977 /* CreateADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F9BF1F9702C500D0D977 /* CreateADCell.swift */; };
+		36B3F9C61F97059500D0D977 /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F9C51F97059500D0D977 /* ImageResizer.swift */; };
+		36B3F9C81F97060200D0D977 /* CreateADImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3F9C71F97060200D0D977 /* CreateADImageViewCell.swift */; };
 		36C15C2A1F8F556800E7B418 /* CalendarDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36C15C241F8F556700E7B418 /* CalendarDayCell.xib */; };
 		36C15C2B1F8F556800E7B418 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C251F8F556700E7B418 /* DateExtension.swift */; };
 		36C15C2C1F8F556800E7B418 /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C15C261F8F556700E7B418 /* CalendarDayCell.swift */; };
@@ -100,6 +105,11 @@
 /* Begin PBXFileReference section */
 		023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.debug.xcconfig"; sourceTree = "<group>"; };
 		15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PioAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert.release.xcconfig"; sourceTree = "<group>"; };
+		36B3F9BD1F9702C400D0D977 /* CompanyLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyLoginViewController.swift; sourceTree = "<group>"; };
+		36B3F9BE1F9702C400D0D977 /* CreateADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateADViewController.swift; sourceTree = "<group>"; };
+		36B3F9BF1F9702C500D0D977 /* CreateADCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateADCell.swift; sourceTree = "<group>"; };
+		36B3F9C51F97059500D0D977 /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageResizer.swift; path = Calendar/ImageResizer.swift; sourceTree = "<group>"; };
+		36B3F9C71F97060200D0D977 /* CreateADImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateADImageViewCell.swift; sourceTree = "<group>"; };
 		36C15C241F8F556700E7B418 /* CalendarDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarDayCell.xib; path = Calendar/CalendarDayCell.xib; sourceTree = "<group>"; };
 		36C15C251F8F556700E7B418 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Calendar/DateExtension.swift; sourceTree = "<group>"; };
 		36C15C261F8F556700E7B418 /* CalendarDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarDayCell.swift; path = Calendar/CalendarDayCell.swift; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 		36C15C231F8F555A00E7B418 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				36B3F9C51F97059500D0D977 /* ImageResizer.swift */,
 				36C15C261F8F556700E7B418 /* CalendarDayCell.swift */,
 				36C15C241F8F556700E7B418 /* CalendarDayCell.xib */,
 				36C15C281F8F556800E7B418 /* CalendarMonthCell.swift */,
@@ -336,10 +347,14 @@
 				502731BD1F1E912000A647F4 /* ShopController.swift */,
 				503B5EBE1F2C7D360019BADA /* ShopViewController.swift */,
 				502731BB1F1E163000A647F4 /* ShowcaseController.swift */,
+				36B3F9C71F97060200D0D977 /* CreateADImageViewCell.swift */,
 				36C15C231F8F555A00E7B418 /* Calendar */,
 				5087E87B1E8F085E00783F84 /* Virgi.storyboard */,
 				50CC71F61EA64DA80025866C /* Virgi.xcassets */,
 				50F000791F48A720008D4C97 /* ARViewController.swift */,
+				36B3F9BD1F9702C400D0D977 /* CompanyLoginViewController.swift */,
+				36B3F9BF1F9702C500D0D977 /* CreateADCell.swift */,
+				36B3F9BE1F9702C400D0D977 /* CreateADViewController.swift */,
 			);
 			name = Virgi;
 			sourceTree = "<group>";
@@ -530,8 +545,10 @@
 				502731C01F1EB26600A647F4 /* NotifiedController.swift in Sources */,
 				5091A9391EBC690C0044B878 /* ProductCollectionViewCell.swift in Sources */,
 				50A709811EB12A4600828CF3 /* JobCell.swift in Sources */,
+				36B3F9C81F97060200D0D977 /* CreateADImageViewCell.swift in Sources */,
 				506CF3F31D202F200052377C /* Category.swift in Sources */,
 				50B7D4151EA91EFC00048EA5 /* PioUser.swift in Sources */,
+				36B3F9C61F97059500D0D977 /* ImageResizer.swift in Sources */,
 				507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */,
 				508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */,
 				507F6BF31F2A566D00DB93C2 /* ModifyCartController.swift in Sources */,
@@ -565,10 +582,12 @@
 				502848B11D01F82600C60823 /* Promo.swift in Sources */,
 				509963D01D0183A500F6012A /* AppDelegate.swift in Sources */,
 				503B5EC11F2E47F80019BADA /* OrderAllController.swift in Sources */,
+				36B3F9C11F9702C500D0D977 /* CompanyLoginViewController.swift in Sources */,
 				5097063C1F130B1000CA7C04 /* PromoController.swift in Sources */,
 				36C15C2B1F8F556800E7B418 /* DateExtension.swift in Sources */,
 				36C15C2E1F8F556800E7B418 /* CalendarMonthCell.swift in Sources */,
 				5091A93D1EBD04E00044B878 /* CompanyCollectionViewCell.swift in Sources */,
+				36B3F9C21F9702C500D0D977 /* CreateADViewController.swift in Sources */,
 				50CE74541F44DAAB00956D61 /* CouponController.swift in Sources */,
 				505B4B861D0359D500BAE9A8 /* PromoViewCell.swift in Sources */,
 				503B5EBF1F2C7D360019BADA /* ShopViewController.swift in Sources */,
@@ -585,6 +604,7 @@
 				502DB71B1F2F709800C1138D /* RankingController.swift in Sources */,
 				504F132C1E8C6AA200EE1698 /* BirthdateCell.swift in Sources */,
 				506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */,
+				36B3F9C31F9702C500D0D977 /* CreateADCell.swift in Sources */,
 				5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */,
 				50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */,
 				50D7F8B41EB1DF390007B8E0 /* PrivacyCell.swift in Sources */,

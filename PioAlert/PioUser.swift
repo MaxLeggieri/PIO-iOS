@@ -15,6 +15,7 @@ class PioUser {
     var userCat = [Int]()
     
     var logged = false
+    var companyLogged = false
     var profiled = false
     var consent = false
     var consentGeo = false
@@ -27,7 +28,8 @@ class PioUser {
     
     var userName = ""
     var userImagePath = ""
-    
+    var companyDict = [String:AnyObject]()
+
     var location = CLLocation(latitude: 41.899254, longitude: 12.494790)
     var userLat = 41.899254
     var userLon = 12.494790
@@ -38,6 +40,8 @@ class PioUser {
     
     func updateUser() {
         logged = UserDefaults.standard.bool(forKey: "logged")
+        companyLogged = UserDefaults.standard.bool(forKey: "companyLogged")
+
         profiled = UserDefaults.standard.bool(forKey: "profiled")
         
         localized = UserDefaults.standard.bool(forKey: "localized")
@@ -70,6 +74,13 @@ class PioUser {
         UserDefaults.standard.set(logged, forKey: "logged")
         UserDefaults.standard.synchronize()
     }
+    
+    func setCompanyLogged(_ logged: Bool) {
+        self.companyLogged = logged
+        UserDefaults.standard.set(logged, forKey: "companyLogged")
+        UserDefaults.standard.synchronize()
+    }
+
     
     func setProfiled(_ profiled: Bool) {
         self.profiled = profiled
@@ -159,5 +170,12 @@ class PioUser {
         UserDefaults.standard.synchronize()
     }
     
+    func setCompanydiction(_ dict: [String: AnyObject]) {
+        self.companyDict = dict
+        
+        UserDefaults.standard.set(self.companyDict, forKey: "companyDict")
+        UserDefaults.standard.synchronize()
+    }
+
     
 }
