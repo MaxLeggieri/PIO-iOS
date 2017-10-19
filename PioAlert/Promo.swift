@@ -42,7 +42,8 @@ class Promo {
     var companyEmail:String!
     
     var expirationHuman:String!
-    
+    var releatedProductId:String!
+
     init(pid: Int) {
         promoId = pid
         brandId = 0
@@ -71,6 +72,6 @@ class Promo {
         lat = 0.00
         lon = 0.00
         
-        
+        releatedProductId = ""
     }
 }

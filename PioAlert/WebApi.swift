@@ -53,6 +53,7 @@ class WebApi {
     
     var apiAddress = "http://www.pioalert.com/api/"
     var isLogged = false
+    var isCompanyLogged = false
     var isProfiled = false
     var isCheckedMissing = false
     var canReceiveNotifications = false
@@ -72,9 +73,7 @@ class WebApi {
     //var liked = [Int]()
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    
-    
+
     func apistart() -> [String:AnyObject] {
         
         var result = [String:AnyObject]()
@@ -118,7 +117,9 @@ class WebApi {
     
     
     func sendFbUserData(_ fbJson: AnyObject) {
-        
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
         
         do {
             
@@ -151,7 +152,7 @@ class WebApi {
                     
                     let response = result!["response"] as? [String:AnyObject]
                     
-                    self.uid = (response?["uid"] as! NSString).integerValue
+                    self.uid = ((response?["uid"] as? NSString)?.integerValue)!
                     UserDefaults.standard.set(self.uid, forKey: "uid")
                     UserDefaults.standard.synchronize()
                     
@@ -242,6 +243,171 @@ class WebApi {
             print(error)
         }
     }
+    
+    func companyLogin(_ username: String, password: String ) {
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
+        
+        do {
+                
+                var params = "?method=login"
+                params += "&user_name="+String(username)
+                params += "&password="+String(password)
+                params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                
+                print(apiAddress+params)
+                
+                let data = getJSON(apiAddress+params)
+                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                
+                if let dictionary = object as? [String: AnyObject] {
+                    
+                    // JSONObject response = new JSONObject(result).getJSONObject("response");
+                    // JSONArray data = response.getJSONObject("data").getJSONObject("ads").getJSONArray("d");
+                    
+                    print(dictionary)
+                    
+                    
+                    let response = dictionary["response"]
+                    let data = response!["data"] as! [String:AnyObject]
+                    self.isCompanyLogged = true
+                    PioUser.sharedUser.companyDict = data
+                    self.delegate?.didSendApiMethod("login", result: "success")
+
+                }
+            
+                
+            } catch {
+                print("Error on getCategoryAds...")
+            }
+        
+    }
+    
+    func createAdd(_ username: String, password: String ) {
+        if !Reachability.isConnectedToNetwork(){
+            return
+        }
+        
+        do {
+            
+            var params = "?method=login"
+            params += "&user_name="+String(username)
+            params += "&password="+String(password)
+            params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            
+            print(apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            
+            if let dictionary = object as? [String: AnyObject] {
+                
+                // JSONObject response = new JSONObject(result).getJSONObject("response");
+                // JSONArray data = response.getJSONObject("data").getJSONObject("ads").getJSONArray("d");
+                
+                print(dictionary)
+                
+                
+                let response = dictionary["response"]
+//                let data = response!["data"] as! [String:AnyObject]
+                self.isCompanyLogged = true
+                self.delegate?.didSendApiMethod("login", result: "true")
+                
+                
+            }
+            
+            
+        } catch {
+            print("Error on getCategoryAds...")
+        }
+        
+    }
+
+    func imageUploadRequest(imageView: UIImage, uploadUrl: NSURL, param: [String:String]?) {
+        
+        let request = NSMutableURLRequest(url:uploadUrl as URL);
+        request.httpMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        let imageData = UIImageJPEGRepresentation(imageView, 1)
+        
+        if(imageData==nil)  { return; }
+        
+        request.httpBody = createBodyWithParameters(parameters: param, filePathKey: "image", imageDataKey: imageData! as NSData, boundary: boundary) as Data
+        
+        //myActivityIndicator.startAnimating();
+        
+        let task =  URLSession.shared.dataTask(with: request as URLRequest,
+                                                                     completionHandler: {
+                                                                        (data, response, error) -> Void in
+                                                                        if let data = data {
+                                                                            
+                                                                            // You can print out response object
+                                                                            print("******* response = \(response)")
+                                                                            
+                                                                            print(data.count)
+                                                                            // you can use data here
+                                                                            
+                                                                            // Print out reponse body
+                                                                            let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                                                                            print("****** response data = \(responseString!)")
+                                                                            
+                                                                            let json =  try!JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? NSDictionary
+                                                                            
+                                                                            print("json value \(json)")
+                                                                            
+                                                                            //var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &err)
+                                                                            
+                                                                            DispatchQueue.main.async(execute: {
+                                                                                //self.myActivityIndicator.stopAnimating()
+                                                                                //self.imageView.image = nil;
+                                                                            });
+                                                                            
+                                                                        } else if let error = error {
+//                                                                            print(error.description)
+                                                                        }
+        })
+        task.resume()
+        
+        
+    }
+    
+    
+    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+        let body = NSMutableData();
+        
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.appendString(string: "--\(boundary)\r\n")
+                body.appendString(string: "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.appendString(string: "\(value)\r\n")
+            }
+        }
+        
+        let filename = "user-profile.jpg"
+        let mimetype = "image/jpg"
+        body.appendString(string: "--\(boundary)\r\n")
+        body.appendString(string: "Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+        body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
+        body.append(imageDataKey as Data)
+        body.appendString(string: "\r\n")
+        
+        body.appendString(string: "--\(boundary)--\r\n")
+        
+        return body
+    }
+    
+    
+    
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
+    
     
     func setUsersCategories(_ cats: String) -> Bool {
         
@@ -345,11 +511,12 @@ class WebApi {
         
         
         do {
-            
+//            http://www.pioalert.com/api/?method=ads2user&uid=1&lat=40.379603&lng=15.534326&catlev=3&device_token=user_refused&page=1&idcategory=0
             var params = "?method=ads2user"
             params += "&uid="+String(uid)
             params += "&lat="+String(PioUser.sharedUser.location.coordinate.latitude)
             params += "&lng="+String(PioUser.sharedUser.location.coordinate.longitude)
+
             //params += "&maxdist="+String(UserDefaults.standard.integer(forKey: "maxDistanceFromAds"))
             params += "&catlev=3"
             params += "&device_token="+deviceToken
@@ -362,8 +529,6 @@ class WebApi {
             } else {
                 params += "&idcategory="+filter
             }
-            
-            
             
             params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
             
@@ -883,9 +1048,10 @@ class WebApi {
             
             var params = "?method=companyProducts"
             params += "&idcom="+String(cid)
-            params += "&ord=lastin"
-            //params += "&direction=asc"
-            
+            params += "&ord=idp"
+            params += "&direction=desc"
+            params += "&rec=5"
+
             params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
             
             print(apiAddress+params)
@@ -1070,6 +1236,55 @@ class WebApi {
         
     }
     
+    func getProductByMultipleId(_ idProd: String) -> [Product] {
+        
+        var prods = [Product]()
+
+        do {
+            
+            var params = "?method=product"
+            params += "&idproduct="+idProd
+            params += "&lat="+String(PioUser.sharedUser.location.coordinate.latitude)
+            params += "&lng="+String(PioUser.sharedUser.location.coordinate.longitude)
+            
+            params = params.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+            
+            
+            print("calling: "+apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+
+            
+            if let dictionary = object as? [String: AnyObject] {
+
+                let response = dictionary["response"]
+                let data = response!["data"] as! [String:AnyObject]
+                let products = data["products"] as? [[String:AnyObject]]
+                //let promos = ads!["d"] as? [[String:AnyObject]]
+                
+                if (products == nil) {
+                    return [Product]()
+                }
+                
+                for product in products! {
+                    //print(product)
+                    let p = createProductFromJson(product)
+                    prods.append(p)
+                }
+            }
+        }
+        catch {
+            print("Error on getProductById")
+            
+        }
+        
+        return prods
+        
+    }
+
+    
+    
     func getAllCategories() -> [Category] {
         
         var allCats = [Category]()
@@ -1181,7 +1396,6 @@ class WebApi {
                 
                 let claimTitle = response["claim"] as! String
                 let claimDesc = response["claimText"] as! String
-                
                 claim.append(claimTitle)
                 claim.append(claimDesc)
                 
@@ -1340,6 +1554,42 @@ class WebApi {
         
         
     }
+    
+    // BASKET
+    //basketAddProduct
+    func basketMoveCalendar(_ idp: Int, quantity: String, calendarType: String, calendarTime: String ) {
+        
+        do {
+            
+            var params = "?method=basketMove"
+            
+            params += "&uid="+String(uid)
+            params += "&idp="+String(idp)
+            params += "&device_token="+deviceToken
+            params += "&quantity="+String(quantity)
+            params += "&calendarType="+String(calendarType)
+            params += "&calendarTime="+String(calendarTime)
+            print(apiAddress+params)
+            
+            let data = getJSON(apiAddress+params)
+            let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            if let dictionary = object as? [String: AnyObject] {
+                
+                
+                let response = dictionary["response"]
+                if delegate != nil {
+                    delegate?.didSendApiMethod("basketMove", result: response.debugDescription)
+                }
+            }
+        } catch {
+            print("Error on basketAddProduct")
+            
+            
+        }
+        
+        
+    }
+
     
     func basketProductUp(_ idp: Int) {
         
@@ -1785,8 +2035,9 @@ class WebApi {
                     let player = PioPlayer(json: obj)
                     players.append(player)
                 }
+                //crash
                 
-                let you = data["you"] as! [String:AnyObject]
+                let you = data["you"] as? [String:AnyObject]
                 
                 PioUser.sharedUser.rankData = you
             }
@@ -1969,6 +2220,10 @@ class WebApi {
         p.lat = promo["lat"]?.doubleValue
         p.lon = promo["lng"]?.doubleValue
         
+        p.releatedProductId = promo["relatedProductsIds"] as? String
+       // p.catId = promo["catId"] as! [AnyObject]
+       // p.catName = promo["cat"] as! [AnyObject]
+
         
         
         return p
@@ -1990,7 +2245,11 @@ class WebApi {
         p.companyName = product["brandname"] as? String
         p.category = product["catText"] as? String
         p.hashtags = product["hashtags"] as? String
-        
+        p.calendarType = product["calendarType"] as? String
+        p.workingDays = product["workingDays"] as? String
+        p.fromTime = product["fromtime"] as? String
+        p.toTime = product["totime"] as? String
+
         
         
         if p.initialPrice == nil {
@@ -2012,6 +2271,7 @@ class WebApi {
         p.companyEmail = product["where"]?["email"] as? String
         p.companyAddress = product["where"]?["addressloc"] as? String
         
+       
         return p
     }
     
@@ -2298,13 +2558,9 @@ class WebApi {
             }
         }).resume()
     }
-    
-    
-    
-    
-    
-}
 
+
+}
 public extension UIDevice {
     
     var modelName: String {
@@ -2345,4 +2601,11 @@ public extension UIDevice {
         }
     }
     
+}
+extension NSMutableData {
+    
+    func appendString(string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        append(data!)
+    }
 }
