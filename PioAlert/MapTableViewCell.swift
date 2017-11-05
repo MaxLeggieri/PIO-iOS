@@ -89,6 +89,8 @@ extension MapTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
         let type = r["type"] as! String
         let pid = r["id"] as! String
         
+        print("TYPE: "+type)
+        
         if type == "ad" {
             homeController.showPromo(pid: pid)
         }

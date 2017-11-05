@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Cosmos
 
 class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource  {
     
@@ -33,16 +34,22 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
     @IBOutlet weak var youtubeButton:UIImageView!
     @IBOutlet weak var promoMapView:MKMapView!
     @IBOutlet weak var navigateToButton:RoundedButton!
-    
+    @IBOutlet var cosmosView:CosmosView!
+
     @IBOutlet weak var collectionViewHightConstraint:NSLayoutConstraint!
     @IBOutlet weak var collectionView:UICollectionView?
     var prodContent = [Product]()
     var promo:Promo!
+    var promoId:Int!
     var imgFolder = "https://www.pioalert.com"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if promo == nil {
+            promo = WebApi.sharedInstance.getAdById(String(promoId))
+        }
+        
         print(promo.releatedProductId)
         
         
@@ -117,6 +124,17 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
         let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         companyImage.isUserInteractionEnabled = true
         companyImage.addGestureRecognizer(tapGestureRecognizer2)
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (showReviews))
+        cosmosView.addGestureRecognizer(gesture)
+
+        cosmosView.rating = promo.rating
+        if promo.votes == 0 {
+            cosmosView.text = "NESSUNA RECENSIONE"
+        } else {
+            cosmosView.text = "("+String(promo.votes)+") VEDI LE RECENSIONI"
+        }
+
     }
     
     
@@ -183,6 +201,23 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
         }
         
     }
+    
+    @IBAction func goToShop(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showCompanyFromPromo", sender: self)
+    }
+    
+    @IBAction func writeReview(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showAddReview", sender: self)
+    }
+
+    func showReviews(sender:UITapGestureRecognizer){
+        // do other task
+        
+//        if promo.votes != 0 {
+//            self.performSegue(withIdentifier: "showReviews", sender: self)
+//        }
+    }
+
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
@@ -294,6 +329,19 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
             let vc = segue.destination as! ShopViewController
             vc.company = WebApi.sharedInstance.getCompanyData(String(promo.brandId))
         }
+        else if segue.identifier == "showAddReview" {
+            let vc = segue.destination as! AddReviewController;
+            vc.promo = promo
+            vc.reviewType = .promoReview
+        }
+            
+        else if segue.identifier == "showReviews" {
+            let vc = segue.destination as! ReviewController;
+            vc.promo = promo
+            vc.getReviewType = .promoReview
+            
+        }
+
     }
     
     //MARK: Collection View Delegate and DataSource

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25B39FE6531B4B0B171167589C940B3C"
-               BuildableName = "Braintree.framework"
-               BlueprintName = "Braintree"
+               BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
+               BuildableName = "IQKeyboardManagerSwift.framework"
+               BlueprintName = "IQKeyboardManagerSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25B39FE6531B4B0B171167589C940B3C"
-            BuildableName = "Braintree.framework"
-            BlueprintName = "Braintree"
+            BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
+            BuildableName = "IQKeyboardManagerSwift.framework"
+            BlueprintName = "IQKeyboardManagerSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25B39FE6531B4B0B171167589C940B3C"
-            BuildableName = "Braintree.framework"
-            BlueprintName = "Braintree"
+            BlueprintIdentifier = "C235F77E101E742652CCF98FFDFA5182"
+            BuildableName = "IQKeyboardManagerSwift.framework"
+            BlueprintName = "IQKeyboardManagerSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

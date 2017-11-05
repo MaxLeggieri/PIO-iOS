@@ -66,6 +66,9 @@
 		5097063E1F1389DF00CA7C04 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097063D1F1389DF00CA7C04 /* CatCell.swift */; };
 		509963D01D0183A500F6012A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509963CF1D0183A500F6012A /* AppDelegate.swift */; };
 		509963DB1D0183A500F6012A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509963DA1D0183A500F6012A /* Assets.xcassets */; };
+		50A431301F9CC89100ADED07 /* RefoundInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4312F1F9CC89100ADED07 /* RefoundInfoController.swift */; };
+		50A431321F9CE42100ADED07 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A431311F9CE42100ADED07 /* NewsController.swift */; };
+		50A56C301F9BC37B006F6256 /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A56C2F1F9BC37B006F6256 /* OrderController.swift */; };
 		50A585991EBBB48B00E2FEB9 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A585981EBBB48B00E2FEB9 /* CompanyTableViewCell.swift */; };
 		50A709721EB0920200828CF3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709711EB0920200828CF3 /* LoginController.swift */; };
 		50A709751EB0B65200828CF3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A709741EB0B65200828CF3 /* ProfileController.swift */; };
@@ -78,6 +81,10 @@
 		50B7D4151EA91EFC00048EA5 /* PioUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D4141EA91EFC00048EA5 /* PioUser.swift */; };
 		50B7D4191EA92A9100048EA5 /* PioAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D4181EA92A9100048EA5 /* PioAnnotation.swift */; };
 		50B7D41B1EA9333000048EA5 /* PioLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */; };
+		50C7CA841F9C95A800F3F2E6 /* AddReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7CA831F9C95A800F3F2E6 /* AddReviewController.swift */; };
+		50C7CA861F9C95FB00F3F2E6 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7CA851F9C95FB00F3F2E6 /* Review.swift */; };
+		50C7CA881F9C96CC00F3F2E6 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7CA871F9C96CC00F3F2E6 /* ReviewViewCell.swift */; };
+		50C7CA8A1F9C9B4400F3F2E6 /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C7CA891F9C9B4400F3F2E6 /* ReviewController.swift */; };
 		50CC71F11EA649AB0025866C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CC71F01EA649AB0025866C /* HomeController.swift */; };
 		50CC71F71EA64DA80025866C /* Virgi.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CC71F61EA64DA80025866C /* Virgi.xcassets */; };
 		50CE74541F44DAAB00956D61 /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CE74531F44DAAB00956D61 /* CouponController.swift */; };
@@ -100,6 +107,9 @@
 		50FECA8D1F28C244002D21C4 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FECA8C1F28C244002D21C4 /* CartCell.swift */; };
 		50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FECA8E1F28C40C002D21C4 /* CartViewController.swift */; };
 		D948CC0F315CF8441E977E8F /* Pods_PioAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF51E95841EB289F0AB2CC66 /* Pods_PioAlert.framework */; };
+		F933DD431FA4930A00AE5C51 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933DD421FA4930A00AE5C51 /* ColorExtension.swift */; };
+		F9A1167F1FA066BB0083F26B /* FreeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1167E1FA066BA0083F26B /* FreeCategoryCell.swift */; };
+		F9A116811FA06A4F0083F26B /* FreeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A116801FA06A4F0083F26B /* FreeCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +179,9 @@
 		509963DA1D0183A500F6012A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509963DD1D0183A500F6012A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		509963DF1D0183A500F6012A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A4312F1F9CC89100ADED07 /* RefoundInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefoundInfoController.swift; sourceTree = "<group>"; };
+		50A431311F9CE42100ADED07 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		50A56C2F1F9BC37B006F6256 /* OrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		50A585981EBBB48B00E2FEB9 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		50A709711EB0920200828CF3 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		50A709741EB0B65200828CF3 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -182,6 +195,10 @@
 		50B7D4181EA92A9100048EA5 /* PioAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioAnnotation.swift; sourceTree = "<group>"; };
 		50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PioLocationManager.swift; sourceTree = "<group>"; };
 		50C118441DB4F2AB0097BFA0 /* PioAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PioAlert.entitlements; sourceTree = "<group>"; };
+		50C7CA831F9C95A800F3F2E6 /* AddReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewController.swift; sourceTree = "<group>"; };
+		50C7CA851F9C95FB00F3F2E6 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		50C7CA871F9C96CC00F3F2E6 /* ReviewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
+		50C7CA891F9C9B4400F3F2E6 /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		50CC71F01EA649AB0025866C /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		50CC71F61EA64DA80025866C /* Virgi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Virgi.xcassets; sourceTree = "<group>"; };
 		50CE74531F44DAAB00956D61 /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
@@ -201,6 +218,9 @@
 		50F23AE11E1574AB00DFD45F /* CompanyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewCell.swift; sourceTree = "<group>"; };
 		50FECA8C1F28C244002D21C4 /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		50FECA8E1F28C40C002D21C4 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		F933DD421FA4930A00AE5C51 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		F9A1167E1FA066BA0083F26B /* FreeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeCategoryCell.swift; sourceTree = "<group>"; };
+		F9A116801FA06A4F0083F26B /* FreeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeCategory.swift; sourceTree = "<group>"; };
 		FF51E95841EB289F0AB2CC66 /* Pods_PioAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PioAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -264,6 +284,7 @@
 				507F6BF01F2A4E4200DB93C2 /* RoundBorderView.swift */,
 				502DB7181F2F6D6E00C1138D /* PioPlayer.swift */,
 				5070B9611F3C615E007D176F /* PioPlace.swift */,
+				50C7CA851F9C95FB00F3F2E6 /* Review.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -305,6 +326,9 @@
 		50A709731EB0B61B00828CF3 /* Virgi */ = {
 			isa = PBXGroup;
 			children = (
+				F933DD421FA4930A00AE5C51 /* ColorExtension.swift */,
+				F9A116801FA06A4F0083F26B /* FreeCategory.swift */,
+				F9A1167E1FA066BA0083F26B /* FreeCategoryCell.swift */,
 				509963CF1D0183A500F6012A /* AppDelegate.swift */,
 				502DB71C1F2FA2C300C1138D /* AppInfoController.swift */,
 				50A7097E1EB1283900828CF3 /* BirthdayCell.swift */,
@@ -329,6 +353,7 @@
 				507F6BF21F2A566D00DB93C2 /* ModifyCartController.swift */,
 				502731BF1F1EB26600A647F4 /* NotifiedController.swift */,
 				503B5EC01F2E47F80019BADA /* OrderAllController.swift */,
+				50A56C2F1F9BC37B006F6256 /* OrderController.swift */,
 				50B7D41A1EA9333000048EA5 /* PioLocationManager.swift */,
 				50B7D4141EA91EFC00048EA5 /* PioUser.swift */,
 				5070B9631F3C6A08007D176F /* PoiController.swift */,
@@ -355,6 +380,11 @@
 				36B3F9BD1F9702C400D0D977 /* CompanyLoginViewController.swift */,
 				36B3F9BF1F9702C500D0D977 /* CreateADCell.swift */,
 				36B3F9BE1F9702C400D0D977 /* CreateADViewController.swift */,
+				50C7CA831F9C95A800F3F2E6 /* AddReviewController.swift */,
+				50C7CA871F9C96CC00F3F2E6 /* ReviewViewCell.swift */,
+				50C7CA891F9C9B4400F3F2E6 /* ReviewController.swift */,
+				50A4312F1F9CC89100ADED07 /* RefoundInfoController.swift */,
+				50A431311F9CE42100ADED07 /* NewsController.swift */,
 			);
 			name = Virgi;
 			sourceTree = "<group>";
@@ -417,13 +447,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = LiveLife;
 				TargetAttributes = {
 					509963CB1D0183A500F6012A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SUPP8Q77NM;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -486,9 +517,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,9 +555,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PioAlert/Pods-PioAlert-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -516,13 +574,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PioAlert-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -540,6 +601,7 @@
 				5097063E1F1389DF00CA7C04 /* CatCell.swift in Sources */,
 				506A0E121DAD620600F56CAA /* Cart.swift in Sources */,
 				50DE063B1F26AD40002A997B /* ProductViewController.swift in Sources */,
+				F9A1167F1FA066BB0083F26B /* FreeCategoryCell.swift in Sources */,
 				50F0007A1F48A720008D4C97 /* ARViewController.swift in Sources */,
 				504F13261E857C7200EE1698 /* CategoryCellView.swift in Sources */,
 				502731C01F1EB26600A647F4 /* NotifiedController.swift in Sources */,
@@ -551,8 +613,10 @@
 				36B3F9C61F97059500D0D977 /* ImageResizer.swift in Sources */,
 				507AFA331DAE839E0066780B /* CartItemViewCell.swift in Sources */,
 				508222071DD9DE0C00C4A242 /* ResultCell.swift in Sources */,
+				50C7CA841F9C95A800F3F2E6 /* AddReviewController.swift in Sources */,
 				507F6BF31F2A566D00DB93C2 /* ModifyCartController.swift in Sources */,
 				50D7F8B21EB1DD570007B8E0 /* SexCell.swift in Sources */,
+				50A56C301F9BC37B006F6256 /* OrderController.swift in Sources */,
 				50D7F8B61EB1FBE00007B8E0 /* IPController.swift in Sources */,
 				508222031DD54AB700C4A242 /* Result.swift in Sources */,
 				50EFA94C1E0A808E00E726C1 /* Utility.swift in Sources */,
@@ -568,9 +632,13 @@
 				507F6BF51F2B9BBF00DB93C2 /* CartAllController.swift in Sources */,
 				504F218D1D7CD8A500F34C7B /* Product.swift in Sources */,
 				506421AC1DC9F9FD002C5FD1 /* FormCell.swift in Sources */,
+				F933DD431FA4930A00AE5C51 /* ColorExtension.swift in Sources */,
 				50B7D4191EA92A9100048EA5 /* PioAnnotation.swift in Sources */,
+				F9A116811FA06A4F0083F26B /* FreeCategory.swift in Sources */,
 				50EFA94E1E0BF0BB00E726C1 /* Order.swift in Sources */,
+				50C7CA881F9C96CC00F3F2E6 /* ReviewViewCell.swift in Sources */,
 				50A709751EB0B65200828CF3 /* ProfileController.swift in Sources */,
+				50C7CA861F9C95FB00F3F2E6 /* Review.swift in Sources */,
 				50D8170E1EC4815000B3BE75 /* SearchResultController.swift in Sources */,
 				505B1A661E017D01009C9582 /* RoundedButton.swift in Sources */,
 				50A709791EB123E900828CF3 /* ConsentController.swift in Sources */,
@@ -600,7 +668,9 @@
 				50A7097D1EB1271000828CF3 /* EmailCell.swift in Sources */,
 				501DCF6E1F211B6500214627 /* PromoViewController.swift in Sources */,
 				36C15C2F1F8F556800E7B418 /* CalendarSubViewController.swift in Sources */,
+				50A431321F9CE42100ADED07 /* NewsController.swift in Sources */,
 				50A585991EBBB48B00E2FEB9 /* CompanyTableViewCell.swift in Sources */,
+				50C7CA8A1F9C9B4400F3F2E6 /* ReviewController.swift in Sources */,
 				502DB71B1F2F709800C1138D /* RankingController.swift in Sources */,
 				504F132C1E8C6AA200EE1698 /* BirthdateCell.swift in Sources */,
 				506E97761D861C5B008C949E /* BackgroundTask.swift in Sources */,
@@ -608,6 +678,7 @@
 				5026D3BA1D2A6D1100B3F46D /* CatButton.swift in Sources */,
 				50FECA8F1F28C40C002D21C4 /* CartViewController.swift in Sources */,
 				50D7F8B41EB1DF390007B8E0 /* PrivacyCell.swift in Sources */,
+				50A431301F9CC89100ADED07 /* RefoundInfoController.swift in Sources */,
 				36C15C2C1F8F556800E7B418 /* CalendarDayCell.swift in Sources */,
 				506B73BD1EBA7DEB006C1CEB /* MapTableViewCell.swift in Sources */,
 				50A709771EB0B73400828CF3 /* CategoryCell.swift in Sources */,
@@ -638,14 +709,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -686,14 +763,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -724,14 +807,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 023DD9E3AF441D0A6CEB1795 /* Pods-PioAlert.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -754,14 +837,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15C5390E0A62DFA1BEC4A51D /* Pods-PioAlert.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PioAlert/PioAlert.prod.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SUPP8Q77NM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

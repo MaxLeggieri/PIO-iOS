@@ -8,6 +8,7 @@
 import UIKit
 
 /// Used to wrap a single slideshow item and allow zooming on it
+//@objcMembers
 open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
 
     /// Image view to hold the image
@@ -135,7 +136,7 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
         self.imageView.image = nil
     }
 
-    func retryLoadImage() {
+    @objc func retryLoadImage() {
         self.loadImage()
     }
 
@@ -149,7 +150,7 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
         self.setZoomScale(minimumZoomScale, animated: false)
     }
 
-    func tapZoom() {
+    @objc func tapZoom() {
         if isZoomed() {
             self.setZoomScale(minimumZoomScale, animated: true)
         } else {

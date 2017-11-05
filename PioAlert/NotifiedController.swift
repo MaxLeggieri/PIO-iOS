@@ -87,12 +87,21 @@ class NotifiedController: UIViewController, UITableViewDelegate, UITableViewData
     var selectedPromo:Promo!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedPromo = content[indexPath.row]
-        self.performSegue(withIdentifier: "showPromoFromNotified", sender: self)
+        
+        if selectedPromo.type == "news" {
+            self.performSegue(withIdentifier: "showNewsFromNotified", sender: self)
+        } else {
+            self.performSegue(withIdentifier: "showPromoFromNotified", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPromoFromNotified" {
             let vc = segue.destination as! PromoViewController
+            vc.promoId = selectedPromo.promoId
+        }
+        if segue.identifier == "showNewsFromNotified" {
+            let vc = segue.destination as! NewsController
             vc.promo = selectedPromo
         }
     }

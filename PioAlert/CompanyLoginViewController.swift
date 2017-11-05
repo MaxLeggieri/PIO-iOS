@@ -8,10 +8,15 @@
 
 import UIKit
 
-class CompanyLoginViewController: UIViewController , WebApiDelegate{
+class CompanyLoginViewController: UIViewController , WebApiDelegate, UITextFieldDelegate{
 
     @IBOutlet weak var usernameTextField:UITextField!
     @IBOutlet weak var passwordTextField:UITextField!
+    @IBOutlet weak var linkLabel:UILabel!
+
+    @IBAction func close() {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,29 @@ class CompanyLoginViewController: UIViewController , WebApiDelegate{
         
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Enter password", attributes: [NSForegroundColorAttributeName: UIColor.white])
         
+        WebApi.sharedInstance.delegate = self
         
+        
+        let attributedString = NSMutableAttributedString(string: "Fai click qui per saperne di più")
+        attributedString.addAttributes([NSForegroundColorAttributeName: UIColor.white], range: NSMakeRange(0, attributedString.length))
+        
+        attributedString.addAttribute(NSUnderlineStyleAttributeName , value: NSUnderlineStyle.styleSingle.rawValue, range: NSMakeRange(0, attributedString.length))
+        
+        attributedString.addAttributes([NSLinkAttributeName: NSURL(string: "https//pioalert.com")!], range: NSMakeRange(0, attributedString.length))
+            
+        linkLabel.attributedText = attributedString
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // User finished typing (hit return): hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func linkAction(_ sender: AnyObject) {
+        let URL = NSURL(string: "https//pioalert.com")! as URL
+        UIApplication.shared.openURL(URL)
     }
     
     @IBAction func loginButtonAction(_ sender: AnyObject) {
@@ -30,9 +57,7 @@ class CompanyLoginViewController: UIViewController , WebApiDelegate{
             WebApi.sharedInstance.companyLogin(usernameTextField.text!, password: passwordTextField.text!)
 
         }
-        PioUser.sharedUser.setCompanyLogged(true)
-        self.performSegue(withIdentifier: "showCompanyLoginToCreateAD", sender: self)
-
+        
     }
     
     func didSendApiMethod(_ method: String, result: String) {
@@ -40,11 +65,17 @@ class CompanyLoginViewController: UIViewController , WebApiDelegate{
             
             print("Sent method: "+method)
             
-            PioUser.sharedUser.setCompanyLogged(true)
             
+            /*
+            PioUser.sharedUser.setCompanyLogged(true)
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
             }
+             */
+            
+            PioUser.sharedUser.setCompanyLogged(true)
+            
+            self.performSegue(withIdentifier: "showCompanyLoginToCreateAD", sender: self)
             
         }
     }
@@ -57,9 +88,13 @@ class CompanyLoginViewController: UIViewController , WebApiDelegate{
             
             PioUser.sharedUser.setCompanyLogged(false)
             
+            Utility.sharedInstance.showSimpleAlert(title: "Errore", message: "Username o password errati, riprovare.", sender: self)
+            
+            /*
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
             }
+             */
         }
     }
 

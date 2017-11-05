@@ -18,7 +18,7 @@ class IPController: UIViewController {
 
         let url = URL(string: "http://www.pioalert.com/app/privacy/")
         let request = URLRequest(url: url!)
-        webView.loadRequest(request);
+        webView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {

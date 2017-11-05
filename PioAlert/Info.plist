@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.3</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -48,7 +48,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>44</string>
+	<string>47</string>
 	<key>FacebookAppID</key>
 	<string>1851533448411785</string>
 	<key>FacebookDisplayName</key>
@@ -108,6 +108,8 @@
 	<string>Quest'app utilizza l'innovativa tecnologia iBeacon per mostrarti le migliori offerte quando sei all'interno di uno dei punti vendita convenzionati con PIO. I tuoi dati vengono trattati con la massima sicurezza e non sono mai condivisi con nessuno.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Quest'app utilizza l'innovativa tecnologia iBeacon per mostrarti le migliori offerte quando sei all'interno di uno dei punti vendita convenzionati con PIO. I tuoi dati vengono trattati con la massima sicurezza e non sono mai condivisi con nessuno.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Usa le tue foto per aggiungere contenuti</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Medium.ttf</string>

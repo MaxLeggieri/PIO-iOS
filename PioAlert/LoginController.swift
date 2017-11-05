@@ -11,16 +11,29 @@ import FBSDKCoreKit
 import GoogleSignIn
 import FBSDKLoginKit
 
-class LoginController: UIViewController, WebApiDelegate, GIDSignInUIDelegate {
+class LoginController: UIViewController, WebApiDelegate, GIDSignInUIDelegate, UITextFieldDelegate {
 
     var fbUserId:String!
     var facebookProfileUrl:String?
     
+    @IBOutlet weak var promoCode:UITextField!
+    @IBOutlet weak var promoCodeLabel:UILabel!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        promoCode.delegate = self
         WebApi.sharedInstance.delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        if PioUser.sharedUser.codeUsed {
+            promoCode.isHidden = true
+            promoCodeLabel.isHidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,9 +102,7 @@ class LoginController: UIViewController, WebApiDelegate, GIDSignInUIDelegate {
                     
                     
                     PioUser.sharedUser.setuserImagePath(picturePath)
-                    
-                    
-                    WebApi.sharedInstance.sendFbUserData(data as AnyObject)
+                    WebApi.sharedInstance.sendFbUserData(data as AnyObject, code: self.promoCode.text!)
                     
                 } else {
                     
@@ -112,6 +123,8 @@ class LoginController: UIViewController, WebApiDelegate, GIDSignInUIDelegate {
     }
     
     @IBAction func loginWithGoogle(_ sender: AnyObject) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.code = promoCode.text
         GIDSignIn.sharedInstance().signIn()
     }
     

@@ -37,7 +37,7 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
             let body = alert["body"] as? String,
             let title = alert["title"] as? String
             else {
-                // handle any error here
+                print("error on notificationReceived HomeController")
                 return
         }
         
@@ -125,6 +125,7 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
             let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
             swipeLeft.direction = UISwipeGestureRecognizerDirection.left
             mainMenuController.view.addGestureRecognizer(swipeLeft)
+            
         }
         
         
@@ -140,7 +141,7 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         searchController?.dimsBackgroundDuringPresentation = false
         searchController?.searchBar.placeholder = "Cerca su PIO"
         searchController?.searchBar.searchBarStyle = .minimal
-        searchController?.searchBar.backgroundColor = UIColor(colorLiteralRed: 0.965, green:0.788, blue:0.255, alpha:1.00)
+        searchController?.searchBar.backgroundColor = UIColor(colorLiteralRed: 0, green:0, blue:0, alpha:0)
         searchController?.searchBar.delegate = self
         
         let textFieldInsideSearchBar = searchController?.searchBar.value(forKey: "searchField") as? UITextField
@@ -236,6 +237,8 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
             appDelegate.registerForNotifications()
             _ = WebApi.sharedInstance.ranking(limit: 1)
             
+            mainMenuController.userCodeLabel.setTitle("PROMO CODE "+PioUser.sharedUser.code, for: .normal) 
+            mainMenuController.userCoderefLabel.text = "UTILIZZATO "+String(PioUser.sharedUser.codeRef)+" VOLTE"
             
         }
         
@@ -372,9 +375,9 @@ class HomeController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print("startHome...")
         
-        
         let home = WebApi.sharedInstance.home(1,searchTerm: nil, idcat: "0")
         updateMapAndResults(home,zoomToAnnotation: false)
+        
         
     }
     

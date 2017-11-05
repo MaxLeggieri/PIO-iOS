@@ -43,6 +43,9 @@ protocol NotificationDelegate {
     func notificationReceived(ids: [String])
 }
 
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
@@ -53,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             
             
-            WebApi.sharedInstance.sendGoogleUserData(user)
+            WebApi.sharedInstance.sendGoogleUserData(user, code: code)
             
             PioUser.sharedUser.setUserName(user.profile.givenName)
             PioUser.sharedUser.setuserImagePath(user.profile.imageURL(withDimension: 40).absoluteString)
@@ -74,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var notificationData:[AnyHashable: Any]?
     //var masterViewController:MasterViewController?
     
-    
+    var code:String!
     
     var appIsInBackgroundOrKilled = false
     
@@ -213,15 +216,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         
         
-        gotNotification = true
-        notificationData = userInfo
-        let idsString = notificationData!["idad"] as! String
-        notificationIDs = idsString.components(separatedBy: ",")
+        let type = userInfo["type"] as! String
+        print("Notification type: "+type)
         
-        if notificationDelegate != nil {
-            notificationDelegate?.notificationReceived(ids: notificationIDs)
+        gotNotification = true
+        
+        switch type {
+        case "news":
+            notificationData = userInfo
+            
+            notificationData = userInfo
+            print("didReceiveRemoteNotification... \(notificationIDs.count)")
+            print("NEWS notification data: "+userInfo.debugDescription)
+            
+            
+            if notificationDelegate != nil {
+                notificationDelegate?.notificationReceived(ids: notificationIDs)
+            }
+            
+            break
+        case "ad":
+            notificationData = userInfo
+            let idsString = notificationData!["idad"] as! String
+            notificationIDs = idsString.components(separatedBy: ",")
+            
+            print("didReceiveRemoteNotification... \(notificationIDs.count)")
+            print("AD notification data: "+userInfo.debugDescription)
+            
+            
+            if notificationDelegate != nil {
+                notificationDelegate?.notificationReceived(ids: notificationIDs)
+            }
+        default:
+            
+            break
         }
-        print("didReceiveRemoteNotification... \(notificationIDs.count)")
+        
+        
+        return
+        
+        
+        
+        
         
         /*
         if((self.masterViewController?.isViewLoaded) != nil) {

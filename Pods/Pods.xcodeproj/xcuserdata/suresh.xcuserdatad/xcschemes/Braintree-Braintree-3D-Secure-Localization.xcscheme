@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "436797A06EFB20B1C266CB3F25EACFE6"
-               BuildableName = "Pods_PioAlert.framework"
-               BlueprintName = "Pods-PioAlert"
+               BlueprintIdentifier = "9A7498C94DD90C10AE5752D3AFA68F9C"
+               BuildableName = "Braintree-3D-Secure-Localization.bundle"
+               BlueprintName = "Braintree-Braintree-3D-Secure-Localization"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "436797A06EFB20B1C266CB3F25EACFE6"
-            BuildableName = "Pods_PioAlert.framework"
-            BlueprintName = "Pods-PioAlert"
+            BlueprintIdentifier = "9A7498C94DD90C10AE5752D3AFA68F9C"
+            BuildableName = "Braintree-3D-Secure-Localization.bundle"
+            BlueprintName = "Braintree-Braintree-3D-Secure-Localization"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "436797A06EFB20B1C266CB3F25EACFE6"
-            BuildableName = "Pods_PioAlert.framework"
-            BlueprintName = "Pods-PioAlert"
+            BlueprintIdentifier = "9A7498C94DD90C10AE5752D3AFA68F9C"
+            BuildableName = "Braintree-3D-Secure-Localization.bundle"
+            BlueprintName = "Braintree-Braintree-3D-Secure-Localization"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

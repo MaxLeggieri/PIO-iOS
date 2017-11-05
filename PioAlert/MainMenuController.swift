@@ -13,13 +13,16 @@ class MainMenuController: UITableViewController {
     
     let menu = [
             ["I miei interessi","Carrelli","Ordini","Classifica","Aziende Felix"],
-            ["Promo Express","Esci","Info"]
+            ["Sei una azienda?","Esci","Info"]
     ]
     
     
     @IBOutlet weak var userImage:UIImageView!
     @IBOutlet weak var userWelcomeLabel:UILabel!
     @IBOutlet weak var userPointsLabel:UILabel!
+    
+    @IBOutlet weak var userCodeLabel:UIButton!
+    @IBOutlet weak var userCoderefLabel:UILabel!
     
     var homeController:HomeController!
     
@@ -36,8 +39,32 @@ class MainMenuController: UITableViewController {
         self.userImage.layer.borderWidth = 1
         
         
+        
     }
     
+    @IBAction func shareCode(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "IL TUO PROMO CODE: "+PioUser.sharedUser.code, message: "Fai installare l'app PIO ad un amico e digli di inserire il tuo promo code", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(cancelAction)
+        let shareAction = UIAlertAction(title: "CONDIVIDI", style: .default, handler:
+        {(alert: UIAlertAction!) in
+            self.showCodeSharing(sender)
+        })
+        alertController.addAction(shareAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showCodeSharing(_ sourceView: UIButton) {
+        if let link = URL(string: "https://pioalert.com/download.php") {
+            let textToShare = "Scarica l'app PIO e inserisci questo codice prima di accedere: "+PioUser.sharedUser.code
+            let objectsToShare = [textToShare, link] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        
+            activityVC.popoverPresentationController?.sourceView = sourceView
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

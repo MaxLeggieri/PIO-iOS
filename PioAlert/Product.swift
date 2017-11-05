@@ -44,12 +44,20 @@ class Product {
     var fromTime: String?
     var toTime: String?
 
+    var rating:Double!
+    var votes:Int!
+    var freeCategory = Array<AnyObject>()
+
+    
     init(pid: Int) {
         self.pid = pid
         self.calendarType = ""
         self.workingDays = ""
         self.fromTime = ""
         self.toTime = ""
+        
+        rating = 0
+        votes = 0
     }
     
     func debugPrint() {

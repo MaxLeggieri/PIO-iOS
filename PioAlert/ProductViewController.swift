@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Cosmos
 
 class ProductViewController: UIViewController,MFMailComposeViewControllerDelegate, CalendarSubViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -15,6 +16,7 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
     @IBOutlet weak var backButton:UIButton!
     @IBOutlet weak var navTitle:UILabel!
     @IBOutlet weak var prodTitle:UILabel!
+    @IBOutlet var cosmosView:CosmosView!
     @IBOutlet weak var image:UIImageView!
     @IBOutlet weak var finalPrice:UILabel!
     @IBOutlet weak var initialPrice:UILabel!
@@ -39,6 +41,8 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
     @IBOutlet weak var bookingViewHeightConstraint:NSLayoutConstraint?
     @IBOutlet weak var calendarViewHeightConstraint:NSLayoutConstraint?
     @IBOutlet weak var calendarView : UIView?
+    
+    @IBOutlet weak var gotoShopButton:RoundedButton!
 
     var pickerDataSource = Array<Any>()
     var  checkInDate : Date?
@@ -46,7 +50,7 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
 
     var checkInDateString:String?
     var checkOutDateString:String?
-    var quantity:String?
+    var quantity:String!
 
     var calendarSubView : CalendarSubViewController!
     var selectedDate : Date?
@@ -65,6 +69,14 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
 
         navTitle.text = product.companyName
         prodTitle.text = product.name
+        cosmosView.rating = product.rating
+        
+        if product.votes == 0 {
+            cosmosView.text = "NESSUNA RECENSIONE"
+        } else {
+            cosmosView.text = "("+String(product.votes)+") VEDI LE RECENSIONI"
+        }
+        
         finalPrice.text = "€ "+product.price
         datePicker?.minimumDate = Date()
         //initialPrice.text = "€ "+product.initialPrice
@@ -126,7 +138,10 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         self.calendarSubView.isServiceType = product.calendarType == "2" ? true : false
         self.calendarSubView.delegate = self
         self.calendarView?.isHidden = true
+        self.view.bringSubview(toFront: calendarView!)
         self.calendarSubView.workingDay = product.workingDays
+        
+        /*
         self.checkInTextField?.layer.borderWidth = 1.0
         self.checkInTextField?.layer.cornerRadius = 4.0
         self.checkInTextField?.layer.borderColor = UIColor.lightGray.cgColor
@@ -134,8 +149,27 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         self.checkOutTextFiled?.layer.borderWidth = 1.0
         self.checkOutTextFiled?.layer.cornerRadius = 4.0
         self.checkOutTextFiled?.layer.borderColor = UIColor.lightGray.cgColor
-
+         */
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (showReviews))
+        cosmosView.addGestureRecognizer(gesture)
+        
     }
+    
+    func showReviews(sender:UITapGestureRecognizer){
+        // do other task
+        
+        if product.votes != 0 {
+            self.performSegue(withIdentifier: "showReviews", sender: self)
+        }
+    }
+    
+    
+    @IBAction func writeReview(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showAddReview", sender: self)
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -154,6 +188,11 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         WebApi.sharedInstance.downloadedFrom(image, link: "https://www.pioalert.com"+product.image, mode: .scaleAspectFit, shadow: true)
         
         Utility.sharedInstance.addFullscreenTouch(image, selector: #selector(showImageFullscreen), target: self)
+    }
+    
+    
+    @IBAction func gotoShop() {
+        performSegue(withIdentifier: "showCompanyFromProduct", sender: self)
     }
     
     
@@ -196,9 +235,14 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         if (product.calendarType == "1" || product.calendarType == "2" ) {
             
             if product.calendarType == "1" {
-                if (checkInDateString != "" && quantity != "") {
-                WebApi.sharedInstance.basketMoveCalendar(product.pid, quantity: quantity!, calendarType: product.calendarType!, calendarTime : checkInDateString!)
+                if (checkInDateString != nil && quantity != nil) {
+                    WebApi.sharedInstance.basketMoveCalendar(product.pid, quantity: quantity!, calendarType: product.calendarType!, calendarTime : checkInDateString!)
 
+                    self.performSegue(withIdentifier: "showCartFromProduct", sender: self)
+                } else {
+                    
+                    Utility.sharedInstance.showSimpleAlert(title: "Errore", message: "Inserisci le date in cui vuoi prenotare", sender: self)
+                    
                 }
 
             }
@@ -220,11 +264,17 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
                     let timeStampString = String(timeStamp)
                     WebApi.sharedInstance.basketMoveCalendar(product.pid, quantity: "1", calendarType: product.calendarType!, calendarTime : timeStampString)
                     
+                    self.performSegue(withIdentifier: "showCartFromProduct", sender: self)
+                    
+                } else {
+                    
+                    Utility.sharedInstance.showSimpleAlert(title: "Errore", message: "Inserisci le date in cui vuoi prenotare", sender: self)
+                    
                 }
 
             }
             
-            self.performSegue(withIdentifier: "showCartFromProduct", sender: self)
+            
 
         }
         else  {
@@ -289,7 +339,7 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
             
         }
         else {
-            self.checkOutTextFiled?.text = Date.parseDate(date: date,format: "yyyy-MM-dd")
+            self.checkOutTextFiled?.text = Date.parseDate(date: date,format: "dd-MM-yyyy")
             checkoutDate = selectedDate
             let timeStamp =  selectedDate?.timeIntervalSince1970
             checkOutDateString = String(timeStamp!)
@@ -301,11 +351,11 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
             let timeDifference = calendar.dateComponents([.day,.hour, .minute], from: checkInDate!, to: checkoutDate!)
             
             if (timeDifference.day! > 0) {
-                quantity = String(describing: timeDifference.day)
+                quantity = String(describing: timeDifference.day!)
                 
             }
             else {
-                let alert = UIAlertController(title: "Alert", message: "checkOut date is small then checkIn not allow", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Attenzione", message: "La data di checkout è precedente a quella di checkin", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -416,6 +466,23 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
             let vc = segue.destination as! CartViewController
             vc.comId = product.idCom
         }
+        else if segue.identifier == "showCompanyFromProduct" {
+            let vc = segue.destination as! ShopViewController
+            vc.company = WebApi.sharedInstance.getCompanyData(String(product.idCom))
+        }
+        else if segue.identifier == "showAddReview" {
+            let vc = segue.destination as! AddReviewController
+            vc.product = product
+            vc.reviewType = .productReview
+
+        }
+        else if segue.identifier == "showReviews" {
+            let vc = segue.destination as! ReviewController
+            vc.product = product
+            vc.getReviewType = .productReview
+
+        }
+        
     }
 
 }

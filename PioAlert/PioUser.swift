@@ -28,7 +28,7 @@ class PioUser {
     
     var userName = ""
     var userImagePath = ""
-    var companyDict = [String:AnyObject]()
+    var companyDict = [String:Any]()
 
     var location = CLLocation(latitude: 41.899254, longitude: 12.494790)
     var userLat = 41.899254
@@ -37,11 +37,26 @@ class PioUser {
     var uid = 0
     
     var rankData:[String:AnyObject]!
+    var code:String!
+    var codeRef:Int!
     
+    var gotShippingAddress:Bool!
+    
+    
+    var codeUsed = false
     func updateUser() {
+        
+        
+        print("UPDATE USER")
+        codeUsed = UserDefaults.standard.bool(forKey: "codeUsed")
         logged = UserDefaults.standard.bool(forKey: "logged")
         companyLogged = UserDefaults.standard.bool(forKey: "companyLogged")
-
+        if UserDefaults.standard.dictionary(forKey: "companyDict") != nil {
+            print("companyDict NOT NULL")
+            companyDict = UserDefaults.standard.dictionary(forKey: "companyDict")!
+        } else {
+            print("companyDict NULL")
+        }
         profiled = UserDefaults.standard.bool(forKey: "profiled")
         
         localized = UserDefaults.standard.bool(forKey: "localized")
@@ -65,6 +80,7 @@ class PioUser {
             userImagePath = UserDefaults.standard.string(forKey: "userImagePath")!
         }
         
+        gotShippingAddress = UserDefaults.standard.bool(forKey: "gotShippingAddress")
         
         UserDefaults.standard.synchronize()
     }
@@ -132,6 +148,14 @@ class PioUser {
         
     }
     
+    func setCodeUsed(_ codeUsed: Bool) {
+        self.codeUsed = codeUsed
+        
+        UserDefaults.standard.set(codeUsed, forKey: "codeUsed")
+        UserDefaults.standard.synchronize()
+        
+    }
+    
     func setDataConsent(_ consentData: Bool) {
         self.consentData = consentData
         
@@ -163,6 +187,13 @@ class PioUser {
         UserDefaults.standard.synchronize()
     }
     
+    func setGotShippingAddress(_ gotShippingAddress: Bool) {
+        self.gotShippingAddress = gotShippingAddress
+        
+        UserDefaults.standard.set(gotShippingAddress, forKey: "gotShippingAddress")
+        UserDefaults.standard.synchronize()
+    }
+    
     func setuserImagePath(_ userImagePath: String) {
         self.userImagePath = userImagePath
         
@@ -170,11 +201,21 @@ class PioUser {
         UserDefaults.standard.synchronize()
     }
     
-    func setCompanydiction(_ dict: [String: AnyObject]) {
-        self.companyDict = dict
+    func setCompanydiction(_ dict: [String: Any]) {
+        self.companyDict = removeNSNull(from: dict) as! [String : Any]
         
         UserDefaults.standard.set(self.companyDict, forKey: "companyDict")
         UserDefaults.standard.synchronize()
+        
+    }
+    
+    func removeNSNull(from dict: [AnyHashable: Any]) -> [AnyHashable:Any] {
+        var mutableDict = dict
+        let keysWithEmptString = dict.filter { $0.1 is NSNull }.map { $0.0 }
+        for key in keysWithEmptString {
+            mutableDict[key] = ""
+        }
+        return mutableDict
     }
 
     

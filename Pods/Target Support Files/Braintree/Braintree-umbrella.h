@@ -1,5 +1,13 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
 #endif
 
 #import "Braintree3DSecure.h"
@@ -14,6 +22,7 @@
 #import "BraintreeCore.h"
 #import "BTAPIClient.h"
 #import "BTAppSwitch.h"
+#import "BTBinData.h"
 #import "BTClientMetadata.h"
 #import "BTClientToken.h"
 #import "BTConfiguration.h"

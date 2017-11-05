@@ -16,10 +16,12 @@ class CreateADCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        /*
         squarBoxButton.layer.cornerRadius = 5.0
         squarBoxButton.clipsToBounds = true
         squarBoxButton.layer.borderColor = UIColor.gray.cgColor
         squarBoxButton.layer.borderWidth = 1.5
+         */
         // Initialization code
     }
 

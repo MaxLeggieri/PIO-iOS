@@ -98,6 +98,7 @@ class PioLocationManager: NSObject, CLLocationManagerDelegate {
         
     }
     
+    var lastBeaconSentTime:TimeInterval = 0
     dynamic var lastCloserBeacon:CLBeacon!
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         
@@ -119,21 +120,12 @@ class PioLocationManager: NSObject, CLLocationManagerDelegate {
             
             lastCloserBeacon = knownBeacons.first
             
+            let currTime = NSDate().timeIntervalSince1970
             
-            
-            /*
-            print("########## PIO BEACON ##########")
-            print("UUID: "+lastCloserBeacon.proximityUUID.uuidString)
-            print("Accuracy: \(lastCloserBeacon.accuracy)")
-            print("RSSI: \(lastCloserBeacon.rssi)")
-            
-            print("Getting data for Company: "+lastCloserBeacon.major.stringValue+" Zone: "+lastCloserBeacon.minor.stringValue)
-            
-            print("\n")
-            */
-            
-            
-            WebApi.sharedInstance.sendBeaconData(lastCloserBeacon.major.stringValue, minor: lastCloserBeacon.minor.stringValue, uuid: lastCloserBeacon.proximityUUID.uuidString, accuracy: String(lastCloserBeacon.accuracy))
+            if currTime-lastBeaconSentTime > 1.5 {
+                lastBeaconSentTime = currTime
+                WebApi.sharedInstance.sendBeaconData(lastCloserBeacon.major.stringValue, minor: lastCloserBeacon.minor.stringValue, uuid: lastCloserBeacon.proximityUUID.uuidString, accuracy: String(lastCloserBeacon.accuracy))
+            }
             
             
             

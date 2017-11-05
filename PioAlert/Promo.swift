@@ -43,6 +43,11 @@ class Promo {
     
     var expirationHuman:String!
     var releatedProductId:String!
+    
+    var rating:Double!
+    var votes:Int!
+
+    var type:String!
 
     init(pid: Int) {
         promoId = pid
@@ -72,6 +77,9 @@ class Promo {
         lat = 0.00
         lon = 0.00
         
+        rating = 0
+        votes = 0
+
         releatedProductId = ""
     }
 }

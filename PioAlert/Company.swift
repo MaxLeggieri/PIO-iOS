@@ -19,9 +19,13 @@ class Company {
     var description:String!
     
     var locations = [Location]()
-    
+    var freeCategory = [FreeCategory]()
+    var rating:Double!
+    var votes:Int!
+
     init(cid: Int) {
        self.cid = cid
+
     }
     
     init(json: [String:AnyObject]) {
@@ -35,11 +39,24 @@ class Company {
         description = json["description"] as! String
         
         if let locs = json["loc"] as? [[String:AnyObject]] {
+            let rate = locs[0]["rate"] as! [String:AnyObject]
+            rating = rate["rating_avg"] as! Double
+            let v = rate["votes"] as! String
+            votes = Int(v)
+            
             for loc in locs {
                 let l = Location(json: loc)
                 locations.append(l)
             }
         }
+        
+        if let comcats = json["comcat"] as? [[String:AnyObject]] {
+            for comcat in comcats {
+                let l = FreeCategory(json: comcat)
+                freeCategory.append(l)
+            }
+        }
+
         
     }
     
