@@ -5,32 +5,32 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - Braintree (4.9.4):
-    - Braintree/Card (= 4.9.4)
-    - Braintree/Core (= 4.9.4)
-    - Braintree/PayPal (= 4.9.4)
-    - Braintree/UI (= 4.9.4)
-  - Braintree/3D-Secure (4.9.4):
+  - Braintree (4.9.6):
+    - Braintree/Card (= 4.9.6)
+    - Braintree/Core (= 4.9.6)
+    - Braintree/PayPal (= 4.9.6)
+    - Braintree/UI (= 4.9.6)
+  - Braintree/3D-Secure (4.9.6):
     - Braintree/Card
     - Braintree/Core
-  - Braintree/Card (4.9.4):
+  - Braintree/Card (4.9.6):
     - Braintree/Core
-  - Braintree/Core (4.9.4)
-  - Braintree/PayPal (4.9.4):
+  - Braintree/Core (4.9.6)
+  - Braintree/PayPal (4.9.6):
     - Braintree/Core
     - Braintree/PayPalOneTouch
-  - Braintree/PayPalDataCollector (4.9.4):
+  - Braintree/PayPalDataCollector (4.9.6):
     - Braintree/Core
     - Braintree/PayPalUtils
-  - Braintree/PayPalOneTouch (4.9.4):
+  - Braintree/PayPalOneTouch (4.9.6):
     - Braintree/Core
     - Braintree/PayPalDataCollector
     - Braintree/PayPalUtils
-  - Braintree/PayPalUtils (4.9.4)
-  - Braintree/UI (4.9.4):
+  - Braintree/PayPalUtils (4.9.6)
+  - Braintree/UI (4.9.6):
     - Braintree/Card
     - Braintree/Core
-  - Braintree/UnionPay (4.9.4):
+  - Braintree/UnionPay (4.9.6):
     - Braintree/Card
     - Braintree/Core
   - BraintreeDropIn (5.2.3):
@@ -42,9 +42,9 @@ PODS:
     - BraintreeDropIn/UIKit
   - BraintreeDropIn/UIKit (5.2.3)
   - Cosmos (11.0.3)
-  - FBSDKCoreKit (4.27.1):
+  - FBSDKCoreKit (4.28.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.27.1):
+  - FBSDKLoginKit (4.28.0):
     - FBSDKCoreKit
   - FirebaseAnalytics (3.9.0):
     - FirebaseCore (~> 3.6)
@@ -59,9 +59,9 @@ PODS:
   - Google/SignIn (3.1.0):
     - Google/Core
     - GoogleSignIn (~> 4.0)
-  - GoogleMaps/Base (2.4.0)
-  - GooglePlaces (2.4.0):
-    - GoogleMaps/Base (= 2.4.0)
+  - GoogleMaps/Base (2.5.0)
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
   - GoogleSignIn (4.1.1):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -103,17 +103,17 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  Braintree: de7e58b8df95bf6514813cbc510578e3737b1c3b
+  Braintree: 56ad3fa47b2f4b047cb50d989d15208690a6cbae
   BraintreeDropIn: 20109bea730b9bd31d71792ca84545265b7d27e4
   Cosmos: eb506859929f4add2d2aec822a27efb2f718a95d
-  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
-  FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
+  FBSDKCoreKit: ca961e279113f691fd83dc634c0bbad9d4e3f370
+  FBSDKLoginKit: b077381c27d800f21661757e8140cf2c80a91e4a
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
   Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
-  GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
-  GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
@@ -123,4 +123,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e6679465c39aa55e0f8b545914255f86b7ff8942
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.2.1

@@ -31,7 +31,6 @@ class ReviewController: UIViewController,UITableViewDelegate, UITableViewDataSou
         
         // Do any additional setup after loading the view.
         
-        titleLabel.text = product.name
     }
     
     @IBAction func close() {
@@ -44,15 +43,18 @@ class ReviewController: UIViewController,UITableViewDelegate, UITableViewDataSou
         
         switch getReviewType {
         case .productReview:
+            titleLabel.text = product.name
             reviews = WebApi.sharedInstance.getRatings(elementId: product.pid, elementType: "product")
 
             break
         case .companyReview:
+            titleLabel.text = company.brandName
             reviews = WebApi.sharedInstance.getRatings(elementId: company.locations[0].idLoc, elementType: "location")
 
             break
             
         case .promoReview:
+            titleLabel.text = promo.brandName
             reviews = WebApi.sharedInstance.getRatings(elementId: promo.promoId, elementType: "ad")
 
             break

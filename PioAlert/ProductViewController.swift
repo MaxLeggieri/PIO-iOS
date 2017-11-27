@@ -44,6 +44,10 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
     
     @IBOutlet weak var gotoShopButton:RoundedButton!
 
+    @IBOutlet weak var rateCosmosView:CosmosView!
+    @IBOutlet  var addReviewButton:UIButton!
+
+    
     var pickerDataSource = Array<Any>()
     var  checkInDate : Date?
     var  checkoutDate : Date?
@@ -69,13 +73,6 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
 
         navTitle.text = product.companyName
         prodTitle.text = product.name
-        cosmosView.rating = product.rating
-        
-        if product.votes == 0 {
-            cosmosView.text = "NESSUNA RECENSIONE"
-        } else {
-            cosmosView.text = "("+String(product.votes)+") VEDI LE RECENSIONI"
-        }
         
         finalPrice.text = "€ "+product.price
         datePicker?.minimumDate = Date()
@@ -97,6 +94,8 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         companyAddress.text = product.companyAddress
         prodDesc.text = product.descLong
         print("calendar %@",product.calendarType ?? "")
+        
+        
         
         if product.calendarType == "1" {
             
@@ -154,6 +153,10 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (showReviews))
         cosmosView.addGestureRecognizer(gesture)
         
+        
+        let addReviewGeesture = UITapGestureRecognizer(target: self, action:  #selector (addReview))
+        rateCosmosView.addGestureRecognizer(addReviewGeesture)
+
     }
     
     func showReviews(sender:UITapGestureRecognizer){
@@ -169,6 +172,11 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
         self.performSegue(withIdentifier: "showAddReview", sender: self)
     }
     
+    func addReview(sender:UITapGestureRecognizer){
+        self.performSegue(withIdentifier: "showAddReview", sender: self)
+    }
+
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -179,6 +187,20 @@ class ProductViewController: UIViewController,MFMailComposeViewControllerDelegat
                 let date = Date()
                 self.getCalendarWorkout(month: String(date.month), year: String(date.year))
             }
+        
+        cosmosView.rating = product.rating
+        rateCosmosView.rating = product.myRating
+        
+        if product.votes == 0 {
+            cosmosView.isHidden = true
+            addReviewButton.isHidden = false
+            cosmosView.text = "NESSUNA RECENSIONE"
+        } else {
+            cosmosView.text = "("+String(product.votes)+") VEDI LE RECENSIONI"
+            cosmosView.isHidden = false
+            addReviewButton.isHidden = true
+        }
+
     }
 
     

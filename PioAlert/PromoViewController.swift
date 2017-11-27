@@ -35,6 +35,8 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
     @IBOutlet weak var promoMapView:MKMapView!
     @IBOutlet weak var navigateToButton:RoundedButton!
     @IBOutlet var cosmosView:CosmosView!
+    @IBOutlet var addRatingView:CosmosView!
+    @IBOutlet weak var addReviewButton:RoundedButton!
 
     @IBOutlet weak var collectionViewHightConstraint:NSLayoutConstraint!
     @IBOutlet weak var collectionView:UICollectionView?
@@ -128,16 +130,27 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (showReviews))
         cosmosView.addGestureRecognizer(gesture)
 
-        cosmosView.rating = promo.rating
-        if promo.votes == 0 {
-            cosmosView.text = "NESSUNA RECENSIONE"
-        } else {
-            cosmosView.text = "("+String(promo.votes)+") VEDI LE RECENSIONI"
-        }
+        let myRatingGesture = UITapGestureRecognizer(target: self, action:  #selector (addReview))
+        addRatingView.addGestureRecognizer(myRatingGesture)
 
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cosmosView.rating = promo.rating
+        addRatingView.rating = promo.myRating
+        if promo.votes == 0 {
+            cosmosView.text = "NESSUNA RECENSIONE"
+            cosmosView.isHidden = true
+            addReviewButton.isHidden = false
+        } else {
+            cosmosView.text = "("+String(promo.votes)+") VEDI LE RECENSIONI"
+            cosmosView.isHidden = false
+            addReviewButton.isHidden = true
+            
+        }
+
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -213,10 +226,15 @@ class PromoViewController: UIViewController, MKMapViewDelegate, UICollectionView
     func showReviews(sender:UITapGestureRecognizer){
         // do other task
         
-//        if promo.votes != 0 {
-//            self.performSegue(withIdentifier: "showReviews", sender: self)
-//        }
+        if promo.votes != 0 {
+            self.performSegue(withIdentifier: "showReviews", sender: self)
+        }
     }
+    
+    func addReview(sender:UITapGestureRecognizer){
+        self.performSegue(withIdentifier: "showAddReview", sender: self)
+    }
+
 
     
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)

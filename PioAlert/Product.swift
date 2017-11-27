@@ -46,6 +46,7 @@ class Product {
 
     var rating:Double!
     var votes:Int!
+    var myRating:Double!
     var freeCategory = Array<AnyObject>()
 
     
@@ -58,6 +59,7 @@ class Product {
         
         rating = 0
         votes = 0
+        myRating = 0
     }
     
     func debugPrint() {

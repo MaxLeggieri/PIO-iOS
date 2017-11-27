@@ -22,6 +22,7 @@ class Company {
     var freeCategory = [FreeCategory]()
     var rating:Double!
     var votes:Int!
+    var myRating:Double!
 
     init(cid: Int) {
        self.cid = cid
@@ -43,6 +44,16 @@ class Company {
             rating = rate["rating_avg"] as! Double
             let v = rate["votes"] as! String
             votes = Int(v)
+            if  let myRate = locs[0]["myrating"] as? [String:AnyObject] {
+                let r = myRate["rating"] as! String
+                myRating = Double(r)
+            }
+            else {
+                myRating = 0
+            }
+            
+
+
             
             for loc in locs {
                 let l = Location(json: loc)

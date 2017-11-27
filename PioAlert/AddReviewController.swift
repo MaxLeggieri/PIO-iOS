@@ -81,17 +81,20 @@ class AddReviewController: UIViewController, UITextViewDelegate {
         switch reviewType {
         case .productReview:
             name.text = product.name
+            rating.rating = product.myRating
             WebApi.sharedInstance.downloadedFrom(image, link: "https://www.pioalert.com"+product.image, mode: .scaleAspectFit, shadow: true)
 
             break
         case .companyReview:
             name.text = company.officialName
+            rating.rating = company.myRating
             WebApi.sharedInstance.downloadedFrom(image, link: "https://www.pioalert.com"+company.image, mode: .scaleAspectFit, shadow: true)
 
             break
             
         case .promoReview:
             name.text = promo.title
+            rating.rating = promo.myRating
             WebApi.sharedInstance.downloadedFrom(image, link: "https://www.pioalert.com"+promo.cimage, mode: .scaleAspectFit, shadow: true)
 
             break
@@ -115,12 +118,15 @@ class AddReviewController: UIViewController, UITextViewDelegate {
         if let commentText = comment.text, !commentText.isEmpty && commentText != "Scrivi qui la tua recensione..."{
             switch reviewType {
             case .productReview:
+                product.myRating = rating.rating
                 if WebApi.sharedInstance.setRating(elementType: "product", elementId: product.pid, rating: rating.rating, comment: commentText) {
                     showAlert()
                 }
                 
                 break
             case .companyReview:
+                company.myRating = rating.rating
+
                 if WebApi.sharedInstance.setRating(elementType: "location", elementId: company.locations[0].idLoc, rating: rating.rating, comment: commentText) {
                     showAlert()
                 }
@@ -128,6 +134,8 @@ class AddReviewController: UIViewController, UITextViewDelegate {
                 break
                 
             case .promoReview:
+                promo.myRating = rating.rating
+
                 if WebApi.sharedInstance.setRating(elementType: "ad", elementId: promo.promoId, rating: rating.rating, comment: commentText) {
                     showAlert()
                 }

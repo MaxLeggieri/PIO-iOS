@@ -38,6 +38,9 @@ class ShopViewController: UIViewController, MFMailComposeViewControllerDelegate,
     
     @IBOutlet var cosmosView:CosmosView!
 
+    @IBOutlet var addRatingView:CosmosView!
+    @IBOutlet var addRatingButton:RoundedButton!
+
     var selectedIndex : Int = 0
     var company:Company!
     
@@ -75,18 +78,28 @@ class ShopViewController: UIViewController, MFMailComposeViewControllerDelegate,
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (showReviews))
         cosmosView.addGestureRecognizer(gesture)
         
-        cosmosView.rating = company.rating
-        if company.votes == 0 {
-            cosmosView.text = "NESSUNA RECENSIONE"
-        } else {
-            cosmosView.text = "("+String(company.votes)+") VEDI LE RECENSIONI"
-        }
+        
+        let addRatingGesture = UITapGestureRecognizer(target: self, action:  #selector (addRating))
+        addRatingView.addGestureRecognizer(addRatingGesture)
+
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        cosmosView.rating = company.rating
+        addRatingView.rating = company.myRating
+        if company.votes == 0 {
+            cosmosView.text = "NESSUNA RECENSIONE"
+            addRatingButton.isHidden = false
+            cosmosView.isHidden = true
+        } else {
+            cosmosView.text = "("+String(company.votes)+") VEDI LE RECENSIONI"
+            addRatingButton.isHidden = true
+            cosmosView.isHidden = false
+        }
+
         WebApi.sharedInstance.downloadedFrom(comImage, link: "https://www.pioalert.com"+company.image, mode: .scaleAspectFit, shadow: true)
         
         
@@ -198,12 +211,17 @@ class ShopViewController: UIViewController, MFMailComposeViewControllerDelegate,
     }
 
     func showReviews(sender:UITapGestureRecognizer){
-        // do other task
         
-        //        if promo.votes != 0 {
-        //            self.performSegue(withIdentifier: "showReviews", sender: self)
-        //        }
+                if company.votes != 0 {
+                    self.performSegue(withIdentifier: "showReviews", sender: self)
+                }
     }
+    
+    func addRating(sender:UITapGestureRecognizer){
+        
+        self.performSegue(withIdentifier: "showAddReview", sender: self)
+    }
+
 
     
     func categoryButtonAction(_ sender: UIButton) {

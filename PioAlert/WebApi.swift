@@ -1159,6 +1159,7 @@ class WebApi {
             var params = "?method=productsByCats"
             params += "&ord=lastin"
             params += "&rec=20"
+            params += "&uid="+String(uid)
             params += "&page=\(page)"
             if filter == "-1" {
                 params += "&idcats=all"
@@ -1262,6 +1263,7 @@ class WebApi {
             
             var params = "?method=product"
             params += "&idproduct="+idProd
+            params += "&uid="+String(uid)
             params += "&lat="+String(PioUser.sharedUser.location.coordinate.latitude)
             params += "&lng="+String(PioUser.sharedUser.location.coordinate.longitude)
             
@@ -2355,6 +2357,12 @@ class WebApi {
             let v = rate["votes"] as! String
             p.votes = Int(v)
         }
+        
+        if let myRating = promo["myrating"] as? [String:AnyObject] {
+            let v = myRating["rating"] as! String
+            p.myRating = Double(v)
+        }
+
 
         
         p.lat = promo["lat"]?.doubleValue
@@ -2395,6 +2403,13 @@ class WebApi {
             let v = rate["votes"] as! String
             p.votes = Int(v)
         }
+        
+        if let myrating = product["myrating"] as? [String:AnyObject] {
+            let v = myrating["rating"] as! String
+            p.myRating = Double(v)
+        }
+        
+
         
         if let comcats = product["comcat"] as? [AnyObject] {
             p.freeCategory = comcats

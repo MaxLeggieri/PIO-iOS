@@ -46,6 +46,7 @@ class Promo {
     
     var rating:Double!
     var votes:Int!
+    var myRating:Double!
 
     var type:String!
 
@@ -79,7 +80,7 @@ class Promo {
         
         rating = 0
         votes = 0
-
+        myRating = 0
         releatedProductId = ""
     }
 }
